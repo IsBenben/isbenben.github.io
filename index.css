@@ -86,8 +86,24 @@ body {
   animation: fadeIn 0.5s forwards;
 }
 
+@keyframes blendIn {
+  from {
+    filter: blur(30px);
+    letter-spacing: 5px;
+  }
+  to {
+    filter: blur(0);
+    letter-spacing: 1px;
+  }
+}
+
 .title-area {
   margin: 10px;
+  filter: url(#blend);
+}
+
+.title-area h1 {
+  animation: blendIn 0.8s forwards;
 }
 
 .return {
@@ -194,10 +210,10 @@ pre {
 .error {
   font-size: 2em;
   text-align: center;
-  margin-top: 250px;
+  margin-top: 20vh;
 }
 
-.error .opps{
+.error .opps {
   font-size: 1rem;
   margin-bottom: 10px;
   letter-spacing: 2px;
@@ -210,4 +226,33 @@ pre {
 .error .message samp {
   font-family: inherit;
   font-weight: bold;
+}
+
+.clicks {
+  position: fixed;
+  pointer-events: none;
+  inset: 0;
+}
+
+@keyframes jump {
+  0% {
+    transform: translate(-50%, 20px);
+    filter: blur(1px);
+    opacity: 0;
+  }
+  80% {
+    transform: translate(-50%, -20px);
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -20px);
+    filter: blur(1px);
+    opacity: 0;
+  }
+}
+
+.clicks .click {
+  position: absolute;
+  animation: jump 0.8s forwards;
 }
