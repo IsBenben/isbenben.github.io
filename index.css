@@ -63,6 +63,10 @@
   font-weight: bold;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   background-color: hsl(201, 20%, 10%);
   color: white;
@@ -106,10 +110,13 @@ body {
   animation: blendIn 0.8s forwards;
 }
 
+.links {
+  display: flex;
+  gap: 1em;
+  padding-left: 5px;
+}
+
 .return {
-  display: block;
-  font-size: 1rem;
-  font-weight: normal;
   padding-left: 5px;
 }
 
@@ -129,13 +136,13 @@ ul {
   margin-left: 1em;
 }
 
-.cards {
+.container > .cards {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-.cards .card {
+.container > .cards .card {
   background-color: hsla(201, 20%, 100%, 0.1);
   position: relative;
   border-radius: 8px;
@@ -144,7 +151,7 @@ ul {
   overflow: hidden;
 }
 
-.cards .card::before {
+.container > .cards .card::before {
   content: '';
   background-image: radial-gradient(
     closest-side circle,
@@ -156,12 +163,12 @@ ul {
   transform: translate(var(--x, -1000px), var(--y, -1000px));
 }
 
-.cards .card:hover:before {
+.container > .cards .card:hover:before {
   background: hsla(201, 20%, 100%, 0.6);
   transform: none;
 }
 
-.cards .card .inner {
+.container > .cards .card .inner {
   background-color: hsl(201, 20%, 15%);
   position: absolute;
   padding: 3px;
@@ -177,7 +184,7 @@ ul {
   opacity: 0.5;
 }
 
-.contents {
+.container > .contents {
   margin: auto;
   width: 90%;
 }
@@ -185,13 +192,14 @@ ul {
 aside {
   float: right;
   width: 300px;
+  margin-left: 10px;
 }
 
 .aside-item {
   background-color: hsla(201, 20%, 100%, 0.1);
   border-radius: 8px;
   padding: 5px;
-  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 article {
@@ -202,7 +210,7 @@ article {
   line-height: 1.5;
 }
 
-pre {
+pre, code {
   font-family: inherit;
   font-size: 14px;
 }
@@ -226,6 +234,11 @@ pre {
 .error .message samp {
   font-family: inherit;
   font-weight: bold;
+}
+
+.error .return {
+  font-size: 1rem;
+  display: block;
 }
 
 .clicks {
@@ -255,4 +268,89 @@ pre {
 .clicks .click {
   position: absolute;
   animation: jump 0.8s forwards;
+}
+
+code {
+  cursor: pointer;
+  background-color: hsla(201, 20%, 100%, 0.1);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+p, ul, ol, li {
+  margin-left: 1em;
+}
+
+.banner {
+  position: relative;
+  min-height: 250px;
+  height: 60vh;
+  transition: 0.2s;
+}
+
+.banner .mask {
+  position: absolute;
+  inset: 0;
+  background-color: hsla(201, 20%, 0%, 0.5);
+  transition: 0.2s;
+}
+
+.banner:hover .mask {
+  background-color: transparent;
+  border-top: 8px solid hsl(201, 20%, 100%);
+  border-bottom: 8px solid hsl(201, 20%, 100%);
+}
+
+.banner:hover {
+  text-shadow: 0 0 10px hsla(201, 20%, 0%, 0.5);
+}
+
+.banner h2 {
+  letter-spacing: 2px;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.banner .contents {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.2em;
+}
+
+@keyframes colorful {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.banner:last-of-type {
+  animation: colorful 10s infinite;
+}
+
+.carousel {
+  /* line-height: 1.2em; */
+  height: 1.2em;
+  --pos: 0;
+  overflow: hidden;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  text-align: center;
+}
+
+.carousel > * {
+  margin: 0;
+  height: 1.2em;
+  transform: translateY(calc(var(--pos) * -1.2em));
+  transition: 0.2s;
+}
+
+.carousel.finished > * {
+  transition: none !important;
 }
