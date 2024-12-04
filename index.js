@@ -86,3 +86,31 @@ window.addEventListener('mousedown', (e) => {
   clicks.appendChild(click);
   click.addEventListener('animationend', () => void click.remove());
 });
+
+const codes = document.querySelectorAll('code');
+for (const code of codes) {
+  code.title = '点击复制';
+  code.addEventListener('click', () => {
+    navigator.clipboard.writeText(code.textContent);
+  });
+}
+
+const carousels = document.querySelectorAll('.carousel');
+for (const carousel of carousels) {
+  const total = carousel.children.length;
+  carousel.appendChild(carousel.children[0].cloneNode(true));
+  let current = 0;
+  setInterval(() => {
+    current++;
+    if (current <= total) {
+      carousel.style.setProperty('--pos', current);
+    } else {
+      carousel.classList.add('finished');
+      carousel.style.setProperty('--pos', 0);
+      carousel.getBoundingClientRect();
+      carousel.classList.remove('finished');
+      current = 1;
+      carousel.style.setProperty('--pos', current);
+    }
+  }, 2000);
+}
