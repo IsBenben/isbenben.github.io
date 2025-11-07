@@ -37,7 +37,7 @@ window.addEventListener('resize', () => {
 ctx.textBaseline = 'top';
 const charIndex = [];
 setInterval(() => {
-  ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+  ctx.fillStyle = 'hsla(201, 20%, 10%, 0.1)';
   ctx.fillRect(0, 0, background.width, background.height);
   ctx.fillStyle = 'hsl(110, 50%, 60%)';
   const fontsize = 16 * devicePixelRatio;
