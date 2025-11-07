@@ -38,7 +38,6 @@
 }
 
 .background {
-  background-color: inherit;
   position: fixed;
   inset: 0;
   width: 100vw;
@@ -70,6 +69,7 @@ body {
   font-family: 'JetBrains Mono', sans-serif;
   padding: 10px;
   text-wrap: pretty;
+  /* text-align: justify; */
 }
 
 @keyframes fadeIn {
@@ -193,6 +193,14 @@ aside {
   float: right;
   width: 300px;
   margin-left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  aside {
+    float: unset;
+    width: unset;
+    margin: 10px 0;
+  }
 }
 
 .aside-item {
