@@ -26,26 +26,6 @@
   clear: both;
 }
 
-@keyframes blur {
-  from {
-    letter-spacing: 10px;
-    filter: blur(1px);
-  }
-  25% {
-    filter: blur(3px);
-  }
-  50% {
-    filter: blur(2px);
-  }
-  75% {
-    filter: blur(4px);
-  }
-  to {
-    letter-spacing: 0;
-    filter: blur(1px);
-  }
-}
-
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -58,13 +38,14 @@
 }
 
 .background {
-  animation: blur 1s infinite alternate ease-in-out, fadeOut 1s 2s forwards;
+  background-color: inherit;
   position: fixed;
   inset: 0;
-  padding: 20px;
-  opacity: 0.4;
-  color: hsl(120, 70%, 40%);
+  width: 100vw;
+  height: 100vh;
   user-select: none;
+  z-index: -10;
+  opacity: 0.3;
 }
 
 @font-face {
@@ -229,11 +210,6 @@ article {
   line-height: 1.5;
 }
 
-pre, code {
-  font-family: inherit;
-  font-size: 14px;
-}
-
 .error {
   font-size: 2em;
   text-align: center;
@@ -289,11 +265,16 @@ pre, code {
   animation: jump 0.8s forwards;
 }
 
-code {
-  cursor: pointer;
+pre, code {
   background-color: hsla(201, 20%, 100%, 0.1);
   padding: 2px 4px;
   border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+code {
+  cursor: pointer;
 }
 
 code:active {
