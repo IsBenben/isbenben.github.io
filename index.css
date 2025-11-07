@@ -1,3 +1,19 @@
+@import url("styles/iconfont.css");
+/* Icon Font Inject */
+.iconfont {
+  font-family: unset !important;
+  font-size: unset;
+  font-style: unset;
+  -webkit-font-smoothing: unset;
+  -moz-osx-font-smoothing: unset;
+}
+
+.iconfont::before {
+  font-family: "iconfont" !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -53,13 +69,13 @@
 
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('JetBrainsMono-Regular.ttf');
+  src: url('styles/JetBrainsMono-Regular.ttf');
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('JetBrainsMono-Bold.ttf');
+  src: url('styles/');
   font-weight: bold;
 }
 
@@ -103,10 +119,13 @@ body {
 
 .title-area {
   margin: 10px;
-  filter: url(#blend);
 }
 
 .title-area h1 {
+  filter: url(#blend);
+}
+
+.title-area h1 span {
   animation: blendIn 0.8s forwards;
 }
 
@@ -277,8 +296,14 @@ code {
   border-radius: 4px;
 }
 
+code:active {
+  background-color: hsla(201, 20%, 100%, 0.2);
+}
+
 p, ul, ol, li {
   margin-left: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .banner {
@@ -286,6 +311,7 @@ p, ul, ol, li {
   min-height: 250px;
   height: 60vh;
   transition: 0.2s;
+  text-align: center;
 }
 
 .banner .mask {
@@ -309,7 +335,6 @@ p, ul, ol, li {
   letter-spacing: 2px;
   font-size: 2em;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 .banner .contents {
@@ -334,14 +359,13 @@ p, ul, ol, li {
 }
 
 .carousel {
-  /* line-height: 1.2em; */
+  line-height: 1;
   height: 1.2em;
   --pos: 0;
   overflow: hidden;
   position: relative;
   list-style: none;
   margin: 0;
-  text-align: center;
 }
 
 .carousel > * {
@@ -353,4 +377,8 @@ p, ul, ol, li {
 
 .carousel.finished > * {
   transition: none !important;
+}
+
+.information .iconfont::before{
+  margin-right: 2px;
 }

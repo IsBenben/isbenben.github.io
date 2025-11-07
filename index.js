@@ -15,6 +15,9 @@ const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
 svg.innerHTML = svgCode;
 svg.style.display = 'none';
 document.body.appendChild(svg);
+setTimeout(() => {
+  svg.remove();
+}, 800);
 
 function choice(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
