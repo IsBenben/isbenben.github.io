@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>“找规律” - Benben's Blog</title>
+    <link rel="stylesheet" href="/index.css" />
+    <script defer src="/index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title-area">
+        <h1><span>Benben's Blog</span></h1>
+        <nav class="links">
+          <a href="/" class="return">返回首页</a>
+        </nav>
+      </div>
+      <div class="contents clearfix">
+        <aside>
+          <div class="aside-item">
+            <h2>相关链接</h2>
+            <ul>
+              <li>
+                <a href="https://www.bilibili.com/video/BV1D9PQeaEBf/"
+                  >演示视频</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/IsBenben/Funny-Things/blob/main/%E6%89%BE%E8%A7%84%E5%BE%8B.py"
+                  >源代码</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="aside-item">
+            <h2>快捷下载</h2>
+            <ul>
+              <li>
+                下载：<a download href="/raw/find-patterns.py"></a>
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <article>
+          <h1>“找规律”</h1>
+          <p>Python程序，可以通过多项式拟合几乎任意的数列，即“找规律”。</p>
+          <p>最上方可以设置数列的每一项，同时支持分数和小数输入。</p>
+          <p>中央可设置拟合输出格式，有LaTeX分数和小数两种格式。</p>
+          <p>点击“确定”按钮后，下方会显示输出结果。示例：</p>
+          <pre>
+容易注意到多项式函数：
+f(x)=x
+满足
+- f(2)=2
+- f(3)=3
+- f(1)=1
+          </pre>
+          <p>原理：一种类似于拉格朗日插值的算法。</p>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>
