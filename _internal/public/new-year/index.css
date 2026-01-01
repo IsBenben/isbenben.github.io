@@ -170,3 +170,7 @@ blockquote::after {
     padding: 1.5rem;
   }
 }
+
+p, ul, li {
+  margin-left: unset;
+}

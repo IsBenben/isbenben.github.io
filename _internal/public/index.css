@@ -132,10 +132,6 @@ a:hover {
   opacity: 0.8;
 }
 
-ul {
-  margin-left: 1em;
-}
-
 .container > .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
