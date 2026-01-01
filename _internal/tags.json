@@ -1,0 +1,59 @@
+[
+    {
+        "key": "lang",
+        "name": "语言标签",
+        "description": "项目主要使用的编程语言。",
+        "value": [
+            {
+                "text": "Python3",
+                "description": "项目主要使用Python3系列语言和对应的库。"
+            },
+            {
+                "text": "Scratch3",
+                "description": "项目主要使用Scratch3或衍生编辑器（如TurboWarp）进行图形化编程。"
+            },
+            {
+                "text": "Web",
+                "description": "项目主要使用Web技术栈，包括HTML、CSS、JS等。"
+            }
+        ]
+    },
+    {
+        "key": "inspiration",
+        "name": "灵感标签",
+        "description": "项目创意来源。",
+        "value": [
+            {
+                "text": "原创",
+                "description": "项目从概念设计到实现均为独立创作，未直接借鉴现有项目。"
+            },
+            {
+                "text": "改编",
+                "description": "在现有项目或开源作品基础上进行修改、扩展或重构，保留部分原框架但具有显著创新。"
+            },
+            {
+                "text": "汉化",
+                "description": "对国际项目或外语资源进行本地化处理，包括界面翻译、文化适配等。"
+            }
+        ]
+    },
+    {
+        "key": "content",
+        "name": "内容标签",
+        "description": "项目主要内容。",
+        "value": [
+            {
+                "text": "游戏",
+                "description": "项目以娱乐性交互（好玩）为核心。"
+            },
+            {
+                "text": "工具",
+                "description": "项目侧重实用功能，用于提升效率、解决特定问题或提供技术服务。"
+            },
+            {
+                "text": "娱乐",
+                "description": "项目以趣味性、艺术性或互动体验为主。"
+            }
+        ]
+    }
+]
