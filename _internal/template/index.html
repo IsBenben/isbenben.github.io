@@ -5,7 +5,11 @@
     <title>Benben's Blog</title>
     <link rel="stylesheet" href="/index.css" />
     <script defer src="/index.js"></script>
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="cae6367e-6ca5-4b1e-893e-96c54137a755"></script>
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="cae6367e-6ca5-4b1e-893e-96c54137a755"
+    ></script>
   </head>
   <body>
     <div class="container">
@@ -30,9 +34,20 @@
           </ul>
         </nav>
       </div>
+
       <div class="cards">
-        {{cards}}
+        <div class="card" style="height: 4em;">
+          <div class="inner" style="display: flex; gap: 1em; padding: 0.5em 1em;">
+            <h2><a href="new-year">新年快乐！</a></h2>
+            <p>时光荏苒，岁月如流。wangac给您拜年啦！</p>
+            <div class="information" style="position: unset;">
+              <span class="iconfont icon-date">日期：2026年</span>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <div class="cards">{{cards}}</div>
     </div>
   </body>
 </html>

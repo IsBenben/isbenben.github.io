@@ -55,7 +55,7 @@
 
 @font-face {
   font-family: 'JetBrains Mono';
-  src: url('styles/');
+  src: url('styles/JetBrainsMono-Bold.ttf');
   font-weight: bold;
 }
 
@@ -65,7 +65,7 @@ html {
 
 body {
   background-color: hsl(201, 20%, 10%);
-  color: white;
+  color: hsl(0, 0%, 100%, 0.95);
   font-family: 'JetBrains Mono', sans-serif;
   padding: 10px;
   text-wrap: pretty;
@@ -137,16 +137,16 @@ ul {
 }
 
 .container > .cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 20px;
+  margin-top: 1rem;
 }
 
 .container > .cards .card {
   background-color: hsla(201, 20%, 100%, 0.1);
   position: relative;
   border-radius: 8px;
-  width: 360px;
   height: 270px;
   overflow: hidden;
 }

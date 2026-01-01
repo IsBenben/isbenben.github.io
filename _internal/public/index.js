@@ -1,3 +1,5 @@
+(function(){
+
 const svgCode = `
 <defs>
   <filter id="blend">
@@ -153,3 +155,5 @@ for (const carousel of carousels) {
     }
   }, 2000);
 }
+
+})();
