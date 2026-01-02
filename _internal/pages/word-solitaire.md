@@ -5,6 +5,9 @@
 !date 2025/3/7
 !description 只要单词的首字母和尾字母相同，就可以接上。
 !description 如果不会，也可以让 AI 帮助。
+!tag lang web
+!tag inspiration original
+!tag content entertainment
 
 只要单词的首字母和尾字母相同，就可以接上。如果不会，也可以让 `AI` 帮助。
 

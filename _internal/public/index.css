@@ -165,7 +165,7 @@ a:hover {
 }
 
 .container > .cards .card .inner {
-  background-color: hsl(201, 20%, 15%);
+  background-color: hsla(201, 20%, 15%, 0.95);
   position: absolute;
   padding: 3px;
   inset: 2px;
@@ -177,7 +177,28 @@ a:hover {
   left: 0;
   bottom: 0;
   padding: 5px;
+}
+
+.information span,
+.information a {
   opacity: 0.5;
+  display: inline-block;
+  vertical-align: bottom;
+  transition: 0.2s;
+}
+
+.information :hover {
+  opacity: 0.8;
+}
+
+.information .tag {
+  max-width: 1em;
+  text-wrap: nowrap;
+  overflow: hidden;
+}
+
+.information .tag:hover {
+  max-width: calc(var(--tag-width) * 1em + 2px);
 }
 
 .container > .contents {
@@ -204,6 +225,11 @@ aside {
   border-radius: 8px;
   padding: 5px;
   margin-bottom: 10px;
+}
+
+.metadata-line {
+  margin-left: 1em;
+  opacity: 0.9;
 }
 
 article {

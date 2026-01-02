@@ -1,3 +1,4 @@
+import json
 import mistune
 import os
 import re
@@ -21,7 +22,7 @@ class CustomRenderer(mistune.HTMLRenderer):
 plugins = ['strikethrough', 'footnotes', 'table', 'url', 'task_lists', 'def_list', 'abbr', 'insert', 'superscript', 'subscript', 'ruby']
 markdown = mistune.create_markdown(plugins=plugins, renderer=CustomRenderer())
 
-whitespaces = re.compile(r'\s+')
+whitespaces = re.compile(r'\s\s+')
 css_comment = re.compile(r'/\*.*?\*/', re.DOTALL)
 css_inset = re.compile(r'inset:\s*(.*?);', re.DOTALL)
 def compress_code(code: str, lang: str = ''):
@@ -44,28 +45,44 @@ def write(file: str, content: str | bytes):
 
 with open('template/aside-item.html', 'r', encoding='utf-8') as f:
     aside_item_template = f.read()
-def parse_aside(title: str, links: list, download: bool):
-    if not links:
+def parse_aside(title: str, content: str):
+    if not content:
         return ''
-    links_str = ''
-    for url, text in links:
-        if download:
-            target_file = url.split('/')[-1]
-            links_str += f'<li><a download href="{url}" title="将下载为：{target_file}">{text}</a></li>'
-        else:
-            links_str += f'<li><a href="{url}">{text}</a></li>'
     return aside_item_template \
                .replace('{{title}}', title) \
-               .replace('{{links}}', links_str)
+               .replace('{{content}}', content)
 
 with open('template/card.html', 'r', encoding='utf-8') as f:
     card_template = f.read()
-def parse_card(id: str, title: str, description: list[str], date: str):
+def parse_card(id: str, title: str, description: list[str], date: str, tags_html: str):
     return card_template \
                .replace('{{id}}', id) \
                .replace('{{title}}', title) \
                .replace('{{descriptions}}', '<br />'.join(description)) \
                .replace('{{date}}', date) \
+               .replace('{{tags}}', tags_html)
+
+with open('template/tag.html', 'r', encoding='utf-8') as f:
+    tag_template = f.read()
+with open('tags.json', 'r', encoding='utf-8') as f:
+    tags = json.load(f)
+def parse_tag(type: str, text: str):
+    width = round(sum(0.6 if ord(c) < 256 else 1 for c in text) + 1, 2)
+    return tag_template \
+               .replace('{{type}}', type) \
+               .replace('{{type_name}}', tags[type]['name']) \
+               .replace('{{type_description}}', tags[type]['description']) \
+               .replace('{{text}}', text) \
+               .replace('{{text_name}}', tags[type]['value'][text]['name']) \
+               .replace('{{text_description}}', tags[type]['value'][text]['description']) \
+               .replace('{{width}}', str(width))
+
+with open('template/metadata-aside.html', 'r', encoding='utf-8') as f:
+    metadata_aside_template = f.read()
+def parse_metadata_aside(date: str, tags_html: str):
+    return metadata_aside_template \
+               .replace('{{date}}', date) \
+               .replace('{{tags}}', tags_html)
 
 cards = []
 with open('template/page.html', 'r', encoding='utf-8') as f:
@@ -75,9 +92,10 @@ def parse_page(id: str):
         text = f.read()
 
     title = ''
-    description = []
-    links = []
-    downloads = []
+    description: list[str] = []
+    links: list[list[str]] = []
+    downloads: list[list[str]] = []
+    tags: list[list[str]] = []
     date = ''
     hide = False
 
@@ -104,10 +122,27 @@ def parse_page(id: str):
         elif keyword == '!hide':
             if words[1] == 'True':
                 hide = True
+        elif keyword == '!tag':
+            tag = words[1].split(maxsplit=1)
+            tags.append(tag)
         else:
             article_lines.append(line)
 
-    aside = parse_aside('相关链接', links, False) + parse_aside('快捷下载', downloads, True)
+    tags_html = ''.join([parse_tag(tag, text) for tag, text in tags])
+    metadata_str = parse_metadata_aside(date, tags_html)
+    links_str = ''
+    for url, text in links:
+        links_str += f'<li><a href="{url}">{text}</a></li>'
+    if links:
+        links_str = f'<ul>{links_str}</ul>'
+    downloads_str = ''
+    for url, text in downloads:
+        target_file = url.split('/')[-1]
+        downloads_str += f'<li><a download href="{url}" title="将下载为：{target_file}">{text}</a></li>'
+    if downloads:
+        downloads_str = f'<ul>{downloads_str}</ul>'
+    aside = parse_aside('文章信息', metadata_str) + parse_aside('相关链接', links_str) + parse_aside('快捷下载', downloads_str)
+
     content = markdown('\n'.join(article_lines))
     assert isinstance(content, str)
     page = page_template \
@@ -118,23 +153,46 @@ def parse_page(id: str):
     write(f'../pages/{id}.html', compress_code(page, 'html'))
 
     if not hide:
-        card = parse_card(id, title, description, date)
+        card = parse_card(id, title, description, date, tags_html)
         global cards
-        cards.append((card, date))
+        cards.append((card, date, tags))
 
 for id in os.listdir('pages'):
     id = id.removesuffix('.md')
     parse_page(id)
 
+sorted_cards = sorted(cards, key=lambda x: datetime.strptime(x[1], '%Y/%m/%d'), reverse=True)
+
 with open('template/index.html', 'r', encoding='utf-8') as f:
         index_template = f.read()
 def parse_index():
-    sorted_cards = sorted(cards, key=lambda x: datetime.strptime(x[1], '%Y/%m/%d'), reverse=True)
     cards_html = ''.join([card_tuple[0] for card_tuple in sorted_cards])
     index = index_template \
                .replace('{{cards}}', cards_html)
     write('../index.html', compress_code(index, 'html'))
 parse_index()
+
+with open('template/tags.html', 'r', encoding='utf-8') as f:
+    tags_template = f.read()
+for type in tags:
+    type_name = tags[type]['name']
+    type_description = tags[type]['description']
+    for text in tags[type]['value']:
+        text_name = tags[type]['value'][text]['name']
+        text_description = tags[type]['value'][text]['description']
+        text_cards = ''
+        for card, date, card_tags in sorted_cards:
+            if [type, text] in card_tags:
+                text_cards += card
+        tags_page = tags_template \
+                   .replace('{{type}}', type) \
+                   .replace('{{type_name}}', type_name) \
+                   .replace('{{type_description}}', type_description) \
+                   .replace('{{text}}', text) \
+                   .replace('{{text_name}}', text_name) \
+                   .replace('{{text_description}}', text_description) \
+                   .replace('{{cards}}', text_cards)
+        write(f'../tags/{type}-{text}.html', compress_code(tags_page, 'html'))
 
 for public_file in os.walk('public'):
     dirpath, dirnames, filenames = public_file
