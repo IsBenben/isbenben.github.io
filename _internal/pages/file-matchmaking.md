@@ -4,6 +4,9 @@
 !date 2025/3/1
 !description 这个程序会帮你创建很多文件，删除的文件会被重新创建。
 !description 删除的越多得分越多。
+!tag lang python3
+!tag inspiration original
+!tag content entertainment
 
 这个程序会帮你创建很多文件，删除的文件会被重新创建。
 删除的越多得分越多。

@@ -5,6 +5,9 @@
 !description Python制作的字符画程序，可以把图片用字符显示出来。
 !description 使用方法：安装pillow库，在相同目录放置字体font.ttf
 !download /raw/characters-drawing.py 下载：字符画程序
+!tag lang python3
+!tag inspiration original
+!tag content art
 
 Python制作的字符画程序，可以把图片用字符显示出来。
 

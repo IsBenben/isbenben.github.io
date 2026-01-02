@@ -7,6 +7,9 @@
 !description 本程序模拟了生命游戏的一种规则：B3/S23，即康威生命游戏的初始版本。
 !description 新版本是自制的无限地图生命游戏，操作简单。
 !description 旧版本参考教程视频，提供有限的地图。
+!tag lang scratch3
+!tag inspiration adaptation
+!tag content art
 
 ## 生命游戏介绍
 

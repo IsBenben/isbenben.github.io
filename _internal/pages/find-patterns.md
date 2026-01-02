@@ -5,6 +5,9 @@
 !date 2025/2/3
 !description Python程序，可以通过多项式拟合几乎任意的数列，即"找规律"。
 !description 原理是一种类似于拉格朗日插值的算法。
+!tag lang python3
+!tag inspiration original
+!tag content tool
 
 Python程序，可以通过多项式拟合几乎任意的数列，即"找规律"。
 

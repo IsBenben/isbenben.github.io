@@ -6,6 +6,9 @@
 !description 本程序仅适用于 Windows 操作系统。
 !description 仅仅为了玩梗。请不要真的运行此程序，后果自负。
 !hide True
+!tag lang python3
+!tag inspiration original
+!tag content tool
 
 ## 介绍
 

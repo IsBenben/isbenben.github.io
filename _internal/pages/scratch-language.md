@@ -5,6 +5,9 @@
 !description 用Python为Scratch做的编程语言。
 !description 编译成品为Scratch可直接识别的project.json。
 !description 已经支持基本的编程语法。
+!tag lang python3
+!tag inspiration original
+!tag content tool
 
 [![license](https://img.shields.io/github/license/IsBenben/Scratch-Language)](https://github.com/IsBenben/Scratch-Language/blob/main/LICENSE)
 [![commit](https://img.shields.io/github/last-commit/IsBenben/Scratch-Language)](https://github.com/IsBenben/Scratch-Language/commits/main)

@@ -8,6 +8,9 @@
 !date 2025/2/3
 !description 这个小程序复制了以 MIT License 开源的 https://github.com/itorr/homo 代码。
 !description 可论证任何数字为 5277 和 7725。
+!tag lang web
+!tag inspiration adaptation
+!tag content tool
 
 ## 介绍
 

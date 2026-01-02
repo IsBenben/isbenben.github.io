@@ -6,6 +6,9 @@
 !description Scratch将UTF-16错误地由UCS-2读取。
 !description 而Scratch不支持直接获取包含特殊表情字符的长度，或某个字符。
 !description 本示例展示如何手动处理字符串，解决该问题。
+!tag lang scratch3
+!tag inspiration original
+!tag content learning
 
 ## 复现过程
 

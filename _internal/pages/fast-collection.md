@@ -5,6 +5,9 @@
 !description 这是一个 Chrome 浏览器插件，需要开启开发者模式导入该插件，在 B 站视频中就可以快速添加到收藏夹。
 !description 快速添加到收藏夹：根据B站视频的标签自动创建并匹配收藏夹。
 !description 原理：通过 JS 脚本操作 DOM 元素，模拟点击按钮和输入，实现快速添加到收藏夹。
+!tag lang web
+!tag inspiration original
+!tag content tool
 
 这是一个 `Chrome` 浏览器插件，需要开启开发者模式导入该插件，在 B 站视频中就可以快速添加到收藏夹。
 

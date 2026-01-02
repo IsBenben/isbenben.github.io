@@ -5,6 +5,9 @@
 !description 你通过↑↓←→方向键操控着数字1。舞台上随机刷新数字。
 !description 这个数字碰到比它小的数字就会吃掉它，并加上它的数值。
 !description 游戏后期还会解锁+-*/和更大的数字！挑战极限！
+!tag lang scratch3
+!tag inspiration adaptation
+!tag content entertainment
 
 ## 游戏设定
 

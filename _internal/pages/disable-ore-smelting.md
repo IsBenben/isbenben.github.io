@@ -3,6 +3,9 @@
 !date 2025/8/25
 !description 该数据包会禁用部分会浪费的矿石烧炼配方。
 !description 支持1.13+的主流版本，在Modrinth上发布。
+!tag lang minecraft
+!tag inspiration original
+!tag content tool
 
 ## 介绍
 
