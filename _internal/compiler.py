@@ -1,3 +1,4 @@
+from dataclasses import dataclass
 import json
 import mistune
 import os
@@ -52,14 +53,33 @@ def parse_aside(title: str, content: str):
                .replace('{{title}}', title) \
                .replace('{{content}}', content)
 
+@dataclass
+class Card:
+    id: str
+    title: str
+    description: list[str]
+    date: str
+    tags: list[list[str]]
+
 with open('template/card.html', 'r', encoding='utf-8') as f:
     card_template = f.read()
-def parse_card(id: str, title: str, description: list[str], date: str, tags_html: str):
+href_pattern = re.compile(r'href=".+?"')
+def parse_card(card: Card, *, delete_tag: list[list[str]] | None = None):
+    if delete_tag is None:
+        delete_tag = []
+    tags_html = ''.join([
+        re.sub(href_pattern, '', parse_tag(type, text))
+            .replace('<a', '<span')
+            .replace('</a', '</span')
+        if [type, text] in delete_tag
+        else parse_tag(type, text)
+        for type, text in card.tags 
+    ])
     return card_template \
-               .replace('{{id}}', id) \
-               .replace('{{title}}', title) \
-               .replace('{{descriptions}}', '<br />'.join(description)) \
-               .replace('{{date}}', date) \
+               .replace('{{id}}', card.id) \
+               .replace('{{title}}', card.title) \
+               .replace('{{descriptions}}', '<br />'.join(card.description)) \
+               .replace('{{date}}', card.date) \
                .replace('{{tags}}', tags_html)
 
 with open('template/tag.html', 'r', encoding='utf-8') as f:
@@ -67,13 +87,14 @@ with open('template/tag.html', 'r', encoding='utf-8') as f:
 with open('tags.json', 'r', encoding='utf-8') as f:
     tags = json.load(f)
 def parse_tag(type: str, text: str):
-    width = round(sum(0.6 if ord(c) < 256 else 1 for c in text) + 1, 2)
+    text_name = tags[type]['value'][text]['name']
+    width = round(sum(0.6 if ord(c) < 256 else 1 for c in text_name) + 1, 2)
     return tag_template \
                .replace('{{type}}', type) \
                .replace('{{type_name}}', tags[type]['name']) \
                .replace('{{type_description}}', tags[type]['description']) \
                .replace('{{text}}', text) \
-               .replace('{{text_name}}', tags[type]['value'][text]['name']) \
+               .replace('{{text_name}}', text_name) \
                .replace('{{text_description}}', tags[type]['value'][text]['description']) \
                .replace('{{width}}', str(width))
 
@@ -84,7 +105,7 @@ def parse_metadata_aside(date: str, tags_html: str):
                .replace('{{date}}', date) \
                .replace('{{tags}}', tags_html)
 
-cards = []
+cards: list[tuple[Card, str, list[list[str]]]] = []
 with open('template/page.html', 'r', encoding='utf-8') as f:
     page_template = f.read()
 def parse_page(id: str):
@@ -153,7 +174,7 @@ def parse_page(id: str):
     write(f'../pages/{id}.html', compress_code(page, 'html'))
 
     if not hide:
-        card = parse_card(id, title, description, date, tags_html)
+        card = Card(id, title, description, date, tags)
         global cards
         cards.append((card, date, tags))
 
@@ -166,11 +187,26 @@ sorted_cards = sorted(cards, key=lambda x: datetime.strptime(x[1], '%Y/%m/%d'), 
 with open('template/index.html', 'r', encoding='utf-8') as f:
         index_template = f.read()
 def parse_index():
-    cards_html = ''.join([card_tuple[0] for card_tuple in sorted_cards])
+    cards_html = ''.join([parse_card(card_tuple[0]) for card_tuple in sorted_cards])
     index = index_template \
                .replace('{{cards}}', cards_html)
     write('../index.html', compress_code(index, 'html'))
 parse_index()
+
+def generate_tag_switcher(selected_tags: list[list[str]]):
+    tags_switcher = ''
+    for type in tags:
+        type_name = tags[type]['name']
+        type_description = tags[type]['description']
+        tags_switcher += f'<div><h2>{type_name}</h2><p>{type_description}</p><div class="tag-values">'
+        for text in tags[type]['value']:
+            text_description = tags[type]["value"][text]["description"]
+            if [type, text] in selected_tags:
+                tags_switcher += f'<em title="{text_description}">{tags[type]["value"][text]["name"]}</em>'
+            else:
+                tags_switcher += f'<a href="/tags/{type}-{text}.html" title="{text_description}">{tags[type]["value"][text]["name"]}</a>'
+        tags_switcher += '</div></div>'
+    return tags_switcher
 
 with open('template/tags.html', 'r', encoding='utf-8') as f:
     tags_template = f.read()
@@ -178,21 +214,32 @@ for type in tags:
     type_name = tags[type]['name']
     type_description = tags[type]['description']
     for text in tags[type]['value']:
+        # 生成标签选择器
+        tags_switcher = generate_tag_switcher([[type, text]])
+        
         text_name = tags[type]['value'][text]['name']
         text_description = tags[type]['value'][text]['description']
         text_cards = ''
         for card, date, card_tags in sorted_cards:
             if [type, text] in card_tags:
-                text_cards += card
+                text_cards += parse_card(card, delete_tag=[[type, text]])
         tags_page = tags_template \
-                   .replace('{{type}}', type) \
-                   .replace('{{type_name}}', type_name) \
-                   .replace('{{type_description}}', type_description) \
-                   .replace('{{text}}', text) \
-                   .replace('{{text_name}}', text_name) \
-                   .replace('{{text_description}}', text_description) \
-                   .replace('{{cards}}', text_cards)
+            .replace('{{type}}', type) \
+            .replace('{{tags_switcher}}', tags_switcher) \
+            .replace('{{type_name}}', type_name) \
+            .replace('{{type_description}}', type_description) \
+            .replace('{{text}}', text) \
+            .replace('{{text_name}}', text_name) \
+            .replace('{{text_description}}', text_description) \
+            .replace('{{cards}}', text_cards)
         write(f'../tags/{type}-{text}.html', compress_code(tags_page, 'html'))
+
+with open('template/tags_index.html', 'r', encoding='utf-8') as f:
+    tags_index_template = f.read()
+tags_switcher = generate_tag_switcher([])
+tags_index_page = tags_index_template \
+    .replace('{{tags_switcher}}', tags_switcher)
+write(f'../tags/index.html', compress_code(tags_index_page, 'html'))
 
 for public_file in os.walk('public'):
     dirpath, dirnames, filenames = public_file
