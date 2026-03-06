@@ -12,7 +12,7 @@
 
 ## 介绍
 
-这个游戏是一个Scratch消消乐游戏，改变了nice.js——js真值表消消乐。
+这个游戏是一个Scratch消消乐游戏，改编了nice.js——js真值表消消乐。
 
 在JavaScript中，`==` 相等是再正常不过的运算符：
 ```js
