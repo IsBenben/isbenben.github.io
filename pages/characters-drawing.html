@@ -10,6 +10,44 @@
 </div><div class="aside-item"> <h2>相关链接</h2> <ul><li><a href="https://www.bilibili.com/video/BV17SDrYEEVS/">演示视频</a></li><li><a href="https://github.com/IsBenben/Funny-Things/blob/main/%E5%AD%97%E7%AC%A6%E7%94%BB.py">源代码</a></li></ul>
 </div><div class="aside-item"> <h2>快捷下载</h2> <ul><li><a download href="/raw/characters-drawing.py" title="将下载为：characters-drawing.py">下载：字符画程序</a></li></ul>
 </div></aside> <article> <h1>字符画</h1>
-<p>Python制作的字符画程序，可以把图片用字符显示出来。</p>
-<p>使用方法：安装 <code>pillow</code> 库，在相同目录放置字体文件 <code>font.ttf</code>。</p> </article> </div> </div> </body>
+<p>Python制作的字符画程序，可以把任意图片用字符画的形式显示出来。</p>
+<h2>功能特点</h2>
+<ul>
+<li>支持多种图片格式（<code>JPG</code>、<code>PNG</code>等）</li>
+<li>可自定义字符集</li>
+<li>可调整输出尺寸</li>
+</ul>
+<h2>使用方法</h2>
+<h3>环境准备</h3>
+<ol>
+<li>安装 Python 3.x</li>
+<li>安装依赖库 <code>pillow</code>：<pre><code class="language-bash">pip install pillow
+</code></pre>
+</li>
+<li>准备字体文件：<ul>
+<li>下载或准备一个 TrueType 字体文件（如 <code>font.ttf</code>）</li>
+<li>将字体文件放在与程序相同的目录下</li>
+</ul>
+</li>
+</ol>
+<h3>运行程序</h3>
+<pre><code class="language-bash">python characters-drawing.py
+</code></pre>
+<p>即打开<code>tkinter</code>窗口，选择图片，调整参数，点击转换即可。</p>
+<h2>技术原理</h2>
+<h3>图像处理流程</h3>
+<ol>
+<li><strong>图像读取</strong>：使用 Pillow 库读取原始图片</li>
+<li><strong>尺寸调整</strong>：根据指定的缩放调整图像尺寸</li>
+<li><strong>灰度转换</strong>：将彩色图像转换为灰度图像</li>
+<li><strong>像素映射</strong>：将每个像素的灰度值映射到对应的字符</li>
+<li><strong>字符输出</strong>：生成最终的字符画</li>
+</ol>
+<h3>字符映射原理</h3>
+<p>程序首先读取字体文件，将字符集中的每个字符逐个渲染到一张临时灰度图上，并统计该字符所占像素的平均灰度值，建立灰度与字符的映射表。随后计算目标图片每个像素灰度，再依据映射表二分查找最接近的字符，最终拼接成完整的字符画。</p>
+<h2>注意事项</h2>
+<ul>
+<li>字体文件必须与程序在同一目录下</li>
+<li>调整尺寸再转换，建议调小，过大会影响显示效果</li>
+</ul> </article> </div> </div> </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN"> <head> <meta charset="UTF-8" /> <title>单词接龙 - Benben's Blog</title> <link rel="stylesheet" href="/index.css" /> <script defer src="/index.js"></script> <meta name="description" content="只要单词的首字母和尾字母相同，就可以接上。 如果不会，也可以让 AI 帮助。"> <script defer src="https://cloud.umami.is/script.js" data-website-id="cae6367e-6ca5-4b1e-893e-96c54137a755"></script> </head> <body> <div class="container"> <div class="title-area"> <h1><span>Benben's Blog</span></h1> <nav class="links"> <a href="/" class="return">返回首页</a> </nav> </div> <div class="contents clearfix"> <aside><div class="aside-item"> <h2>文章信息</h2> <div class="metadata-line"><span class="iconfont icon-date">发布日期：2025/3/7</span></div>
+<html lang="zh-CN"> <head> <meta charset="UTF-8" /> <title>单词接龙 - Benben's Blog</title> <link rel="stylesheet" href="/index.css" /> <script defer src="/index.js"></script> <meta name="description" content="单词接龙是一个经典的文字游戏，只要新单词的首字母和前一个单词的尾字母相同，就可以接上。 这个网页版游戏支持不会时AI辅助和释义查询。"> <script defer src="https://cloud.umami.is/script.js" data-website-id="cae6367e-6ca5-4b1e-893e-96c54137a755"></script> </head> <body> <div class="container"> <div class="title-area"> <h1><span>Benben's Blog</span></h1> <nav class="links"> <a href="/" class="return">返回首页</a> </nav> </div> <div class="contents clearfix"> <aside><div class="aside-item"> <h2>文章信息</h2> <div class="metadata-line"><span class="iconfont icon-date">发布日期：2025/3/7</span></div>
 <div class="metadata-line"><a class="tag iconfont icon-tag-lang" style="--tag-width: 2.8" title="语言标签 - 项目主要使用的编程语言&#10;项目主要使用Web技术栈，包括HTML、CSS、JS等。" href="/tags/lang-web.html" >Web</a
 >
 <a class="tag iconfont icon-tag-inspiration" style="--tag-width: 3" title="灵感标签 - 项目创意来源&#10;项目从概念设计到实现均为独立创作，未直接借鉴现有项目。" href="/tags/inspiration-original.html" >原创</a
@@ -10,7 +10,27 @@
 </div><div class="aside-item"> <h2>相关链接</h2> <ul><li><a href="https://github.com/IsBenben/Funny-Things/blob/main/word-solitaire.html">源代码</a></li><li><a href="/raw/word-solitaire.html">体验</a></li></ul>
 </div><div class="aside-item"> <h2>快捷下载</h2> <ul><li><a download href="/raw/word-solitaire.html" title="将下载为：word-solitaire.html">下载</a></li></ul>
 </div></aside> <article> <h1>单词接龙</h1>
-<p>只要单词的首字母和尾字母相同，就可以接上。如果不会，也可以让 <code>AI</code> 帮助。</p>
-<p>若没有单词可接龙，会自动显示消息。在游戏过程中，将鼠标放在单词上，可查看单词的意思。</p>
-<p>支持约15000词接龙和释义查询。</p> </article> </div> </div> </body>
+<p>单词接龙是一个经典的文字游戏，玩家需要根据前一个单词的尾字母，找到一个以该字母开头的新单词。这个网页版游戏支持 AI 辅助和单词释义查询。</p>
+<h2>基本规则</h2>
+<ul>
+<li><strong>首尾相接</strong>：新单词的首字母需要和前一个单词的尾字母完全相同。</li>
+<li><strong>单词有效</strong>：单词必须在游戏字典中，否则无效。</li>
+<li><strong>无重复</strong>：同一个单词在一轮游戏中不能重复使用。</li>
+<li><strong>大小写敏感</strong>：只有小写字母被接受。</li>
+</ul>
+<p>示例如下：</p>
+<pre><code>apple-&gt;elephant-&gt;tiger-&gt;rabbit
+  -&gt;monkey（首尾不相接，无效）
+  -&gt;tiger (重复，无效)
+  -&gt;ttt（不在字典中，无效）
+  -&gt;TURKEY（大小写错误，无效）
+  -&gt;turkey（正确接龙）
+</code></pre>
+<h2>操作方法</h2>
+<p>输入框中输入单词即开始。若没有单词可接龙，会自动显示消息。</p>
+<p>在游戏过程中，将鼠标放在单词上，可查看单词的意思。</p>
+<p>如果不会，可以点击“询问AI”进行 <code>AI</code> 辅助，基于输入匹配单词。</p>
+<h2>游戏特色</h2>
+<p>词汇库支持约15000词接龙和释义查询，涵盖基础词汇、学术词汇等，自动验证输入的单词是否有效。</p>
+<p>释义涵盖基本释义、词性、常见短语对照，可配合玩家理解、学习单词。</p> </article> </div> </div> </body>
 </html>

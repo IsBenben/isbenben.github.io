@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN"> <head> <meta charset="UTF-8" /> <title>Village of Chaos - Benben's Blog</title> <link rel="stylesheet" href="/index.css" /> <script defer src="/index.js"></script> <meta name="description" content="《混乱村庄》是一个简短的文字放置游戏，支持多语言，免费在线游玩。"> <script defer src="https://cloud.umami.is/script.js" data-website-id="cae6367e-6ca5-4b1e-893e-96c54137a755"></script> </head> <body> <div class="container"> <div class="title-area"> <h1><span>Benben's Blog</span></h1> <nav class="links"> <a href="/" class="return">返回首页</a> </nav> </div> <div class="contents clearfix"> <aside><div class="aside-item"> <h2>文章信息</h2> <div class="metadata-line"><span class="iconfont icon-date">发布日期：2026/3/6</span></div>
+<div class="metadata-line"><a class="tag iconfont icon-tag-lang" style="--tag-width: 2.8" title="语言标签 - 项目主要使用的编程语言&#10;项目主要使用Web技术栈，包括HTML、CSS、JS等。" href="/tags/lang-web.html" >Web</a
+>
+<a class="tag iconfont icon-tag-inspiration" style="--tag-width: 3" title="灵感标签 - 项目创意来源&#10;对国际项目或外语资源进行本地化处理，包括界面翻译、文化适配等。" href="/tags/inspiration-localization.html" >汉化</a
+>
+<a class="tag iconfont icon-tag-content" style="--tag-width: 3" title="内容标签 - 项目主要内容&#10;项目以娱乐性交互（好玩）为核心。" href="/tags/content-entertainment.html" >娱乐</a
+>
+</div>
+</div><div class="aside-item"> <h2>相关链接</h2> <ul><li><a href="https://github.com/IsBenben/village-of-chaos">关联仓库（本地化版）</a></li><li><a href="https://github.com/Tearnote/village-of-chaos">关联仓库（英文原版）</a></li><li><a href="https://isbenben.github.io/village-of-chaos/">体验：本地化版</a></li><li><a href="https://tearnote.github.io/village-of-chaos/">体验：英文原版</a></li></ul>
+</div></aside> <article> <h1>Village of Chaos</h1>
+<h2>游戏介绍</h2>
+<p>《混乱村庄》（Village of Chaos）是一个简短的文字放置游戏，由 <a href="https://github.com/Tearnote">Tearnote</a> 使用原生 JavaScript 编写，最初为 <a href="https://codeinstitute.net">Code Institute</a> 的第二次提交项目而制作。</p>
+<h3>游戏目标</h3>
+<p>游戏的目标是逐步建造村庄，管理村民的工作以最大化他们的潜力。玩家需要：</p>
+<ul>
+<li>收集资源（木材、食物、石头）</li>
+<li>邀请村民加入村庄</li>
+<li>建造新建筑（码头、采石场、铁匠铺、学院）</li>
+<li>分配村民到不同的工作岗位</li>
+<li>升级建筑和技能</li>
+<li>完成游戏目标</li>
+</ul>
+<h3>游戏特色</h3>
+<ul>
+<li><strong>放置游戏机制</strong>：游戏可以自动进行，玩家可以随时回来查看进度</li>
+<li><strong>资源管理</strong>：管理木材、食物、石头三种基础资源</li>
+<li><strong>职业系统</strong>：村民可以从事伐木工人、渔夫、矿工、铁匠、教授等职业</li>
+<li><strong>建筑升级</strong>：升级建筑可以提高生产效率和容纳更多村民</li>
+<li><strong>混乱机制</strong>：建筑升级会增加混乱值，影响生产效率</li>
+<li><strong>教程系统</strong>：游戏通过弹窗教程引导玩家了解各项功能</li>
+<li><strong>存档系统</strong>：支持自动保存和手动保存，每5分钟自动保存一次</li>
+</ul>
+<h3>技术栈</h3>
+<ul>
+<li><strong>纯 JavaScript</strong>：不依赖任何框架，使用原生 JavaScript 实现</li>
+<li><strong>HTML5</strong>：使用语义化 HTML 标签</li>
+<li><strong>CSS3</strong>：使用现代 CSS 进行样式设计</li>
+<li><strong>PWA 支持</strong>：支持作为渐进式 Web 应用安装</li>
+<li><strong>响应式设计</strong>：适配桌面和移动设备</li>
+</ul>
+<h2>游戏玩法</h2>
+<h3>基础操作</h3>
+<ol>
+<li><strong>收集资源</strong>：点击&quot;采集木材&quot;和&quot;采集食物&quot;按钮手动收集资源</li>
+<li><strong>邀请村民</strong>：使用食物邀请村民加入村庄</li>
+<li><strong>分配工作</strong>：在&quot;分配&quot;标签页中分配村民到不同的工作岗位</li>
+<li><strong>升级建筑</strong>：在&quot;制造&quot;标签页中使用资源升级建筑</li>
+<li><strong>研究科技</strong>：在&quot;研究&quot;标签页中解锁高级功能</li>
+</ol>
+<h3>职业系统</h3>
+<p>每个建筑都有三种角色：</p>
+<ul>
+<li><strong>村民</strong>：基础工人，产生基础资源</li>
+<li><strong>导师</strong>：提高村民的工作效率</li>
+<li><strong>经理</strong>：提高导师的效率</li>
+</ul>
+<h3>混乱机制</h3>
+<p>建筑升级会增加混乱值，混乱值越高，生产效率越低。需要平衡建筑等级和混乱值。</p>
+<h3>游戏目标</h3>
+<p>摧毁巨石，达到游戏胜利条件。</p>
+<h3>调试模式</h3>
+<p>在浏览器控制台中执行以下代码可以快速获得资源：</p>
+<pre><code class="language-javascript">game.cheat();
+</code></pre>
+<h2>本地化实现</h2>
+<h3>支持的语言</h3>
+<ul>
+<li><strong>英语 (en-US)</strong>：原始语言</li>
+<li><strong>简体中文 (zh-CN)</strong>：本地化版本</li>
+<li><strong>繁体中文 (zh-TW)</strong>：本地化版本</li>
+</ul>
+<h3>本地化架构</h3>
+<p>游戏使用自定义的 i18n（国际化）系统，基于以下文件结构：</p>
+<pre><code>assets/js/i18n/
+├── en_us.js      # 英语翻译
+├── zh_cn.js      # 简体中文翻译
+├── zh_hant.js    # 繁体中文翻译
+└── main.js       # i18n 核心逻辑
+</code></pre>
+<h3>翻译数据结构</h3>
+<p>每种语言的翻译文件导出一个包含所有翻译键值对的对象：</p>
+<pre><code class="language-javascript">// assets/js/i18n/zh_cn.js
+const zh_cn = {
+	&quot;meta.language&quot;: &quot;zh-CN&quot;,
+	&quot;meta.name&quot;: &quot;简体中文&quot;,
+	&quot;text.title&quot;: &quot;Village of Chaos&quot;,
+    // ... 更多翻译
+}
+</code></pre>
+<h3>自定义元素 <code>&lt;t-i18n&gt;</code></h3>
+<p>HTML 中使用自定义元素 <code>&lt;t-i18n&gt;</code> 标记需要翻译的文本：</p>
+<pre><code class="language-html">&lt;h1&gt;&lt;t-i18n k=&quot;text.title&quot;&gt;&lt;/t-i18n&gt;&lt;/h1&gt;
+</code></pre>
+<h3>本地化核心逻辑</h3>
+<p><code>main.js</code> 文件实现了以下功能：</p>
+<ul>
+<li><strong>语言切换</strong>：支持动态切换语言</li>
+<li><strong>文本替换</strong>：自动查找并替换 <code>&lt;t-i18n&gt;</code> 元素中的文本</li>
+<li><strong>回退机制</strong>：当翻译缺失时显示原始键名</li>
+</ul>
+<h3>语言选择界面</h3>
+<p>游戏提供了语言选择界面，用户可以：</p>
+<ul>
+<li>查看所有可用语言</li>
+<li>选择首选语言</li>
+</ul>
+<h3>添加新语言</h3>
+<ol>
+<li>在 <code>assets/js/i18n/</code> 目录下创建新的语言文件</li>
+<li>复制现有语言文件的结构并翻译所有文本</li>
+<li>在 <code>main.js</code> 中注册新语言</li>
+</ol>
+<h2>开发和构建</h2>
+<h3>本地运行</h3>
+<ol>
+<li><p>克隆仓库：</p>
+<pre><code class="language-bash">git clone https://github.com/IsBenben/village-of-chaos.git
+cd village-of-chaos
+</code></pre>
+</li>
+<li><p>使用本地服务器运行（需要 HTTP 服务器）：</p>
+<pre><code class="language-bash"># 使用 Python
+python -m http.server 8000
+
+# 使用 Node.js
+npx http-server
+</code></pre>
+</li>
+<li><p>在浏览器中访问 <code>http://localhost:8000</code></p>
+</li>
+</ol>
+<h2>License</h2>
+<p>本项目基于 <a href="https://github.com/Tearnote/village-of-chaos/blob/main/LICENSE">MIT License</a> 开源。</p> </article> </div> </div> </body>
+</html>

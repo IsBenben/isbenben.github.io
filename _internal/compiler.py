@@ -129,6 +129,9 @@ def parse_page(id: str):
             continue
         keyword = words[0]
         if keyword == '#':
+            if title:
+                article_lines.append(line)
+                continue
             title = words[1]
         elif keyword == '!description':
             description.append(words[1])
