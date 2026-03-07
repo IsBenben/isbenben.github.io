@@ -1,4 +1,5 @@
 # 谷歌翻译十遍（语言包）
+!link https://www.bilibili.com/video/BV1bRcEzHE42/ 演示视频
 !download /raw/google_10.zip 下载资源包
 !date 2026/2/13
 !description 该资源包添加一种语言，名叫“中文（谷歌翻译十遍）”。

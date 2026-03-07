@@ -4,7 +4,9 @@
 !link https://isbenben.github.io/village-of-chaos/ 体验：本地化版
 !link https://tearnote.github.io/village-of-chaos/ 体验：英文原版
 !date 2026/3/6
-!description 《混乱村庄》是一个简短的文字放置游戏，支持多语言，免费在线游玩。
+!description 简短文字放置游戏，原生JS编写，轻松挂机发展村庄。
+!description 支持多语言切换，覆盖中文简繁体。
+!description 完全免费在线游玩，无需下载即开即玩。
 !tag lang web
 !tag inspiration localization
 !tag content entertainment
