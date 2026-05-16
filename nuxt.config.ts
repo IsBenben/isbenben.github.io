@@ -16,9 +16,6 @@ export default defineNuxtConfig({
     exclude: ['/404', '/405'],
   },
   css: ['~/assets/index.css'],
-  app: {
-    buildAssetsDir: 'static',
-  },
   nitro: {
     prerender: {
       crawlLinks: true, // 自动抓取所有动态路由
