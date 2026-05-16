@@ -29,6 +29,9 @@ jobs:
       
       - name: Generate
         run: npm run generate
+      
+      - name: Nojekyll
+        run: touch dist/.nojekyll
 
       - name: Deploy with gh-pages
         run: |
