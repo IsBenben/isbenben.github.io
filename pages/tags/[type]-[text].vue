@@ -27,9 +27,9 @@ const tagName = computed(() => {
 
 useSeoMeta({
   title: () =>
-    (tagName.value ? `搜索${typeName.value}${tagName.value}标签 - ` : '') +
+    (tagName.value ? `搜索${tagName.value}${typeName.value} - ` : '') +
     "Benben's Website",
-  description: `标签搜索页面，展示${typeName.value}标签包含${tagName.value}的所有内容。${tagDescription.value}细致搜索Benben的个人技术博客。`,
+  description: `标签搜索页面，展示${typeName.value}包含${tagName.value}的所有内容。${tagDescription.value}细致搜索Benben的个人技术博客。`,
 });
 </script>
 
@@ -37,7 +37,7 @@ useSeoMeta({
   <div>
     <TagSwitcher :active-tag="{ type, text }" />
     <p class="search-description">
-      显示{{ typeName }}包含{{ tagName }}的所有内容。
+      显示{{ typeName }}包含{{ tagName }}的所有内容。{{ tagDescription }}
     </p>
     <div class="cards">
       <Card
