@@ -29,11 +29,9 @@ useSeoMeta({
           <li>
             欢迎来到我的个人网站
             <strong><CopyableCode>isbenben.github.io</CopyableCode></strong
-            >（
-            <a href="https://github.com/IsBenben/isbenben.github.io">
-              查看源代码
-            </a>
-            ）。
+            >（<a href="https://github.com/IsBenben/isbenben.github.io"
+              >查看源代码</a
+            >）。
           </li>
           <li>
             <strong>Bilibili: </strong>
