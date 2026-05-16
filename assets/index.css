@@ -1,0 +1,311 @@
+@import url('iconfont.css');
+/* Icon Font Inject */
+.iconfont {
+  font-family: unset !important;
+  font-size: unset;
+  font-style: unset;
+  -webkit-font-smoothing: unset;
+  -moz-osx-font-smoothing: unset;
+}
+
+.iconfont::before {
+  font-family: 'iconfont' !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    bottom: 100%;
+    margin-bottom: auto;
+  }
+}
+
+.background {
+  z-index: -10;
+  opacity: 0.3;
+}
+
+.background, .clicks {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  user-select: none;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('JetBrainsMono-Regular.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('JetBrainsMono-Bold.ttf');
+  font-weight: bold;
+}
+
+html {
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: hsl(201, 20%, 10%);
+  color: hsla(0, 0%, 100%, 0.95);
+  font-family: 'JetBrains Mono', sans-serif;
+  padding: 10px;
+  text-wrap: pretty;
+  /* text-align: justify; */
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.container {
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes blendIn {
+  from {
+    filter: blur(30px);
+    letter-spacing: 5px;
+  }
+  to {
+    filter: blur(0);
+    letter-spacing: 1px;
+  }
+}
+
+.title-area {
+  margin: 10px;
+}
+
+.title-area h1 {
+  filter: url(#blend);
+}
+
+.title-area h1 span {
+  animation: blendIn 0.8s forwards;
+}
+
+.links {
+  display: flex;
+  gap: 1em;
+  padding-left: 5px;
+}
+
+.return {
+  padding-left: 5px;
+}
+
+.return::before {
+  content: '◀ ';
+}
+
+a {
+  color: inherit;
+  transition: 0.2s;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.section-link {
+  user-select: none;
+  text-decoration: none;
+  opacity: 0;
+}
+
+.section-heading:hover .section-link {
+  opacity: 0.5;
+}
+
+.section-heading:hover .section-link:hover {
+  opacity: 0.8;
+}
+
+.container .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 20px;
+  margin-top: 1rem;
+}
+
+.information {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 5px;
+}
+
+.information :is(span, a) {
+  opacity: 0.5;
+  display: inline-block;
+  vertical-align: bottom;
+  transition: 0.2s;
+}
+
+.information :hover {
+  opacity: 0.8;
+}
+
+.information .tag {
+  max-width: 1em;
+  text-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.information .tag:hover {
+  max-width: calc(var(--tag-width) * 1em + 2px);
+}
+
+.container .contents {
+  margin: auto;
+  width: 90%;
+}
+
+@keyframes jump {
+  0% {
+    transform: translate(-50%, 20px);
+    filter: blur(1px);
+    opacity: 0;
+  }
+  80% {
+    transform: translate(-50%, -20px);
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -20px);
+    filter: blur(1px);
+    opacity: 0;
+  }
+}
+
+.clicks .click {
+  position: absolute;
+  animation: jump 0.8s forwards;
+}
+
+pre,
+code {
+  background-color: hsla(201, 20%, 100%, 0.1);
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+pre code {
+  background-color: none;
+  padding: 0;
+  cursor: auto;
+}
+
+p,
+ul,
+ol,
+li {
+  margin-left: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.banner {
+  position: relative;
+  min-height: 250px;
+  height: 60vh;
+  transition: 0.2s;
+  text-align: center;
+}
+
+.banner .mask {
+  position: absolute;
+  inset: 0;
+  background-color: hsla(201, 20%, 0%, 0.5);
+  transition: 0.2s;
+}
+
+.banner:hover .mask {
+  background-color: transparent;
+  border-top: 8px solid hsl(201, 20%, 100%);
+  border-bottom: 8px solid hsl(201, 20%, 100%);
+}
+
+.banner:hover {
+  text-shadow: 0 0 10px hsla(201, 20%, 0%, 0.5);
+}
+
+.banner h2 {
+  letter-spacing: 2px;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.banner .contents {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 1.2em;
+}
+
+@keyframes colorful {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.banner:last-of-type {
+  animation: colorful 10s infinite;
+}
+
+.information .iconfont::before {
+  margin-right: 2px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.search-description {
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.visually-hidden {
+  display: none;
+  visibility: hidden;
+}
