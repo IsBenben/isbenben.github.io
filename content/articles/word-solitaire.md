@@ -2,42 +2,28 @@
 {
   "slug": "word-solitaire",
   "title": "单词接龙",
-  "description": [
-    "单词接龙是一个经典的文字游戏，只要新单词的首字母和前一个单词的尾字母相同，就可以接上。",
-    "这个网页版游戏支持不会时AI辅助和释义查询。"
-  ],
+  "description":
+    [
+      "单词接龙是一个经典的文字游戏，只要新单词的首字母和前一个单词的尾字母相同，就可以接上。",
+      "这个网页版游戏支持不会时AI辅助和释义查询。",
+    ],
   "date": "2025/3/7",
-  "tags": [
+  "tags":
     [
-      "lang",
-      "web"
+      ["lang", "web"],
+      ["inspiration", "original"],
+      ["content", "entertainment"],
     ],
+  "links":
     [
-      "inspiration",
-      "original"
+      [
+        "https://github.com/IsBenben/Funny-Things/blob/main/word-solitaire.html",
+        "源代码",
+      ],
+      ["/raw/word-solitaire.html", "体验"],
     ],
-    [
-      "content",
-      "entertainment"
-    ]
-  ],
-  "links": [
-    [
-      "https://github.com/IsBenben/Funny-Things/blob/main/word-solitaire.html",
-      "源代码"
-    ],
-    [
-      "/raw/word-solitaire.html",
-      "体验"
-    ]
-  ],
-  "downloads": [
-    [
-      "/raw/word-solitaire.html",
-      "下载"
-    ]
-  ],
-  "hide": false
+  "downloads": [["/raw/word-solitaire.html", "下载"]],
+  "hide": false,
 }
 ---
 

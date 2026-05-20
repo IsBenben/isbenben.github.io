@@ -2,42 +2,24 @@
 {
   "slug": "characters-drawing",
   "title": "字符画",
-  "description": [
-    "Python制作的字符画程序，可以把图片用字符显示出来。",
-    "使用方法：安装pillow库，在相同目录放置字体font.ttf"
-  ],
+  "description":
+    [
+      "Python制作的字符画程序，可以把图片用字符显示出来。",
+      "使用方法：安装pillow库，在相同目录放置字体font.ttf",
+    ],
   "date": "2024/11/9",
-  "tags": [
+  "tags":
+    [["lang", "python3"], ["inspiration", "original"], ["content", "art"]],
+  "links":
     [
-      "lang",
-      "python3"
+      ["https://www.bilibili.com/video/BV17SDrYEEVS/", "演示视频"],
+      [
+        "https://github.com/IsBenben/Funny-Things/blob/main/%E5%AD%97%E7%AC%A6%E7%94%BB.py",
+        "源代码",
+      ],
     ],
-    [
-      "inspiration",
-      "original"
-    ],
-    [
-      "content",
-      "art"
-    ]
-  ],
-  "links": [
-    [
-      "https://www.bilibili.com/video/BV17SDrYEEVS/",
-      "演示视频"
-    ],
-    [
-      "https://github.com/IsBenben/Funny-Things/blob/main/%E5%AD%97%E7%AC%A6%E7%94%BB.py",
-      "源代码"
-    ]
-  ],
-  "downloads": [
-    [
-      "/raw/characters-drawing.py",
-      "下载：字符画程序"
-    ]
-  ],
-  "hide": false
+  "downloads": [["/raw/characters-drawing.py", "下载：字符画程序"]],
+  "hide": false,
 }
 ---
 

@@ -2,38 +2,22 @@
 {
   "slug": "scratch-language",
   "title": "Scratch-Language",
-  "description": [
-    "用Python为Scratch做的编程语言。",
-    "编译成品为Scratch可直接识别的project.json。",
-    "已经支持基本的编程语法。"
-  ],
+  "description":
+    [
+      "用Python为Scratch做的编程语言。",
+      "编译成品为Scratch可直接识别的project.json。",
+      "已经支持基本的编程语法。",
+    ],
   "date": "2024/8/25",
-  "tags": [
+  "tags":
+    [["lang", "python3"], ["inspiration", "original"], ["content", "tool"]],
+  "links":
     [
-      "lang",
-      "python3"
+      ["https://github.com/IsBenben/Scratch-Language", "关联仓库"],
+      ["https://www.bilibili.com/video/BV1G31iY3ETX", "演示视频"],
     ],
-    [
-      "inspiration",
-      "original"
-    ],
-    [
-      "content",
-      "tool"
-    ]
-  ],
-  "links": [
-    [
-      "https://github.com/IsBenben/Scratch-Language",
-      "关联仓库"
-    ],
-    [
-      "https://www.bilibili.com/video/BV1G31iY3ETX",
-      "演示视频"
-    ]
-  ],
   "downloads": [],
-  "hide": false
+  "hide": false,
 }
 ---
 
@@ -52,6 +36,7 @@
 已经支持基本的语法。包括注释、函数、变量、判断、运算、列表、循环。
 
 ## 使用
+
 ```bash
 git clone https://github.com/IsBenben/Scratch-Language.git
 cd Scratch-Language

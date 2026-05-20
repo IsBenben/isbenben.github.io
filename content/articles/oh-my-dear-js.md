@@ -2,43 +2,26 @@
 {
   "slug": "oh-my-dear-js",
   "title": "Oh my dear JavaScript",
-  "description": [
-    "在JavaScript中，==相等运算符有一些特殊的行为。",
-    "这个消消乐游戏利用了这一特点。",
-    "只要每个选择的相邻元素满足==判断为true，就可以消除。消除的越多得分越多。"
-  ],
+  "description":
+    [
+      "在JavaScript中，==相等运算符有一些特殊的行为。",
+      "这个消消乐游戏利用了这一特点。",
+      "只要每个选择的相邻元素满足==判断为true，就可以消除。消除的越多得分越多。",
+    ],
   "date": "2025/2/9",
-  "tags": [
+  "tags":
     [
-      "lang",
-      "scratch3"
+      ["lang", "scratch3"],
+      ["inspiration", "adaptation"],
+      ["content", "entertainment"],
     ],
+  "links":
     [
-      "inspiration",
-      "adaptation"
+      ["/raw/oh-my-dear-js.html", "体验游戏"],
+      ["https://js.wdn.md/", "原作品（Vue）"],
     ],
-    [
-      "content",
-      "entertainment"
-    ]
-  ],
-  "links": [
-    [
-      "/raw/oh-my-dear-js.html",
-      "体验游戏"
-    ],
-    [
-      "https://js.wdn.md/",
-      "原作品（Vue）"
-    ]
-  ],
-  "downloads": [
-    [
-      "/raw/oh-my-dear-js.sb3",
-      "下载：游戏SB3"
-    ]
-  ],
-  "hide": false
+  "downloads": [["/raw/oh-my-dear-js.sb3", "下载：游戏SB3"]],
+  "hide": false,
 }
 ---
 
@@ -47,6 +30,7 @@
 这个游戏是一个Scratch消消乐游戏，改编了nice.js——js真值表消消乐。
 
 在JavaScript中，`==` 相等是再正常不过的运算符：
+
 ```js
 []==[] // false
 []==![] // true

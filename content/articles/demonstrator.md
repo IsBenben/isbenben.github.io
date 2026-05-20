@@ -2,54 +2,32 @@
 {
   "slug": "demonstrator",
   "title": "XXXX 论证器",
-  "description": [
-    "这个小程序复制了以 MIT License 开源的 https://github.com/itorr/homo 代码。",
-    "可论证任何数字为 5277 和 7725。"
-  ],
+  "description":
+    [
+      "这个小程序复制了以 MIT License 开源的 https://github.com/itorr/homo 代码。",
+      "可论证任何数字为 5277 和 7725。",
+    ],
   "date": "2025/2/3",
-  "tags": [
+  "tags": [["lang", "web"], ["inspiration", "adaptation"], ["content", "tool"]],
+  "links":
     [
-      "lang",
-      "web"
+      [
+        "https://github.com/IsBenben/Funny-Things/blob/main/5277-demonstrator.html",
+        "源代码（5277）",
+      ],
+      [
+        "https://github.com/IsBenben/Funny-Things/blob/main/7725-demonstrator.html",
+        "源代码（7725）",
+      ],
+      ["/raw/5277-demonstrator.html", "体验：5277论证器"],
+      ["/raw/7725-demonstrator.html", "体验：7725论证器"],
     ],
+  "downloads":
     [
-      "inspiration",
-      "adaptation"
+      ["/raw/5277-demonstrator.html", "下载：5277论证器"],
+      ["/raw/7725-demonstrator.html", "下载：7725论证器"],
     ],
-    [
-      "content",
-      "tool"
-    ]
-  ],
-  "links": [
-    [
-      "https://github.com/IsBenben/Funny-Things/blob/main/5277-demonstrator.html",
-      "源代码（5277）"
-    ],
-    [
-      "https://github.com/IsBenben/Funny-Things/blob/main/7725-demonstrator.html",
-      "源代码（7725）"
-    ],
-    [
-      "/raw/5277-demonstrator.html",
-      "体验：5277论证器"
-    ],
-    [
-      "/raw/7725-demonstrator.html",
-      "体验：7725论证器"
-    ]
-  ],
-  "downloads": [
-    [
-      "/raw/5277-demonstrator.html",
-      "下载：5277论证器"
-    ],
-    [
-      "/raw/7725-demonstrator.html",
-      "下载：7725论证器"
-    ]
-  ],
-  "hide": false
+  "hide": false,
 }
 ---
 

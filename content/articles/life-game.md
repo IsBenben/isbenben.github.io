@@ -2,47 +2,26 @@
 {
   "slug": "life-game",
   "title": "Scratch 生命游戏",
-  "description": [
-    "本程序模拟了生命游戏的一种规则：B3/S23，即康威生命游戏的初始版本。",
-    "新版本是自制的无限地图生命游戏，操作简单。",
-    "旧版本参考教程视频，提供有限的地图。"
-  ],
+  "description":
+    [
+      "本程序模拟了生命游戏的一种规则：B3/S23，即康威生命游戏的初始版本。",
+      "新版本是自制的无限地图生命游戏，操作简单。",
+      "旧版本参考教程视频，提供有限的地图。",
+    ],
   "date": "2025/7/20",
-  "tags": [
+  "tags":
+    [["lang", "scratch3"], ["inspiration", "adaptation"], ["content", "art"]],
+  "links":
     [
-      "lang",
-      "scratch3"
+      ["https://www.bilibili.com/video/BV1ingezAEem/", "演示视频（新版本）"],
+      ["/raw/infinity-life-game.html", "体验：新版本"],
     ],
+  "downloads":
     [
-      "inspiration",
-      "adaptation"
+      ["/raw/infinity-life-game.sb3", "下载：新版本"],
+      ["/raw/life-game.sb3", "下载：旧版本"],
     ],
-    [
-      "content",
-      "art"
-    ]
-  ],
-  "links": [
-    [
-      "https://www.bilibili.com/video/BV1ingezAEem/",
-      "演示视频（新版本）"
-    ],
-    [
-      "/raw/infinity-life-game.html",
-      "体验：新版本"
-    ]
-  ],
-  "downloads": [
-    [
-      "/raw/infinity-life-game.sb3",
-      "下载：新版本"
-    ],
-    [
-      "/raw/life-game.sb3",
-      "下载：旧版本"
-    ]
-  ],
-  "hide": false
+  "hide": false,
 }
 ---
 

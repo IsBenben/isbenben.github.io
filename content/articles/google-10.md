@@ -2,39 +2,18 @@
 {
   "slug": "google-10",
   "title": "谷歌翻译十遍（语言包）",
-  "description": [
-    "该资源包添加一种语言，名叫“中文（谷歌翻译十遍）”。",
-    "其文本使用谷歌翻译，从英文开始，在随机语言间翻译，最后出现一些滑稽的翻译结果。",
-    "支持Minecraft 1.21.9。"
-  ],
+  "description":
+    [
+      "该资源包添加一种语言，名叫“中文（谷歌翻译十遍）”。",
+      "其文本使用谷歌翻译，从英文开始，在随机语言间翻译，最后出现一些滑稽的翻译结果。",
+      "支持Minecraft 1.21.9。",
+    ],
   "date": "2026/2/13",
-  "tags": [
-    [
-      "lang",
-      "minecraft"
-    ],
-    [
-      "inspiration",
-      "adaptation"
-    ],
-    [
-      "content",
-      "art"
-    ]
-  ],
-  "links": [
-    [
-      "https://www.bilibili.com/video/BV1bRcEzHE42/",
-      "演示视频"
-    ]
-  ],
-  "downloads": [
-    [
-      "/raw/google_10.zip",
-      "下载资源包"
-    ]
-  ],
-  "hide": false
+  "tags":
+    [["lang", "minecraft"], ["inspiration", "adaptation"], ["content", "art"]],
+  "links": [["https://www.bilibili.com/video/BV1bRcEzHE42/", "演示视频"]],
+  "downloads": [["/raw/google_10.zip", "下载资源包"]],
+  "hide": false,
 }
 ---
 
@@ -49,6 +28,7 @@
 ## 安装方式
 
 资源包支持Minecraft 1.21.9。
+
 1. 下载Minecraft 1.21.9的原版游戏和 `google_10.zip` 资源包。
 2. 在游戏根目录下新建 `resourcepacks` 文件夹。
 3. 将 `google_10.zip` 拖入 `resourcepacks` 文件夹。

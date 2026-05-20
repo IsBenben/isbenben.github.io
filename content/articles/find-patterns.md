@@ -2,42 +2,24 @@
 {
   "slug": "find-patterns",
   "title": "“找规律”",
-  "description": [
-    "Python程序，可以通过多项式拟合几乎任意的数列，即\"找规律\"。",
-    "原理是一种类似于拉格朗日插值的算法。"
-  ],
+  "description":
+    [
+      'Python程序，可以通过多项式拟合几乎任意的数列，即"找规律"。',
+      "原理是一种类似于拉格朗日插值的算法。",
+    ],
   "date": "2025/2/3",
-  "tags": [
+  "tags":
+    [["lang", "python3"], ["inspiration", "original"], ["content", "tool"]],
+  "links":
     [
-      "lang",
-      "python3"
+      ["https://www.bilibili.com/video/BV1D9PQeaEBf/", "演示视频"],
+      [
+        "https://github.com/IsBenben/Funny-Things/blob/main/%E6%89%BE%E8%A7%84%E5%BE%8B.py",
+        "源代码",
+      ],
     ],
-    [
-      "inspiration",
-      "original"
-    ],
-    [
-      "content",
-      "tool"
-    ]
-  ],
-  "links": [
-    [
-      "https://www.bilibili.com/video/BV1D9PQeaEBf/",
-      "演示视频"
-    ],
-    [
-      "https://github.com/IsBenben/Funny-Things/blob/main/%E6%89%BE%E8%A7%84%E5%BE%8B.py",
-      "源代码"
-    ]
-  ],
-  "downloads": [
-    [
-      "/raw/find-patterns.py",
-      "下载：Python程序"
-    ]
-  ],
-  "hide": false
+  "downloads": [["/raw/find-patterns.py", "下载：Python程序"]],
+  "hide": false,
 }
 ---
 

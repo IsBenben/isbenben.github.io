@@ -2,46 +2,28 @@
 {
   "slug": "village-of-chaos",
   "title": "Village of Chaos",
-  "description": [
-    "简短文字放置游戏，原生JS编写，轻松挂机发展村庄。",
-    "支持多语言切换，覆盖中文简繁体。",
-    "完全免费在线游玩，无需下载即开即玩。"
-  ],
+  "description":
+    [
+      "简短文字放置游戏，原生JS编写，轻松挂机发展村庄。",
+      "支持多语言切换，覆盖中文简繁体。",
+      "完全免费在线游玩，无需下载即开即玩。",
+    ],
   "date": "2026/3/6",
-  "tags": [
+  "tags":
     [
-      "lang",
-      "web"
+      ["lang", "web"],
+      ["inspiration", "localization"],
+      ["content", "entertainment"],
     ],
+  "links":
     [
-      "inspiration",
-      "localization"
+      ["https://github.com/IsBenben/village-of-chaos", "关联仓库（本地化版）"],
+      ["https://github.com/Tearnote/village-of-chaos", "关联仓库（英文原版）"],
+      ["https://isbenben.github.io/village-of-chaos/", "体验：本地化版"],
+      ["https://tearnote.github.io/village-of-chaos/", "体验：英文原版"],
     ],
-    [
-      "content",
-      "entertainment"
-    ]
-  ],
-  "links": [
-    [
-      "https://github.com/IsBenben/village-of-chaos",
-      "关联仓库（本地化版）"
-    ],
-    [
-      "https://github.com/Tearnote/village-of-chaos",
-      "关联仓库（英文原版）"
-    ],
-    [
-      "https://isbenben.github.io/village-of-chaos/",
-      "体验：本地化版"
-    ],
-    [
-      "https://tearnote.github.io/village-of-chaos/",
-      "体验：英文原版"
-    ]
-  ],
   "downloads": [],
-  "hide": false
+  "hide": false,
 }
 ---
 
@@ -139,11 +121,11 @@ assets/js/i18n/
 ```javascript
 // assets/js/i18n/zh_cn.js
 const zh_cn = {
-	"meta.language": "zh-CN",
-	"meta.name": "简体中文",
-	"text.title": "Village of Chaos",
-    // ... 更多翻译
-}
+  "meta.language": "zh-CN",
+  "meta.name": "简体中文",
+  "text.title": "Village of Chaos",
+  // ... 更多翻译
+};
 ```
 
 ### 自定义元素 `<t-i18n>`
@@ -180,16 +162,18 @@ HTML 中使用自定义元素 `<t-i18n>` 标记需要翻译的文本：
 ### 本地运行
 
 1. 克隆仓库：
+
    ```bash
    git clone https://github.com/IsBenben/village-of-chaos.git
    cd village-of-chaos
    ```
 
 2. 使用本地服务器运行（需要 HTTP 服务器）：
+
    ```bash
    # 使用 Python
    python -m http.server 8000
-   
+
    # 使用 Node.js
    npx http-server
    ```

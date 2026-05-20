@@ -2,39 +2,22 @@
 {
   "slug": "numbers-eating-game",
   "title": "大数吃小数游戏",
-  "description": [
-    "你通过↑↓←→方向键操控着数字1。舞台上随机刷新数字。",
-    "这个数字碰到比它小的数字就会吃掉它，并加上它的数值。",
-    "游戏后期还会解锁+-*/和更大的数字！挑战极限！"
-  ],
+  "description":
+    [
+      "你通过↑↓←→方向键操控着数字1。舞台上随机刷新数字。",
+      "这个数字碰到比它小的数字就会吃掉它，并加上它的数值。",
+      "游戏后期还会解锁+-*/和更大的数字！挑战极限！",
+    ],
   "date": "2025/2/17",
-  "tags": [
+  "tags":
     [
-      "lang",
-      "scratch3"
+      ["lang", "scratch3"],
+      ["inspiration", "adaptation"],
+      ["content", "entertainment"],
     ],
-    [
-      "inspiration",
-      "adaptation"
-    ],
-    [
-      "content",
-      "entertainment"
-    ]
-  ],
-  "links": [
-    [
-      "/raw/numbers-eating-game.html",
-      "体验游戏"
-    ]
-  ],
-  "downloads": [
-    [
-      "/raw/numbers-eating-game.sb3",
-      "下载游戏SB3"
-    ]
-  ],
-  "hide": false
+  "links": [["/raw/numbers-eating-game.html", "体验游戏"]],
+  "downloads": [["/raw/numbers-eating-game.sb3", "下载游戏SB3"]],
+  "hide": false,
 }
 ---
 
