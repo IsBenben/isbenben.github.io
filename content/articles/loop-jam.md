@@ -2,53 +2,32 @@
 {
   "slug": "loop-jam",
   "title": "2^1024 Loops",
-  "description": [
-    "2^1024 Loops 是由 MrRedShark77 在 GMTK Game Jam 2025 上制作的游戏。游戏的目标是通过编程，达到 2^1024（约 1.8x10^308）。",
-    "本文章提供游戏相关教程和攻略。"
-  ],
+  "description":
+    [
+      "2^1024 Loops 是由 MrRedShark77 在 GMTK Game Jam 2025 上制作的游戏。游戏的目标是通过编程，达到 2^1024（约 1.8x10^308）。",
+      "本文章提供游戏相关教程和攻略。",
+    ],
   "date": "2025/8/14",
-  "tags": [
+  "tags":
     [
-      "lang",
-      "web"
+      ["lang", "web"],
+      ["inspiration", "localization"],
+      ["content", "entertainment"],
     ],
+  "links":
     [
-      "inspiration",
-      "localization"
+      ["https://www.bilibili.com/video/BV1vhbkzPEJv/", "隐藏成就攻略"],
+      ["https://github.com/IsBenben/loop-jam-cn", "关联仓库（汉化插件版）"],
+      ["https://mrredshark77.github.io/loop-jam/", "关联仓库（英文原版）"],
+      ["https://isbenben.github.io/loop-jam-cn", "体验：汉化插件版"],
+      [
+        "https://html-classic.itch.zone/html/14534996/index.html",
+        "体验：英文原版（链接1）",
+      ],
+      ["https://mrredshark77.github.io/loop-jam/", "体验：英文原版（链接2）"],
     ],
-    [
-      "content",
-      "entertainment"
-    ]
-  ],
-  "links": [
-    [
-      "https://www.bilibili.com/video/BV1vhbkzPEJv/",
-      "隐藏成就攻略"
-    ],
-    [
-      "https://github.com/IsBenben/loop-jam-cn",
-      "关联仓库（汉化插件版）"
-    ],
-    [
-      "https://mrredshark77.github.io/loop-jam/",
-      "关联仓库（英文原版）"
-    ],
-    [
-      "https://isbenben.github.io/loop-jam-cn",
-      "体验：汉化插件版"
-    ],
-    [
-      "https://html-classic.itch.zone/html/14534996/index.html",
-      "体验：英文原版（链接1）"
-    ],
-    [
-      "https://mrredshark77.github.io/loop-jam/",
-      "体验：英文原版（链接2）"
-    ]
-  ],
   "downloads": [],
-  "hide": false
+  "hide": false,
 }
 ---
 

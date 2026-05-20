@@ -2,39 +2,18 @@
 {
   "slug": "fuck-school",
   "title": "Fuck School",
-  "description": [
-    "Fuck School 是一个基于 Python 的工具，用于在学校的信息技术课堂上对电脑进行恶搞操作。",
-    "本程序仅适用于 Windows 操作系统。",
-    "仅仅为了玩梗。请不要真的运行此程序，后果自负。"
-  ],
+  "description":
+    [
+      "Fuck School 是一个基于 Python 的工具，用于在学校的信息技术课堂上对电脑进行恶搞操作。",
+      "本程序仅适用于 Windows 操作系统。",
+      "仅仅为了玩梗。请不要真的运行此程序，后果自负。",
+    ],
   "date": "2024/9/20",
-  "tags": [
-    [
-      "lang",
-      "python3"
-    ],
-    [
-      "inspiration",
-      "original"
-    ],
-    [
-      "content",
-      "tool"
-    ]
-  ],
-  "links": [
-    [
-      "https://github.com/IsBenben/Fuck_school",
-      "关联仓库"
-    ]
-  ],
-  "downloads": [
-    [
-      "/raw/fuck-school.py",
-      "下载：Python程序"
-    ]
-  ],
-  "hide": true
+  "tags":
+    [["lang", "python3"], ["inspiration", "original"], ["content", "tool"]],
+  "links": [["https://github.com/IsBenben/Fuck_school", "关联仓库"]],
+  "downloads": [["/raw/fuck-school.py", "下载：Python程序"]],
+  "hide": true,
 }
 ---
 

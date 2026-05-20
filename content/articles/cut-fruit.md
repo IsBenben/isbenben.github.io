@@ -2,38 +2,21 @@
 {
   "slug": "cut-fruit",
   "title": "切水果",
-  "description": [
-    "Scratch休闲游戏，键盘操作简单易上手，切水果感受舒适爽感，多种升级可用。",
-    "在升级的加持下，切碎上千水果，通关游戏！"
-  ],
+  "description":
+    [
+      "Scratch休闲游戏，键盘操作简单易上手，切水果感受舒适爽感，多种升级可用。",
+      "在升级的加持下，切碎上千水果，通关游戏！",
+    ],
   "date": "2025/1/24",
-  "tags": [
+  "tags":
     [
-      "lang",
-      "scratch3"
+      ["lang", "scratch3"],
+      ["inspiration", "adaptation"],
+      ["content", "entertainment"],
     ],
-    [
-      "inspiration",
-      "adaptation"
-    ],
-    [
-      "content",
-      "entertainment"
-    ]
-  ],
-  "links": [
-    [
-      "/raw/cut-fruit.html",
-      "体验"
-    ]
-  ],
-  "downloads": [
-    [
-      "/raw/cut-fruit.sb3",
-      "下载"
-    ]
-  ],
-  "hide": false
+  "links": [["/raw/cut-fruit.html", "体验"]],
+  "downloads": [["/raw/cut-fruit.sb3", "下载"]],
+  "hide": false,
 }
 ---
 

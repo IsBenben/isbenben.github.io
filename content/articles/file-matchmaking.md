@@ -2,38 +2,27 @@
 {
   "slug": "file-matchmaking",
   "title": "文件消消乐",
-  "description": [
-    "这个程序会帮你创建很多文件，删除的文件会被重新创建。",
-    "删除的越多得分越多。"
-  ],
+  "description":
+    [
+      "这个程序会帮你创建很多文件，删除的文件会被重新创建。",
+      "删除的越多得分越多。",
+    ],
   "date": "2025/3/1",
-  "tags": [
+  "tags":
     [
-      "lang",
-      "python3"
+      ["lang", "python3"],
+      ["inspiration", "original"],
+      ["content", "entertainment"],
     ],
+  "links":
     [
-      "inspiration",
-      "original"
+      [
+        "https://github.com/IsBenben/Funny-Things/blob/main/file-matchmaking.py",
+        "源代码",
+      ],
     ],
-    [
-      "content",
-      "entertainment"
-    ]
-  ],
-  "links": [
-    [
-      "https://github.com/IsBenben/Funny-Things/blob/main/file-matchmaking.py",
-      "源代码"
-    ]
-  ],
-  "downloads": [
-    [
-      "/raw/file-matchmaking.py",
-      "下载：Python程序"
-    ]
-  ],
-  "hide": false
+  "downloads": [["/raw/file-matchmaking.py", "下载：Python程序"]],
+  "hide": false,
 }
 ---
 
