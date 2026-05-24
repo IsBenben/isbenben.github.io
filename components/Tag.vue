@@ -11,6 +11,10 @@ const typeName = computed(() => {
   return tagsData[props.type]?.name;
 });
 
+const typeIcon = computed(() => {
+  return tagsData[props.type]?.icon;
+});
+
 const typeDescription = computed(() => {
   return tagsData[props.type]?.description;
 });
@@ -33,12 +37,11 @@ const tagWidth = computed(() => {
 
 <template>
   <a
-    class="tag iconfont"
-    :class="`icon-tag-${type}`"
+    class="tag"
     :style="{ '--tag-width': tagWidth }"
     :href="`/tags/${type}-${text}`"
     :title="`${typeName} - ${typeDescription}\n${tagDescription}`"
   >
-    {{ tagName }}
+    <Icon :icon="typeIcon" />{{ tagName }}
   </a>
 </template>

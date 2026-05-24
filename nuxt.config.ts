@@ -10,12 +10,13 @@ export default defineNuxtConfig({
   ssr: true,
   compatibilityDate: '2026-04-29',
   modules: ['@nuxt/content', 'nuxt-github-pages', '@nuxtjs/sitemap'],
-  site: { url: 'https://isbenben.github.io' }, // 请务必设置你的线上域名
+  plugins: ['~/plugins/fontawesome.ts'],
+  site: { url: 'https://isbenben.github.io' },
   sitemap: {
     autoLastmod: true,
     exclude: ['/404', '/405'],
   },
-  css: ['~/assets/index.css'],
+  css: ['~/assets/index.css', '@fortawesome/fontawesome-svg-core/styles.css'],
   nitro: {
     prerender: {
       crawlLinks: true, // 自动抓取所有动态路由
@@ -23,11 +24,8 @@ export default defineNuxtConfig({
   },
   vite: {
     optimizeDeps: {
-      include: [
-        '@vue/devtools-core',
-        '@vue/devtools-kit',
-      ]
-    }
+      include: ['@vue/devtools-core', '@vue/devtools-kit'],
+    },
   },
   content: {
     build: {

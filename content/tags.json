@@ -2,6 +2,7 @@
     "lang": {
         "name": "语言标签",
         "description": "项目主要使用的编程语言",
+        "icon": "fa-solid fa-code",
         "value": {
             "python3": {
                 "name": "Python3",
@@ -24,6 +25,7 @@
     "inspiration": {
         "name": "灵感标签",
         "description": "项目创意来源",
+        "icon": "fa-regular fa-lightbulb",
         "value": {
             "original": {
                 "name": "原创",
@@ -42,6 +44,7 @@
     "content": {
         "name": "内容标签",
         "description": "项目主要内容",
+        "icon": "fa-solid fa-table-cells-large",
         "value": {
             "entertainment": {
                 "name": "娱乐",

@@ -18,7 +18,6 @@ if (process.client) {
 </script>
 
 <style scoped>
-
 .card-container .card {
   background-color: hsla(201, 20%, 100%, 0.1);
   position: relative;
@@ -61,23 +60,27 @@ if (process.client) {
 <template>
   <div class="card-container">
     <div class="card" ref="cardRef">
-    <div class="inner">
-      <h2>
-        <a :href="`/pages/${article.slug}`">{{ article.title }}</a>
-      </h2>
-      <p>
-        <template v-for="(item, index) in article.description" :key="index">
-          {{ item }}
-          <br v-if="index !== article.description.length - 1" />
-        </template>
-      </p>
-      <div class="information">
-        <span class="iconfont icon-date">日期：{{ article.date }}</span>
-        <template v-for="(tag, idx) in article.tags" :key="idx"
-          >&nbsp;<Tag :type="tag[0]" :text="tag[1]"
-        /></template>
+      <div class="inner">
+        <h2>
+          <a :href="`/pages/${article.slug}`">{{ article.title }}</a>
+        </h2>
+        <p>
+          <template v-for="(item, index) in article.description" :key="index">
+            {{ item }}
+            <br v-if="index !== article.description.length - 1" />
+          </template>
+        </p>
+        <div class="information">
+          <span
+            ><Icon icon="fa-regular fa-calendar-days" />日期：{{
+              article.date
+            }}</span
+          >
+          <template v-for="(tag, idx) in article.tags" :key="idx"
+            >&nbsp;<Tag :type="tag[0]" :text="tag[1]"
+          /></template>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 </template>
