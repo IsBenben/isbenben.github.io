@@ -1,17 +1,5 @@
-@import url('iconfont.css');
-/* Icon Font Inject */
-.iconfont {
-  font-family: unset !important;
-  font-size: unset;
-  font-style: unset;
-  -webkit-font-smoothing: unset;
-  -moz-osx-font-smoothing: unset;
-}
-
-.iconfont::before {
-  font-family: 'iconfont' !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.svg-inline--fa {
+  width: var(--fa-width, 1em) !important;
 }
 
 * {
@@ -26,15 +14,27 @@
   clear: both;
 }
 
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    bottom: 100%;
-    margin-bottom: auto;
-  }
+:root {
+  scrollbar-width: auto;
+  scrollbar-color: hsl(201, 20%, 30%) hsl(201, 20%, 10%);
+}
+
+:root::-webkit-scrollbar {
+  width: 12px;
+}
+
+:root::-webkit-scrollbar-track {
+  background: hsl(201, 20%, 10%);
+  border-radius: 6px;
+}
+
+:root::-webkit-scrollbar-thumb {
+  background: hsl(201, 20%, 25%);
+  border-radius: 6px;
+}
+
+:root::-webkit-scrollbar-thumb:hover {
+  background: hsl(201, 20%, 30%);
 }
 
 .background {
@@ -42,7 +42,8 @@
   opacity: 0.3;
 }
 
-.background, .clicks {
+.background,
+.clicks {
   position: fixed;
   inset: 0;
   width: 100vw;
@@ -77,7 +78,7 @@ body {
   /* text-align: justify; */
 }
 
-@keyframes fadeIn {
+/* @keyframes fadeIn {
   from {
     transform: translateY(100px);
     opacity: 0;
@@ -90,7 +91,7 @@ body {
 
 .container {
   animation: fadeIn 0.5s forwards;
-}
+} */
 
 @keyframes blendIn {
   from {
@@ -166,14 +167,14 @@ a:hover {
   padding: 5px;
 }
 
-.information :is(span, a) {
+.information > :is(span, a) {
   opacity: 0.5;
   display: inline-block;
   vertical-align: bottom;
   transition: 0.2s;
 }
 
-.information :hover {
+.information > :is(span, a):hover {
   opacity: 0.8;
 }
 
@@ -185,7 +186,7 @@ a:hover {
 }
 
 .information .tag:hover {
-  max-width: calc(var(--tag-width) * 1em + 2px);
+  max-width: calc(var(--tag-width, 100) * 1em + 2px);
 }
 
 .container .contents {
@@ -226,9 +227,33 @@ code {
 }
 
 pre code {
-  background-color: none;
+  background-color: unset;
   padding: 0;
   cursor: auto;
+}
+
+pre {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: hsl(201, 20%, 30%) hsl(201, 20%, 20%);
+}
+
+pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+pre::-webkit-scrollbar-track {
+  background: hsl(201, 20%, 18%);
+  border-radius: 3px;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: hsl(201, 20%, 24%);
+  border-radius: 3px;
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+  background: hsl(201, 20%, 30%);
 }
 
 p,

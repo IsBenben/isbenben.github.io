@@ -7,7 +7,7 @@
   margin-top: 20vh;
 }
 
-.error .opps {
+.error .oops {
   font-size: 1rem;
   margin-bottom: 10px;
   letter-spacing: 2px;
@@ -26,12 +26,21 @@
   font-size: 1rem;
   display: block;
 }
+
+.circled {
+  border-radius: 50%;
+  padding: 2px;
+  border: 2px solid;
+}
 </style>
 
 <template>
   <div class="error">
-        <div class="opps iconfont icon-error">出错了</div>
+    <div class="oops">
+      <Icon icon="fa-solid fa-exclamation" class="circled" />
+      出错了
+    </div>
     <slot></slot>
-        <a href="/" class="return">返回首页</a>
+    <a href="/" class="return">返回首页</a>
   </div>
 </template>

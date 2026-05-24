@@ -10,7 +10,7 @@ aside {
   margin-left: 10px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   aside {
     float: unset;
     width: unset;
@@ -36,17 +36,19 @@ aside {
     <div class="aside-item">
       <h2>文章信息</h2>
       <div class="metadata-line">
-        <span class="iconfont icon-date">发布日期：{{ article.date }}</span>
+        <Icon icon="far fa-calendar-days" />发布日期：{{ article.date }}
       </div>
-      <div class="metadata-line"><template v-for="(tag, idx) in article.tags" :key="idx"
-          ><Tag :type="tag[0]" :text="tag[1]"
-        />&nbsp;</template></div>
+      <div class="metadata-line">
+        <template v-for="(tag, idx) in article.tags" :key="idx"
+          ><Tag :type="tag[0]" :text="tag[1]" />&nbsp;</template
+        >
+      </div>
     </div>
     <div class="aside-item" v-if="article.links.length > 0">
       <h2>相关链接</h2>
       <ul>
         <li v-for="link in article.links">
-          <a :href="link[0]">{{link[1]}}</a>
+          <a :href="link[0]">{{ link[1] }}</a>
         </li>
       </ul>
     </div>
@@ -54,7 +56,12 @@ aside {
       <h2>快捷下载</h2>
       <ul>
         <li v-for="download in article.downloads">
-          <a download :href="download[0]" :title="`将下载为：${download[0].split('/').pop()}`">{{download[1]}}</a>
+          <a
+            download
+            :href="download[0]"
+            :title="`将下载为：${download[0].split('/').pop()}`"
+            >{{ download[1] }}</a
+          >
         </li>
       </ul>
     </div>
