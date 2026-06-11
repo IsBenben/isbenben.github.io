@@ -1,7 +1,5 @@
 ---
 {
-  "slug": "loop-jam",
-  "title": "2^1024 Loops",
   "description":
     [
       "2^1024 Loops 是由 MrRedShark77 在 GMTK Game Jam 2025 上制作的游戏。游戏的目标是通过编程，达到 2^1024（约 1.8x10^308）。",
@@ -30,6 +28,8 @@
   "hide": false,
 }
 ---
+
+# 2^1024 Loops
 
 ## 游戏介绍
 

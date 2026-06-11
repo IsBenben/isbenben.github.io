@@ -6,11 +6,11 @@ definePageMeta({
   layout: false,
 });
 
-const { data: articles } = await useAsyncData('home', () =>
-  queryCollection('articles')
+const { data: articles } = await useAsyncData('pages-all', () =>
+  queryCollection('pages')
     .where('hide', '<>', true)
     .order('date', 'DESC')
-    .select('slug', 'title', 'description', 'date', 'tags')
+    .select('title', 'description', 'date', 'tags', 'path')
     .all(),
 );
 
@@ -47,7 +47,7 @@ useSeoMeta({
       <div class="cards">
         <Card
           v-for="article in articles"
-          :key="article._path"
+          :key="article.path"
           :article="article"
         />
       </div>

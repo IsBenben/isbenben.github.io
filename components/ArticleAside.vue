@@ -1,4 +1,6 @@
 <script setup>
+import TableOfContents from './TableOfContents.vue';
+
 const props = defineProps(['article']);
 const article = props.article;
 </script>
@@ -8,6 +10,7 @@ aside {
   float: right;
   width: 300px;
   margin-left: 10px;
+  flex-shrink: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -15,6 +18,7 @@ aside {
     float: unset;
     width: unset;
     margin: 10px 0;
+    flex-shrink: 1;
   }
 }
 
@@ -28,6 +32,11 @@ aside {
 .metadata-line {
   margin-left: 1em;
   opacity: 0.9;
+}
+
+.aside-item.sticky {
+  position: sticky;
+  top: 10px;
 }
 </style>
 
@@ -64,6 +73,10 @@ aside {
           >
         </li>
       </ul>
+    </div>
+    <div class="aside-item sticky" v-if="article.body?.toc?.links.length">
+      <h2>目录</h2>
+      <TableOfContents :article="article" />
     </div>
   </aside>
 </template>

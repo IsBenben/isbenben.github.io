@@ -39,7 +39,7 @@ onMounted(() => {
     ctx.font = `${fontsize}px 'JetBrains Mono', sans-serif`;
     const columns = Math.ceil(background.width / fontsize);
     for (let i = 0; i < columns - charIndex.length; i++) {
-      charIndex.push(0);
+      charIndex.push(1000);
     }
     for (let i = 0; i < charIndex.length; i++) {
       const char = choice('1234567890ABCDEF');
@@ -52,7 +52,7 @@ onMounted(() => {
         }
       }
     }
-  }, 20);
+  }, 50);
   document.body.insertBefore(background, document.body.firstChild);
 });
 onUnmounted(() => {

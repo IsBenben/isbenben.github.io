@@ -1,7 +1,5 @@
 ---
 {
-  "slug": "click-ta",
-  "title": "点击Ta!",
   "description":
     [
       "点击Ta！升级，然后再次点击Ta！",
@@ -24,6 +22,8 @@
   "hide": false,
 }
 ---
+
+# 点击Ta!
 
 ## 介绍
 

@@ -1,7 +1,5 @@
 ---
 {
-  "slug": "demonstrator",
-  "title": "XXXX 论证器",
   "description":
     [
       "这个小程序复制了以 MIT License 开源的 https://github.com/itorr/homo 代码。",
@@ -30,6 +28,8 @@
   "hide": false,
 }
 ---
+
+# XXXX 论证器
 
 ## 介绍
 

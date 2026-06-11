@@ -1,7 +1,5 @@
 ---
 {
-  "slug": "life-game",
-  "title": "Scratch 生命游戏",
   "description":
     [
       "本程序模拟了生命游戏的一种规则：B3/S23，即康威生命游戏的初始版本。",
@@ -24,6 +22,8 @@
   "hide": false,
 }
 ---
+
+# Scratch生命游戏
 
 ## 生命游戏介绍
 

@@ -1,7 +1,5 @@
 ---
 {
-  "slug": "fuck-school",
-  "title": "Fuck School",
   "description":
     [
       "Fuck School 是一个基于 Python 的工具，用于在学校的信息技术课堂上对电脑进行恶搞操作。",
@@ -16,6 +14,8 @@
   "hide": true,
 }
 ---
+
+# Fuck School
 
 ## 介绍
 

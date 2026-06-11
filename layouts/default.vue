@@ -7,6 +7,21 @@ import ClientOnlyEffects from '~/components/ClientOnlyEffects.vue';
   text-align: center;
   margin: 1em 0;
   opacity: 0.5;
+  overflow: hidden;
+}
+
+.title-area {
+  margin: 10px;
+  top: 0;
+  background-color: hsla(201, 20%, 10%, 50%);
+}
+
+.title-area h1 {
+  filter: url(#blend);
+}
+
+.title-area h1 span {
+  animation: blendIn 0.8s forwards;
 }
 </style>
 
@@ -24,6 +39,7 @@ import ClientOnlyEffects from '~/components/ClientOnlyEffects.vue';
     <slot />
     <footer class="footer">
       来自Benben's Website ·
+      <a href="/infos/about">关于</a> ·
       <a href="/sitemap.xml">sitemap</a>
     </footer>
   </div>

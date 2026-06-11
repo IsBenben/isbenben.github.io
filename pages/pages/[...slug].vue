@@ -2,10 +2,9 @@
 import ArticleAside from '~/components/ArticleAside.vue';
 
 const route = useRoute();
-const slug = route.params.slug;
 
-const { data: article } = await useAsyncData(`article-${slug}`, () =>
-  queryCollection('articles').where('slug', '=', slug).first(),
+const { data: article } = await useAsyncData(`article-${route.path}`, () =>
+  queryCollection('pages').path(route.path).first(),
 );
 
 useSeoMeta({
@@ -23,6 +22,20 @@ article {
   padding: 5px;
   overflow: hidden;
   line-height: 1.5;
+  flex: 1;
+  min-width: 0;       /* 防止内容溢出 */
+}
+
+.contents {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: stretch;
+}
+
+@media screen and (max-width: 768px) {
+  .contents {
+    flex-direction: column;
+  }
 }
 </style>
 
@@ -30,7 +43,6 @@ article {
   <div class="contents clearfix" v-if="article">
     <ArticleAside :article="article" />
     <article>
-      <h1>{{ article.title }}</h1>
       <ContentRenderer :value="article" />
     </article>
   </div>

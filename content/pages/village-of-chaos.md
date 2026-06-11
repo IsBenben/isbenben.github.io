@@ -1,7 +1,5 @@
 ---
 {
-  "slug": "village-of-chaos",
-  "title": "Village of Chaos",
   "description":
     [
       "简短文字放置游戏，原生JS编写，轻松挂机发展村庄。",
@@ -26,6 +24,8 @@
   "hide": false,
 }
 ---
+
+# Village of Chaos
 
 ## 游戏介绍
 

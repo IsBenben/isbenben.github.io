@@ -1,7 +1,5 @@
 ---
 {
-  "slug": "chicken-parkour",
-  "title": "小鸡跑酷",
   "description":
     [
       "基于Scratch风格的横版跑酷游戏，控制小鸡在滚动背景中跳跃前进。",
@@ -20,6 +18,8 @@
   "hide": false,
 }
 ---
+
+# 小鸡跑酷
 
 ## 介绍
 

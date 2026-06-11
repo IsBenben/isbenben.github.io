@@ -1,7 +1,5 @@
 ---
 {
-  "slug": "scratch-language",
-  "title": "Scratch-Language",
   "description":
     [
       "用Python为Scratch做的编程语言。",
@@ -20,6 +18,8 @@
   "hide": false,
 }
 ---
+
+# Scratch-Language
 
 [![license](https://img.shields.io/github/license/IsBenben/Scratch-Language)](https://github.com/IsBenben/Scratch-Language/blob/main/LICENSE)
 [![commit](https://img.shields.io/github/last-commit/IsBenben/Scratch-Language)](https://github.com/IsBenben/Scratch-Language/commits/main)

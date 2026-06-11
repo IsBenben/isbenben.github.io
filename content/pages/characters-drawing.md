@@ -1,7 +1,5 @@
 ---
 {
-  "slug": "characters-drawing",
-  "title": "字符画",
   "description":
     [
       "Python制作的字符画程序，可以把图片用字符显示出来。",
@@ -22,6 +20,8 @@
   "hide": false,
 }
 ---
+
+# 字符画
 
 Python制作的字符画程序，可以把任意图片用字符画的形式显示出来。
 

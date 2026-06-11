@@ -39,7 +39,7 @@
 
 .background {
   z-index: -10;
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 .background,
@@ -56,12 +56,14 @@
   font-family: 'JetBrains Mono';
   src: url('JetBrainsMono-Regular.ttf');
   font-weight: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'JetBrains Mono';
   src: url('JetBrainsMono-Bold.ttf');
   font-weight: bold;
+  font-display: swap;
 }
 
 html {
@@ -71,27 +73,15 @@ html {
 
 body {
   background-color: hsl(201, 20%, 10%);
+  color: hsla(0, 0%, 100%);
   color: hsla(0, 0%, 100%, 0.95);
-  font-family: 'JetBrains Mono', sans-serif;
+  font-family:
+    'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono',
+    sans-serif;
   padding: 10px;
   text-wrap: pretty;
   /* text-align: justify; */
 }
-
-/* @keyframes fadeIn {
-  from {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.container {
-  animation: fadeIn 0.5s forwards;
-} */
 
 @keyframes blendIn {
   from {
@@ -102,18 +92,6 @@ body {
     filter: blur(0);
     letter-spacing: 1px;
   }
-}
-
-.title-area {
-  margin: 10px;
-}
-
-.title-area h1 {
-  filter: url(#blend);
-}
-
-.title-area h1 span {
-  animation: blendIn 0.8s forwards;
 }
 
 .links {

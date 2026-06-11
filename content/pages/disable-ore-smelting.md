@@ -1,7 +1,5 @@
 ---
 {
-  "slug": "disable-ore-smelting",
-  "title": "禁用矿石烧炼",
   "description":
     [
       "该数据包会禁用部分会浪费的矿石烧炼配方。",
@@ -16,6 +14,8 @@
   "hide": false,
 }
 ---
+
+# 禁用矿石烧炼
 
 ## 介绍
 
