@@ -1,1 +1,0 @@
-import{_ as o,o as s,c as r,G as n}from"./CX4RNCoF.js";const t={};function c(e,a){return s(),r("ol",null,[n(e.$slots,"default")])}const _=Object.assign(o(t,[["render",c]]),{__name:"ProseOl"});export{_ as default};
