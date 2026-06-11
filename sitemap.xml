@@ -2,42 +2,42 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://isbenben.github.io/</loc>
-        <lastmod>2026-06-11T12:40:12Z</lastmod>
+        <lastmod>2026-06-11T12:47:31Z</lastmod>
     </url>
     <url>
         <loc>https://isbenben.github.io/new-year</loc>
-        <lastmod>2026-06-11T12:40:12Z</lastmod>
+        <lastmod>2026-06-11T12:47:31Z</lastmod>
     </url>
     <url>
         <loc>https://isbenben.github.io/tags</loc>
-        <lastmod>2026-06-11T12:40:12Z</lastmod>
+        <lastmod>2026-06-11T12:47:31Z</lastmod>
     </url>
     <url>
         <loc>https://isbenben.github.io/infos/about</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
     </url>
     <url>
         <loc>https://isbenben.github.io/infos/changelog</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
     </url>
     <url>
         <loc>https://isbenben.github.io/infos/disclaimer</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
     </url>
     <url>
         <loc>https://isbenben.github.io/infos/license</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/animated-calculator</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
         <image:image>
             <image:loc>https://isbenben.github.io/raw/animated-calculator-screenshot.png</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/characters-drawing</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
         <image:image>
             <image:loc>https://isbenben.github.io/raw/characters-drawing-gui.png</image:loc>
         </image:image>
@@ -47,14 +47,14 @@
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/chicken-parkour</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
         <image:image>
             <image:loc>https://isbenben.github.io/raw/chicken-pakour-screenshot.png</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/click-ta</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
         <image:image>
             <image:loc>https://isbenben.github.io/raw/click-ta-screenshot.png</image:loc>
         </image:image>
@@ -64,7 +64,7 @@
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/cut-fruit</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
         <image:image>
             <image:loc>https://isbenben.github.io/raw/cut-fruit-init.png</image:loc>
         </image:image>
@@ -77,7 +77,7 @@
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/demonstrator</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
         <image:image>
             <image:loc>https://isbenben.github.io/raw/5277-demonstrator-screenshot.png</image:loc>
         </image:image>
@@ -87,14 +87,14 @@
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/disable-ore-smelting</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
         <image:image>
             <image:loc>https://cdn-alt.modrinth.com/data/5NTQdowV/images/f10fdec145d9a9d733944b2a1e4d100d9be1b3ee.png</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/epf-limit-remover</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
         <image:image>
             <image:loc>https://img.shields.io/github/license/IsBenben/EPFLimitRemover</image:loc>
         </image:image>
@@ -107,39 +107,39 @@
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/fast-collection</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
         <image:image>
             <image:loc>https://isbenben.github.io/raw/fast-collection-gui.png</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/file-matchmaking</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/find-patterns</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
         <image:image>
             <image:loc>https://isbenben.github.io/raw/find-patterns-gui.png</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/google-10</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
         <image:image>
             <image:loc>https://isbenben.github.io/raw/google-10-options.png</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/guess-the-word</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
         <image:image>
             <image:loc>https://isbenben.github.io/raw/guess-the-word-screenshot.png</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/life-game</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
         <image:image>
             <image:loc>https://isbenben.github.io/raw/infinity-life-game-screenshot.png</image:loc>
         </image:image>
@@ -149,7 +149,7 @@
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/loop-jam</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
         <image:image>
             <image:loc>https://isbenben.github.io/loop-jam-cn/textures/help.png</image:loc>
         </image:image>
@@ -165,21 +165,21 @@
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/numbers-eating-game</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
         <image:image>
             <image:loc>https://isbenben.github.io/raw/numbers-eating-game-screenshot.png</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/oh-my-dear-js</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
         <image:image>
             <image:loc>https://isbenben.github.io/raw/oh-my-dear-js-screenshot.png</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/scratch-language</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
         <image:image>
             <image:loc>https://img.shields.io/github/license/IsBenben/Scratch-Language</image:loc>
         </image:image>
@@ -198,14 +198,14 @@
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/utf-16-supporting</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
         <image:image>
             <image:loc>https://isbenben.github.io/raw/utf-16-supporting-solution.png</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/village-of-chaos</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
         <image:image>
             <image:loc>https://isbenben.github.io/raw/village-of-chaos-mobile.png</image:loc>
         </image:image>
@@ -215,54 +215,54 @@
     </url>
     <url>
         <loc>https://isbenben.github.io/pages/word-solitaire</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
         <image:image>
             <image:loc>https://isbenben.github.io/raw/word-solitaire-screenshot.png</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://isbenben.github.io/tags/content-art</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
     </url>
     <url>
         <loc>https://isbenben.github.io/tags/content-entertainment</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
     </url>
     <url>
         <loc>https://isbenben.github.io/tags/content-learning</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
     </url>
     <url>
         <loc>https://isbenben.github.io/tags/content-tool</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
     </url>
     <url>
         <loc>https://isbenben.github.io/tags/inspiration-adaptation</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
     </url>
     <url>
         <loc>https://isbenben.github.io/tags/inspiration-localization</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
     </url>
     <url>
         <loc>https://isbenben.github.io/tags/inspiration-original</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
     </url>
     <url>
         <loc>https://isbenben.github.io/tags/lang-minecraft</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
     </url>
     <url>
         <loc>https://isbenben.github.io/tags/lang-python3</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
     </url>
     <url>
         <loc>https://isbenben.github.io/tags/lang-scratch3</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
     </url>
     <url>
         <loc>https://isbenben.github.io/tags/lang-web</loc>
-        <lastmod>2026-06-11T12:40:28Z</lastmod>
+        <lastmod>2026-06-11T12:47:50Z</lastmod>
     </url>
 </urlset>
-<!-- XML Sitemap generated by @nuxtjs/sitemap v8.0.15 at 2026-06-11T12:40:38.805Z -->
+<!-- XML Sitemap generated by @nuxtjs/sitemap v8.0.15 at 2026-06-11T12:48:02.159Z -->
