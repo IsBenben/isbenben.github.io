@@ -5,11 +5,11 @@ const route = useRoute();
 const { type, text } = route.params;
 
 const { data: articles } = await useAsyncData(`tag-${type}-${text}`, () =>
-  queryCollection('articles')
+  queryCollection('pages')
     .where('hide', '<>', true)
     .where('tags', 'LIKE', `%["${type}","${text}"]%`)
     .order('date', 'DESC')
-    .select('slug', 'title', 'description', 'date', 'tags')
+    .select('title', 'description', 'date', 'tags', 'path')
     .all(),
 );
 
@@ -42,7 +42,7 @@ useSeoMeta({
     <div class="cards">
       <Card
         v-for="article in articles"
-        :key="article._path"
+        :key="article.id"
         :article="article"
       />
     </div>

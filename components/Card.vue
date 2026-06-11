@@ -62,7 +62,7 @@ if (process.client) {
     <div class="card" ref="cardRef">
       <div class="inner">
         <h2>
-          <a :href="`/pages/${article.slug}`">{{ article.title }}</a>
+          <NuxtLink :to="`${article.path}`">{{ article.title }}</NuxtLink>
         </h2>
         <p>
           <template v-for="(item, index) in article.description" :key="index">

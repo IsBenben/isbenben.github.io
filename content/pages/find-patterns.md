@@ -1,7 +1,5 @@
 ---
 {
-  "slug": "find-patterns",
-  "title": "“找规律”",
   "description":
     [
       'Python程序，可以通过多项式拟合几乎任意的数列，即"找规律"。',
@@ -22,6 +20,8 @@
   "hide": false,
 }
 ---
+
+# “找规律”
 
 ## 介绍
 

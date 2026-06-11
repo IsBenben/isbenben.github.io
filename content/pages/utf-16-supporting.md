@@ -1,7 +1,5 @@
 ---
 {
-  "slug": "utf-16-supporting",
-  "title": "Scratch支持UTF-16",
   "description":
     [
       "Scratch将UTF-16错误地由UCS-2读取。",
@@ -27,6 +25,8 @@
   "hide": false,
 }
 ---
+
+# Scratch支持UTF-16
 
 ## 复现过程
 

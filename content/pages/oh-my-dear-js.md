@@ -1,7 +1,5 @@
 ---
 {
-  "slug": "oh-my-dear-js",
-  "title": "Oh my dear JavaScript",
   "description":
     [
       "在JavaScript中，==相等运算符有一些特殊的行为。",
@@ -24,6 +22,8 @@
   "hide": false,
 }
 ---
+
+# Oh my dear JavaScript
 
 ## 介绍
 

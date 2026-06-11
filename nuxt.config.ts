@@ -15,6 +15,14 @@ export default defineNuxtConfig({
   sitemap: {
     autoLastmod: true,
     exclude: ['/404', '/405'],
+    zeroRuntime: true,
+  },
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'zh-CN', // 根据你的网站内容语言设置，简体中文
+      },
+    },
   },
   css: ['~/assets/index.css', '@fortawesome/fontawesome-svg-core/styles.css'],
   nitro: {
@@ -46,8 +54,11 @@ export default defineNuxtConfig({
               headingProperties: { class: 'section-heading' },
               properties: { class: 'section-link' },
               content(node: Nodes) {
+                if (node.type === 'element' && node.tagName === 'h1') {
+                  return [];
+                }
                 return [
-                  h('span.visually-hidden', '章节', toString(node)),
+                  h('span.visually-hidden', '章节'),
                   h('span', { ariaHidden: 'true', tabIndex: -1 }, ' §'),
                 ];
               },
@@ -57,6 +68,7 @@ export default defineNuxtConfig({
         highlight: {
           theme: 'dracula',
         },
+        toc: { depth: 3 },
       },
     },
     renderer: {
