@@ -2,10 +2,6 @@
 const props = defineProps(['article']);
 const article = props.article;
 
-setTimeout(() => {
-  console.log(props);
-}, 100);
-
 function getText(heading) {
   return heading.slice(0, heading.length - 4);
 }

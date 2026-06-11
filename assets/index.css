@@ -81,6 +81,7 @@ body {
   padding: 10px;
   text-wrap: pretty;
   /* text-align: justify; */
+  line-height: 1.5;
 }
 
 @keyframes blendIn {
