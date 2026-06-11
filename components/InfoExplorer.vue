@@ -52,9 +52,9 @@ h2,
       <h2>网站说明</h2>
       <ul>
         <li class="info-link" v-for="info in infos">
-          <NuxtLink :to="info.path" v-if="info.title !== article.title">{{
+          <a :href="info.path" v-if="info.title !== article.title">{{
             info.title
-          }}</NuxtLink>
+          }}</a>
           <em v-else>{{ info.title }}</em>
         </li>
       </ul>

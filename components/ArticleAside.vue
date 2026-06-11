@@ -37,6 +37,8 @@ aside {
 .aside-item.sticky {
   position: sticky;
   top: 10px;
+  max-height: calc(100vh - 20px);
+  overflow: auto;
 }
 </style>
 

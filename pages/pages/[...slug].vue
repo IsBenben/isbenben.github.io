@@ -21,7 +21,6 @@ article {
   border-radius: 8px;
   padding: 5px;
   overflow: hidden;
-  line-height: 1.5;
   flex: 1;
   min-width: 0;       /* 防止内容溢出 */
 }
