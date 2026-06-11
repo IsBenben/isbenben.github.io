@@ -20,6 +20,10 @@ aside {
     margin: 10px 0;
     flex-shrink: 1;
   }
+
+  .aside-item.sticky {
+    max-height: unset;
+  }
 }
 
 .aside-item {
