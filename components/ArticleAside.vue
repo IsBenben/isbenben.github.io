@@ -5,24 +5,18 @@ const props = defineProps(['article']);
 const article = props.article;
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 aside {
   float: right;
   width: 300px;
   margin-left: 10px;
   flex-shrink: 0;
-}
 
-@media screen and (max-width: 768px) {
-  aside {
+  @media screen and (max-width: 768px) {
     float: unset;
     width: unset;
     margin: 10px 0;
     flex-shrink: 1;
-  }
-
-  .aside-item.sticky {
-    max-height: unset;
   }
 }
 
@@ -31,18 +25,22 @@ aside {
   border-radius: 8px;
   padding: 5px;
   margin-bottom: 10px;
+
+  &.sticky {
+    position: sticky;
+    top: 10px;
+    max-height: calc(100vh - 20px);
+    overflow: auto;
+
+    @media screen and (max-width: 768px) {
+      max-height: unset;
+    }
+  }
 }
 
 .metadata-line {
   margin-left: 1em;
   opacity: 0.9;
-}
-
-.aside-item.sticky {
-  position: sticky;
-  top: 10px;
-  max-height: calc(100vh - 20px);
-  overflow: auto;
 }
 </style>
 

@@ -111,7 +111,7 @@ useSeoMeta({
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 #firework {
   width: 100%;
   height: 90vh;
@@ -163,26 +163,26 @@ article {
 
 section {
   margin-bottom: 3rem;
-}
 
-section h2 {
-  color: hsl(201, 50%, 80%);
-  font-size: 2.2rem;
-  margin-bottom: 1.5rem;
-  text-shadow: 0 0 4px hsla(0, 0%, 0%, 0.3);
-}
+  h2 {
+    color: hsl(201, 50%, 80%);
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 4px hsla(0, 0%, 0%, 0.3);
+  }
 
-section h3 {
-  color: hsl(201, 10%, 95%);
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
+  h3 {
+    color: hsl(201, 10%, 95%);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
 
-section p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  text-align: justify;
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-align: justify;
+  }
 }
 
 /* 祝福网格布局 */
@@ -205,21 +205,21 @@ section p {
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
-}
 
-.wish-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px hsla(340, 100%, 70%, 0.5);
-}
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px hsla(340, 100%, 70%, 0.5);
+  }
 
-.wish-item h3 {
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-}
+  h3 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
 
-.wish-item p {
-  font-size: 1rem;
-  margin-bottom: 0;
+  p {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
 }
 
 /* 展望列表样式 */
@@ -240,10 +240,10 @@ section p {
   font-size: 1.1rem;
   box-shadow: 0 4px 10px hsla(40, 100%, 40%, 0.4);
   transition: transform 0.3s ease;
-}
 
-.new-year-resolution li:hover {
-  transform: translateX(10px);
+  &:hover {
+    transform: translateX(10px);
+  }
 }
 
 /* 庆祝区块样式 */
@@ -263,39 +263,23 @@ blockquote {
   font-style: italic;
   box-shadow: 0 8px 20px hsla(226, 71%, 61%, 0.3);
   position: relative;
-}
 
-blockquote::before {
-  content: '"';
-  font-size: 4rem;
-  position: absolute;
-  top: -10px;
-  left: 20px;
-  color: hsla(0, 0%, 100%, 0.4);
-}
-
-blockquote::after {
-  content: '"';
-  font-size: 4rem;
-  position: absolute;
-  bottom: -30px;
-  right: 20px;
-  color: hsla(0, 0%, 100%, 0.4);
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-  article {
-    padding: 2rem;
-    margin: 1rem;
+  &::before {
+    content: '"';
+    font-size: 4rem;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    color: hsla(0, 0%, 100%, 0.4);
   }
 
-  section h2 {
-    font-size: 1.8rem;
-  }
-
-  .wish-item {
-    padding: 1.5rem;
+  &::after {
+    content: '"';
+    font-size: 4rem;
+    position: absolute;
+    bottom: -30px;
+    right: 20px;
+    color: hsla(0, 0%, 100%, 0.4);
   }
 }
 

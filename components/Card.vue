@@ -17,7 +17,7 @@ if (process.client) {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .card-container .card {
   background-color: hsla(201, 20%, 100%, 0.1);
   position: relative;
@@ -25,31 +25,31 @@ if (process.client) {
   height: 270px;
   overflow: hidden;
   transition: 0.2s;
-}
 
-.card-container .card::before {
-  content: '';
-  background-image: radial-gradient(
-    closest-side circle,
-    hsla(201, 20%, 100%, 0.4),
-    transparent
-  );
-  position: absolute;
-  inset: 0;
-  transform: translate(var(--x, -1000px), var(--y, -1000px));
-}
+  &::before {
+    content: '';
+    background-image: radial-gradient(
+      closest-side circle,
+      hsla(201, 20%, 100%, 0.4),
+      transparent
+    );
+    position: absolute;
+    inset: 0;
+    transform: translate(var(--x, -1000px), var(--y, -1000px));
+  }
 
-.card-container .card:hover:before {
-  background: hsla(201, 20%, 100%, 0.6);
-  transform: none;
-}
+  &:hover:before {
+    background: hsla(201, 20%, 100%, 0.6);
+    transform: none;
+  }
 
-.card-container .card .inner {
-  background-color: hsla(201, 20%, 15%, 0.95);
-  position: absolute;
-  padding: 3px;
-  inset: 2px;
-  border-radius: inherit;
+  .inner {
+    background-color: hsla(201, 20%, 15%, 0.95);
+    position: absolute;
+    padding: 3px;
+    inset: 2px;
+    border-radius: inherit;
+  }
 }
 
 .card-container:hover .card {

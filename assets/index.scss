@@ -17,24 +17,24 @@
 :root {
   scrollbar-width: auto;
   scrollbar-color: hsl(201, 20%, 30%) hsl(201, 20%, 10%);
-}
 
-:root::-webkit-scrollbar {
-  width: 12px;
-}
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
 
-:root::-webkit-scrollbar-track {
-  background: hsl(201, 20%, 10%);
-  border-radius: 6px;
-}
+  &::-webkit-scrollbar-track {
+    background: hsl(201, 20%, 10%);
+    border-radius: 6px;
+  }
 
-:root::-webkit-scrollbar-thumb {
-  background: hsl(201, 20%, 25%);
-  border-radius: 6px;
-}
+  &::-webkit-scrollbar-thumb {
+    background: hsl(201, 20%, 25%);
+    border-radius: 6px;
+  }
 
-:root::-webkit-scrollbar-thumb:hover {
-  background: hsl(201, 20%, 30%);
+  &::-webkit-scrollbar-thumb:hover {
+    background: hsl(201, 20%, 30%);
+  }
 }
 
 .background {
@@ -103,33 +103,33 @@ body {
 
 .return {
   padding-left: 5px;
-}
 
-.return::before {
-  content: '◀ ';
+  &::before {
+    content: '◀ ';
+  }
 }
 
 a {
   color: inherit;
   transition: 0.2s;
-}
 
-a:hover {
-  opacity: 0.8;
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .section-link {
   user-select: none;
   text-decoration: none;
   opacity: 0;
-}
 
-.section-heading:hover .section-link {
-  opacity: 0.5;
-}
+  .section-heading:hover & {
+    opacity: 0.5;
+  }
 
-.section-heading:hover .section-link:hover {
-  opacity: 0.8;
+  .section-heading:hover &:hover {
+    opacity: 0.8;
+  }
 }
 
 .container .cards {
@@ -144,31 +144,35 @@ a:hover {
   left: 0;
   bottom: 0;
   padding: 5px;
+
+  & > :is(span, a) {
+    opacity: 0.5;
+    display: inline-block;
+    vertical-align: bottom;
+    transition: 0.2s;
+  }
+
+  & > :is(span, a):hover {
+    opacity: 0.8;
+  }
+
+  .tag {
+    max-width: 1em;
+    text-wrap: nowrap;
+    white-space: nowrap;
+    overflow: hidden;
+
+    &:hover {
+      max-width: calc(var(--tag-width, 100) * 1em + 2px);
+    }
+  }
+
+  .iconfont::before {
+    margin-right: 2px;
+  }
 }
 
-.information > :is(span, a) {
-  opacity: 0.5;
-  display: inline-block;
-  vertical-align: bottom;
-  transition: 0.2s;
-}
-
-.information > :is(span, a):hover {
-  opacity: 0.8;
-}
-
-.information .tag {
-  max-width: 1em;
-  text-wrap: nowrap;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.information .tag:hover {
-  max-width: calc(var(--tag-width, 100) * 1em + 2px);
-}
-
-.container .contents {
+.contents {
   margin: auto;
   width: 90%;
 }
@@ -205,34 +209,34 @@ code {
   font-size: 14px;
 }
 
-pre code {
-  background-color: unset;
-  padding: 0;
-  cursor: auto;
-}
-
 pre {
   overflow: auto;
   scrollbar-width: thin;
   scrollbar-color: hsl(201, 20%, 30%) hsl(201, 20%, 20%);
-}
 
-pre::-webkit-scrollbar {
-  height: 6px;
-}
+  code {
+    background-color: unset;
+    padding: 0;
+    cursor: auto;
+  }
 
-pre::-webkit-scrollbar-track {
-  background: hsl(201, 20%, 18%);
-  border-radius: 3px;
-}
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
 
-pre::-webkit-scrollbar-thumb {
-  background: hsl(201, 20%, 24%);
-  border-radius: 3px;
-}
+  &::-webkit-scrollbar-track {
+    background: hsl(201, 20%, 18%);
+    border-radius: 3px;
+  }
 
-pre::-webkit-scrollbar-thumb:hover {
-  background: hsl(201, 20%, 30%);
+  &::-webkit-scrollbar-thumb {
+    background: hsl(201, 20%, 24%);
+    border-radius: 3px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: hsl(201, 20%, 30%);
+  }
 }
 
 p,
@@ -250,54 +254,50 @@ li {
   height: 60vh;
   transition: 0.2s;
   text-align: center;
-}
 
-.banner .mask {
-  position: absolute;
-  inset: 0;
-  background-color: hsla(201, 20%, 0%, 0.5);
-  transition: 0.2s;
-}
-
-.banner:hover .mask {
-  background-color: transparent;
-  border-top: 8px solid hsl(201, 20%, 100%);
-  border-bottom: 8px solid hsl(201, 20%, 100%);
-}
-
-.banner:hover {
-  text-shadow: 0 0 10px hsla(201, 20%, 0%, 0.5);
-}
-
-.banner h2 {
-  letter-spacing: 2px;
-  font-size: 2em;
-  margin-bottom: 20px;
-}
-
-.banner .contents {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-size: 1.2em;
-}
-
-@keyframes colorful {
-  to {
-    filter: hue-rotate(360deg);
+  .mask {
+    position: absolute;
+    inset: 0;
+    background-color: hsla(201, 20%, 0%, 0.5);
+    transition: 0.2s;
   }
-}
 
-.banner:last-of-type {
-  animation: colorful 10s infinite;
-}
+  &:hover {
+    text-shadow: 0 0 10px hsla(201, 20%, 0%, 0.5);
+  }
 
-.information .iconfont::before {
-  margin-right: 2px;
+  &:hover .mask {
+    background-color: transparent;
+    border-top: 8px solid hsl(201, 20%, 100%);
+    border-bottom: 8px solid hsl(201, 20%, 100%);
+  }
+
+  h2 {
+    letter-spacing: 2px;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .contents {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.2em;
+  }
+
+  &:last-of-type {
+    @keyframes colorful {
+      to {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    animation: colorful 10s infinite;
+  }
 }
 
 img {

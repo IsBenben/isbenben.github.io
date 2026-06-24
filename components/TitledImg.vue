@@ -12,7 +12,7 @@
   </figure>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .img-description::before {
   content: '';
   display: inline-block;

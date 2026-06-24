@@ -24,7 +24,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  css: ['~/assets/index.css', '@fortawesome/fontawesome-svg-core/styles.css'],
+  css: ['~/assets/index.scss', '@fortawesome/fontawesome-svg-core/styles.css'],
   nitro: {
     prerender: {
       crawlLinks: true, // 自动抓取所有动态路由

@@ -40,7 +40,7 @@ onUnmounted(() => {
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .carousel {
   line-height: 1;
   height: 1.2em;
@@ -50,16 +50,16 @@ onUnmounted(() => {
   list-style: none;
   margin: 0;
   padding: 0;
-}
 
-.carousel > * {
-  margin: 0;
-  height: 1.2em;
-  transform: translateY(calc(var(--pos) * -1.2em));
-  transition: transform 0.2s ease;
-}
+  & > * {
+    margin: 0;
+    height: 1.2em;
+    transform: translateY(calc(var(--pos) * -1.2em));
+    transition: transform 0.2s ease;
+  }
 
-.carousel.finished > * {
-  transition: none !important;
+  &.finished > * {
+    transition: none !important;
+  }
 }
 </style>

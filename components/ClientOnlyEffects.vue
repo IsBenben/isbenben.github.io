@@ -142,8 +142,6 @@ onUnmounted(() => {
 });
 </script>
 
-<style scoped></style>
-
 <template>
   <svg v-if="titleBlend" class="visually-hidden">
     <defs>
