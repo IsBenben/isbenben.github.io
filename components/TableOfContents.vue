@@ -7,9 +7,6 @@ function getText(heading) {
 }
 </script>
 
-<style scoped>
-</style>
-
 <template>
   <nav class="toc">
     <ul>

@@ -2,7 +2,7 @@
 import ClientOnlyEffects from '~/components/ClientOnlyEffects.vue';
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .footer {
   text-align: center;
   margin: 1em 0;
@@ -14,14 +14,14 @@ import ClientOnlyEffects from '~/components/ClientOnlyEffects.vue';
   margin: 10px;
   top: 0;
   background-color: hsla(201, 20%, 10%, 50%);
-}
 
-.title-area h1 {
-  filter: url(#blend);
-}
+  h1 {
+    filter: url(#blend);
 
-.title-area h1 span {
-  animation: blendIn 0.8s forwards;
+    span {
+      animation: blendIn 0.8s forwards;
+    }
+  }
 }
 </style>
 

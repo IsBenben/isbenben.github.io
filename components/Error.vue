@@ -1,30 +1,30 @@
 <script setup></script>
 
-<style scoped>
+<style scoped lang="scss">
 .error {
   font-size: 2em;
   text-align: center;
   margin-top: 20vh;
-}
 
-.error .oops {
-  font-size: 1rem;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-}
+  .oops {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
 
-.error :deep(.message) {
-  margin-bottom: 10px;
-}
+  :deep(.message) {
+    margin-bottom: 10px;
+  }
 
-.error :deep(.message samp) {
-  font-family: inherit;
-  font-weight: bold;
-}
+  :deep(.message samp) {
+    font-family: inherit;
+    font-weight: bold;
+  }
 
-.error .return {
-  font-size: 1rem;
-  display: block;
+  .return {
+    font-size: 1rem;
+    display: block;
+  }
 }
 
 .circled {

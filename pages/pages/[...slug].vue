@@ -15,24 +15,22 @@ useSeoMeta({
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 article {
   box-shadow: 0 0 5px hsla(201, 20%, 100%, 0.4);
   border-radius: 8px;
   padding: 5px;
   overflow: hidden;
   flex: 1;
-  min-width: 0;       /* 防止内容溢出 */
+  min-width: 0; /* 防止内容溢出 */
 }
 
 .contents {
   display: flex;
   flex-direction: row-reverse;
   align-items: stretch;
-}
 
-@media screen and (max-width: 768px) {
-  .contents {
+  @media screen and (max-width: 768px) {
     flex-direction: column;
   }
 }

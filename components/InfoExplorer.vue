@@ -3,22 +3,18 @@ const props = defineProps(['article']);
 const article = props.article;
 
 const { data: infos } = await useAsyncData('infos-all', () =>
-  queryCollection('infos')
-    .select('title', 'path')
-    .all(),
+  queryCollection('infos').select('title', 'path').all(),
 );
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 aside {
   float: left;
   width: 200px;
   margin-right: 10px;
   background-color: hsla(201, 20%, 100%, 0.1);
-}
 
-@media screen and (max-width: 768px) {
-  aside {
+  @media screen and (max-width: 768px) {
     float: unset;
     width: unset;
     margin: 10px 0;

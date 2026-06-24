@@ -24,13 +24,13 @@ function copy() {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 code {
   cursor: pointer;
-}
 
-code:active {
-  background-color: hsla(201, 20%, 100%, 0.2);
+  &:active {
+    background-color: hsla(201, 20%, 100%, 0.2);
+  }
 }
 </style>
 

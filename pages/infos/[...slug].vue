@@ -16,7 +16,7 @@ useSeoMeta({
 });
 </script>
 
-<style>
+<style scoped lang="scss">
 article {
   overflow: auto;
 }
