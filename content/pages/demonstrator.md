@@ -5,7 +5,7 @@
       "这个小程序复制了以 MIT License 开源的 https://github.com/itorr/homo 代码。",
       "可论证任何数字为 5277 和 7725。",
     ],
-  "date": "2025/2/3",
+  "date": "2025/02/03",
   "tags": [["lang", "web"], ["inspiration", "adaptation"], ["content", "tool"]],
   "links":
     [

@@ -6,7 +6,7 @@
       "本程序仅适用于 Windows 操作系统。",
       "仅仅为了玩梗。请不要真的运行此程序，后果自负。",
     ],
-  "date": "2024/9/20",
+  "date": "2024/09/20",
   "tags":
     [["lang", "python3"], ["inspiration", "original"], ["content", "tool"]],
   "links": [["https://github.com/IsBenben/Fuck_school", "关联仓库"]],

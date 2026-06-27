@@ -6,7 +6,7 @@
       "新版本是自制的无限地图生命游戏，操作简单。",
       "旧版本参考教程视频，提供有限的地图。",
     ],
-  "date": "2025/7/20",
+  "date": "2025/07/20",
   "tags":
     [["lang", "scratch3"], ["inspiration", "adaptation"], ["content", "art"]],
   "links":

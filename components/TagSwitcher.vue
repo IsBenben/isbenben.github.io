@@ -23,11 +23,6 @@ function isActive(type, text) {
     gap: 1em;
     padding: 5px;
 
-    &:last-child {
-      margin-bottom: 0;
-      border-bottom: unset;
-    }
-
     @media screen and (max-width: 700px) {
       display: block;
       gap: unset;
@@ -35,6 +30,11 @@ function isActive(type, text) {
 
     @include useTheme using ($map) {
       border-bottom: 1px dotted map.get($map, borderColor);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      border-bottom: unset;
     }
   }
 

@@ -83,7 +83,7 @@ if (process.client) {
         <div class="information">
           <span
             ><Icon icon="fa-regular fa-calendar-days" />日期：{{
-              article.date
+              article.date.replace(/\/0/g, '/')
             }}</span
           >
           <template v-for="(tag, idx) in article.tags" :key="idx"

@@ -12,7 +12,11 @@ function toggleTheme() {
 
 <style lang="scss">
 .theme-switcher {
+  background: none;
+  border: none;
   display: inline-block;
+  font: inherit;
+  color: inherit;
   font-size: 2em;
   cursor: pointer;
 
@@ -24,9 +28,9 @@ function toggleTheme() {
 
 <template>
   <ClientOnly>
-    <div @click="toggleTheme" class="theme-switcher">
+    <button @click="toggleTheme" class="theme-switcher" aria-label="主题切换">
       <Icon v-show="colorMode.value === 'light'" icon="fa-regular fa-sun" />
       <Icon v-show="colorMode.value === 'dark'" icon="fa-regular fa-moon" />
-    </div>
+    </button>
   </ClientOnly>
 </template>

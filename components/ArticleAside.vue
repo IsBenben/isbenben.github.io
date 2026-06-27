@@ -52,7 +52,9 @@ aside {
     <div class="aside-item">
       <h2>文章信息</h2>
       <div class="metadata-line">
-        <Icon icon="far fa-calendar-days" />发布日期：{{ article.date }}
+        <Icon icon="far fa-calendar-days" />发布日期：{{
+          article.date.replace(/\/0/g, '/')
+        }}
       </div>
       <div class="metadata-line">
         <template v-for="(tag, idx) in article.tags" :key="idx"

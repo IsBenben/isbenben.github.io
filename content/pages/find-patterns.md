@@ -5,7 +5,7 @@
       'Python程序，可以通过多项式拟合几乎任意的数列，即"找规律"。',
       "原理是一种类似于拉格朗日插值的算法。",
     ],
-  "date": "2025/2/3",
+  "date": "2025/02/03",
   "tags":
     [["lang", "python3"], ["inspiration", "original"], ["content", "tool"]],
   "links":
