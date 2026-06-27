@@ -1,4 +1,5 @@
 <script setup>
+import { SITENAME } from '~/config/common';
 import tagsData from '~/content/tags.json';
 
 const route = useRoute();
@@ -28,7 +29,7 @@ const tagName = computed(() => {
 useSeoMeta({
   title: () =>
     (tagName.value ? `搜索${tagName.value}${typeName.value} - ` : '') +
-    "Benben's Website",
+    SITENAME,
   description: `标签搜索页面，展示${typeName.value}包含${tagName.value}的所有内容。${tagDescription.value}细致搜索Benben的个人技术博客。`,
 });
 </script>
@@ -40,11 +41,7 @@ useSeoMeta({
       显示{{ typeName }}包含{{ tagName }}的所有内容。{{ tagDescription }}
     </p>
     <div class="cards">
-      <Card
-        v-for="article in articles"
-        :key="article.id"
-        :article="article"
-      />
+      <Card v-for="article in articles" :key="article.id" :article="article" />
     </div>
   </div>
 </template>

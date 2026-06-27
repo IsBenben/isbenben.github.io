@@ -1,6 +1,7 @@
 <script setup>
 import Carousel from '~/components/Carousel.vue';
 import CopyableCode from '~/components/CopyableCode.vue';
+import { SITENAME } from '~/config/common';
 
 definePageMeta({
   layout: false,
@@ -15,7 +16,7 @@ const { data: articles } = await useAsyncData('pages-all', () =>
 );
 
 useSeoMeta({
-  title: "Benben's Website - 原创编程与游戏开发分享网站",
+  title: SITENAME + ' - 原创编程与游戏开发分享网站',
   description:
     'Benben的个人技术分享网站，包含游戏开发、实用工具、学习经验等内容。分享Scratch编程、Python项目、Minecraft包等技术干货。',
 });

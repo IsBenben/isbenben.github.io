@@ -1,15 +1,37 @@
 import { h } from 'hastscript';
-import { toString } from 'hast-util-to-string';
 import type { Nodes } from 'hast';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import postcssPresetEnv from 'postcss-preset-env';
 import remarkCjkFriendly from 'remark-cjk-friendly';
+import { themes, defaultTheme } from './config/themes';
+
+function jsObjectToScssMap(obj: Record<string, any>): string {
+  const entries = Object.entries(obj).map(([key, value]) => {
+    if (typeof value === 'object') {
+      return `"${key}": ${jsObjectToScssMap(value)}`;
+    }
+    return `"${key}": ${value}`;
+  });
+  return '(' + entries.join(', ') + ')';
+}
+
+const scssAdditionalData = `
+  @use 'sass:map';
+  $themes: (${jsObjectToScssMap(themes)});
+  $defaultTheme: "${defaultTheme}";
+  @import '~/assets/themes';
+`;
 
 export default defineNuxtConfig({
   ssr: true,
   compatibilityDate: '2026-04-29',
-  modules: ['@nuxt/content', 'nuxt-github-pages', '@nuxtjs/sitemap'],
+  modules: [
+    '@nuxt/content',
+    'nuxt-github-pages',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/color-mode',
+  ],
   plugins: ['~/plugins/fontawesome.ts'],
   site: { url: 'https://isbenben.github.io' },
   sitemap: {
@@ -20,20 +42,34 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: {
-        lang: 'zh-CN', // 根据你的网站内容语言设置，简体中文
+        lang: 'zh-CN',
       },
     },
   },
   css: ['~/assets/index.scss', '@fortawesome/fontawesome-svg-core/styles.css'],
   nitro: {
     prerender: {
-      crawlLinks: true, // 自动抓取所有动态路由
+      crawlLinks: true,
     },
   },
   vite: {
     optimizeDeps: {
       include: ['@vue/devtools-core', '@vue/devtools-kit'],
     },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: scssAdditionalData,
+        },
+      },
+    },
+  },
+  colorMode: {
+    preference: 'system',
+    fallback: defaultTheme,
+    storage: 'localStorage',
+    storageKey: 'benben-color-mode',
+    classPrefix: 'theme-',
   },
   content: {
     build: {
@@ -66,7 +102,11 @@ export default defineNuxtConfig({
           },
         },
         highlight: {
-          theme: 'dracula',
+          theme: {
+            default: 'one-dark-pro',
+            dark: 'one-dark-pro',
+            light: 'one-light'
+          },
         },
         toc: { depth: 3 },
       },

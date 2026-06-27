@@ -19,7 +19,7 @@
   width: 1em;
   height: 0.6em;
   vertical-align: top;
-  border: 1px solid #fff;
+  border: 1px solid;
   border-top: none;
   border-right: none;
   margin: 0 0.5em;

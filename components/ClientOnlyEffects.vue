@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import { themes } from '~/config/themes';
 
 function choice(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
@@ -18,6 +19,7 @@ onMounted(() => {
   if (!process.client) {
     return;
   }
+  const colorMode = useColorMode();
   background = document.createElement('canvas');
   background.className = 'background';
   const ctx = background.getContext('2d');
@@ -32,9 +34,12 @@ onMounted(() => {
   ctx.textBaseline = 'top';
   const charIndex = [];
   backgroundInterval = setInterval(() => {
-    ctx.fillStyle = 'hsla(201, 20%, 10%, 0.1)';
+    ctx.globalAlpha = 0.1;
+    ctx.fillStyle = themes[colorMode.value].background;
     ctx.fillRect(0, 0, background.width, background.height);
-    ctx.fillStyle = 'hsl(110, 50%, 60%)';
+
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = themes[colorMode.value].backgroundCanvasColor;
     const fontsize = 16 * devicePixelRatio;
     ctx.font = `${fontsize}px 'JetBrains Mono', sans-serif`;
     const columns = Math.ceil(background.width / fontsize);

@@ -19,7 +19,6 @@ if (process.client) {
 
 <style scoped lang="scss">
 .card-container .card {
-  background-color: hsla(201, 20%, 100%, 0.1);
   position: relative;
   border-radius: 8px;
   height: 270px;
@@ -28,27 +27,38 @@ if (process.client) {
 
   &::before {
     content: '';
-    background-image: radial-gradient(
-      closest-side circle,
-      hsla(201, 20%, 100%, 0.4),
-      transparent
-    );
     position: absolute;
     inset: 0;
     transform: translate(var(--x, -1000px), var(--y, -1000px));
+
+    @include useTheme using ($map) {
+      background: radial-gradient(
+        closest-side circle,
+        map.get($map, cardGlow),
+        transparent
+      );
+    }
   }
 
   &:hover:before {
-    background: hsla(201, 20%, 100%, 0.6);
     transform: none;
+    @include useTheme using ($map) {
+      background: map.get($map, cardHoverGlow);
+    }
   }
 
   .inner {
-    background-color: hsla(201, 20%, 15%, 0.95);
     position: absolute;
     padding: 3px;
     inset: 2px;
     border-radius: inherit;
+    @include useTheme using ($map) {
+      background: map.get($map, cardInnerBackground);
+    }
+  }
+
+  @include useTheme using ($map) {
+    background: map.get($map, cardBackground);
   }
 }
 

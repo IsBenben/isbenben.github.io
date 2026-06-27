@@ -21,7 +21,6 @@ aside {
 }
 
 .aside-item {
-  background-color: hsla(201, 20%, 100%, 0.1);
   border-radius: 8px;
   padding: 5px;
   margin-bottom: 10px;
@@ -35,6 +34,10 @@ aside {
     @media screen and (max-width: 768px) {
       max-height: unset;
     }
+  }
+
+  @include useTheme using ($map) {
+    background: map.get($map, asideBackground);
   }
 }
 

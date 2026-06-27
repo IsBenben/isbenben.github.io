@@ -1,5 +1,6 @@
 <script setup>
 import InfoExplorer from '~/components/InfoExplorer.vue';
+import { SITENAME } from '~/config/common';
 
 const route = useRoute();
 
@@ -8,10 +9,9 @@ const { data: info } = await useAsyncData(`info-${route.path}`, () =>
 );
 
 useSeoMeta({
-  title: () =>
-    (info.value?.title ? `${info.value.title} - ` : '') + "Benben's Website",
+  title: () => (info.value?.title ? `${info.value.title} - ` : '') + SITENAME,
   description: info.value?.title
-    ? `${info.value.title}是Benben's Website的说明文件。`
+    ? `${info.value.title}是${SITENAME}的说明文件。`
     : '',
 });
 </script>
