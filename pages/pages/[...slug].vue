@@ -13,11 +13,13 @@ const { data } = await useAsyncData(`article-${route.path}`, async () => {
   }
 
   const prev = await queryCollection('pages')
+    .where('hide', '<>', true)
     .where('date', '<', current.date)
     .order('date', 'DESC')
     .first();
 
   const next = await queryCollection('pages')
+    .where('hide', '<>', true)
     .where('date', '>', current.date)
     .order('date', 'ASC')
     .first();
