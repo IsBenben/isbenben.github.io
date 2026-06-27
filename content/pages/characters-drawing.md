@@ -5,7 +5,7 @@
       "Python制作的字符画程序，可以把图片用字符显示出来。",
       "使用方法：安装pillow库，在相同目录放置字体font.ttf",
     ],
-  "date": "2024/11/9",
+  "date": "2024/11/09",
   "tags":
     [["lang", "python3"], ["inspiration", "original"], ["content", "art"]],
   "links":

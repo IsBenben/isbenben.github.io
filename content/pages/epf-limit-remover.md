@@ -5,7 +5,7 @@
       "EPFLimitRemover是一个可配置的Minecraft模组，用于修改原版魔咒保护系数EPF的上限。",
       "兼容Minecraft 1.21~1.21.11全系列版本。通过轻量级Mixin注入原版游戏。",
     ],
-  "date": "2026/5/30",
+  "date": "2026/05/30",
   "tags":
     [["lang", "minecraft"], ["inspiration", "adaptation"], ["content", "tool"]],
   "links":

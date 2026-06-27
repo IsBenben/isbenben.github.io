@@ -131,7 +131,7 @@ a {
     opacity: 0.5;
   }
 
-  .section-heading:hover &:hover {
+  .section-heading &:is(:hover, :focus) {
     opacity: 0.8;
   }
 }

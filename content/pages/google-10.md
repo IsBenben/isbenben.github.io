@@ -6,7 +6,7 @@
       "其文本使用谷歌翻译，从英文开始，在随机语言间翻译，最后出现一些滑稽的翻译结果。",
       "支持Minecraft 1.21.9。",
     ],
-  "date": "2026/2/13",
+  "date": "2026/02/13",
   "tags":
     [["lang", "minecraft"], ["inspiration", "adaptation"], ["content", "art"]],
   "links": [["https://www.bilibili.com/video/BV1bRcEzHE42/", "演示视频"]],

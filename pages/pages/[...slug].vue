@@ -1,12 +1,33 @@
 <script setup>
 import ArticleAside from '~/components/ArticleAside.vue';
+import MoreArticle from '~/components/MoreArticle.vue';
 import { SITENAME } from '~/config/common';
 
 const route = useRoute();
 
-const { data: article } = await useAsyncData(`article-${route.path}`, () =>
-  queryCollection('pages').path(route.path).first(),
-);
+const { data } = await useAsyncData(`article-${route.path}`, async () => {
+  const current = await queryCollection('pages').path(route.path).first();
+
+  if (!current) {
+    return { current: null, prev: null, next: null };
+  }
+
+  const prev = await queryCollection('pages')
+    .where('date', '<', current.date)
+    .order('date', 'DESC')
+    .first();
+
+  const next = await queryCollection('pages')
+    .where('date', '>', current.date)
+    .order('date', 'ASC')
+    .first();
+
+  return { current, prev, next };
+});
+
+const article = computed(() => data.value?.current);
+const prevArticle = computed(() => data.value?.prev);
+const nextArticle = computed(() => data.value?.next);
 
 useSeoMeta({
   title: () =>
@@ -28,7 +49,7 @@ article {
   }
 }
 
-.contents {
+.main-content {
   display: flex;
   flex-direction: row-reverse;
   align-items: stretch;
@@ -41,9 +62,12 @@ article {
 
 <template>
   <div class="contents clearfix" v-if="article">
-    <ArticleAside :article="article" />
-    <article>
-      <ContentRenderer :value="article" />
-    </article>
+    <div class="main-content">
+      <ArticleAside :article="article" />
+      <article>
+        <ContentRenderer :value="article" />
+      </article>
+    </div>
+    <MoreArticle :prevArticle="prevArticle" :nextArticle="nextArticle" />
   </div>
 </template>

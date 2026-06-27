@@ -6,7 +6,7 @@
       "编译成品为Scratch可直接识别的project.json。",
       "已经支持基本的编程语法。",
     ],
-  "date": "2024/8/25",
+  "date": "2024/08/25",
   "tags":
     [["lang", "python3"], ["inspiration", "original"], ["content", "tool"]],
   "links":

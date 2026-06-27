@@ -5,7 +5,7 @@
       "该数据包会禁用部分会浪费的矿石烧炼配方。",
       "支持1.13+的主流版本，在Modrinth上发布。",
     ],
-  "date": "2025/8/25",
+  "date": "2025/08/25",
   "tags":
     [["lang", "minecraft"], ["inspiration", "original"], ["content", "tool"]],
   "links":
