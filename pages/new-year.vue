@@ -1,4 +1,6 @@
 <script setup>
+import { SITENAME } from '~/config/common';
+
 definePageMeta({
   layout: false,
 });
@@ -107,7 +109,7 @@ onMounted(() => {
 });
 
 useSeoMeta({
-  title: "2026新年 - Benben's Website",
+  title: '2026新年 - ' + SITENAME,
 });
 </script>
 

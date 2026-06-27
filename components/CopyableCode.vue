@@ -29,7 +29,9 @@ code {
   cursor: pointer;
 
   &:active {
-    background-color: hsla(201, 20%, 100%, 0.2);
+    @include useTheme using ($map) {
+      background: map.get($map, codeActiveBackground);
+    }
   }
 }
 </style>

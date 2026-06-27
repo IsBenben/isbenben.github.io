@@ -1,5 +1,7 @@
 <script setup>
 import ClientOnlyEffects from '~/components/ClientOnlyEffects.vue';
+import ThemeSwitcher from '~/components/ThemeSwitcher.vue';
+import { SITENAME } from '~/config/common';
 </script>
 
 <style scoped lang="scss">
@@ -10,17 +12,27 @@ import ClientOnlyEffects from '~/components/ClientOnlyEffects.vue';
   overflow: hidden;
 }
 
-.title-area {
+.header {
   margin: 10px;
   top: 0;
-  background-color: hsla(201, 20%, 10%, 50%);
 
   h1 {
+    font-size: 2em;
     filter: url(#blend);
+
+    @media screen and (max-width: 500px) {
+      font-size: 1.5em;
+    }
 
     span {
       animation: blendIn 0.8s forwards;
     }
+  }
+
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 </style>
@@ -28,8 +40,13 @@ import ClientOnlyEffects from '~/components/ClientOnlyEffects.vue';
 <template>
   <div class="container">
     <ClientOnlyEffects />
-    <header class="title-area">
-      <h1><span>Benben's Website</span></h1>
+    <header class="header">
+      <div class="title">
+        <h1>
+          <span>{{ SITENAME }}</span>
+        </h1>
+        <ThemeSwitcher />
+      </div>
       <nav class="links">
         <slot name="nav">
           <a href="/" class="return">返回首页</a>
@@ -38,8 +55,7 @@ import ClientOnlyEffects from '~/components/ClientOnlyEffects.vue';
     </header>
     <slot />
     <footer class="footer">
-      来自Benben's Website ·
-      <a href="/infos/about">关于</a> ·
+      来自{{ SITENAME }} · <a href="/infos/about">关于</a> ·
       <a href="/sitemap.xml">sitemap</a>
     </footer>
   </div>

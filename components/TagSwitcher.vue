@@ -12,7 +12,6 @@ function isActive(type, text) {
 
 <style scoped lang="scss">
 .tags-switcher {
-  box-shadow: 0 0 5px hsla(201, 20%, 100%, 0.4);
   padding: 5px;
   border-radius: 5px;
   width: 70%;
@@ -20,7 +19,6 @@ function isActive(type, text) {
 
   & > div {
     margin-bottom: 5px;
-    border-bottom: 1px dotted hsla(201, 20%, 100%, 0.6);
     display: flex;
     gap: 1em;
     padding: 5px;
@@ -34,16 +32,23 @@ function isActive(type, text) {
       display: block;
       gap: unset;
     }
+
+    @include useTheme using ($map) {
+      border-bottom: 1px dotted map.get($map, borderColor);
+    }
   }
 
   .tag-values {
     display: flex;
     gap: 1em;
-    color: hsl(0, 0%, 100%, 0.76);
 
     @media screen and (max-width: 700px) {
       margin-top: 0.5em;
     }
+  }
+
+  @include useTheme using ($map) {
+    box-shadow: 0 0 5px map.get($map, boxShadow);
   }
 
   h2 {
@@ -56,10 +61,18 @@ function isActive(type, text) {
     margin: 0;
   }
 
-  em {
+  .tag-values a {
+    opacity: 0.76;
+  }
+
+  .tag-values a:hover {
+    opacity: 0.608;
+  }
+
+  .tag-values em {
     font-style: normal;
     font-weight: bold;
-    color: hsl(0, 0%, 100%, 0.855);
+    opacity: 0.855;
   }
 }
 </style>

@@ -12,12 +12,15 @@ aside {
   float: left;
   width: 200px;
   margin-right: 10px;
-  background-color: hsla(201, 20%, 100%, 0.1);
 
   @media screen and (max-width: 768px) {
     float: unset;
     width: unset;
     margin: 10px 0;
+  }
+
+  @include useTheme using ($map) {
+    background: map.get($map, asideBackground);
   }
 }
 
@@ -38,7 +41,9 @@ h2,
 
 .info-link :is(a:hover, em) {
   opacity: unset;
-  background-color: hsla(201, 20%, 100%, 0.1);
+  @include useTheme using ($map) {
+    background: map.get($map, asideBackground);
+  }
 }
 </style>
 

@@ -1,5 +1,6 @@
 <script setup>
 import ArticleAside from '~/components/ArticleAside.vue';
+import { SITENAME } from '~/config/common';
 
 const route = useRoute();
 
@@ -9,20 +10,22 @@ const { data: article } = await useAsyncData(`article-${route.path}`, () =>
 
 useSeoMeta({
   title: () =>
-    (article.value?.title ? `${article.value.title} - ` : '') +
-    "Benben's Website",
+    (article.value?.title ? `${article.value.title} - ` : '') + SITENAME,
   description: article.value?.description.join(' ') ?? '',
 });
 </script>
 
 <style scoped lang="scss">
 article {
-  box-shadow: 0 0 5px hsla(201, 20%, 100%, 0.4);
   border-radius: 8px;
   padding: 5px;
   overflow: hidden;
   flex: 1;
   min-width: 0; /* 防止内容溢出 */
+
+  @include useTheme using ($map) {
+    box-shadow: 0 0 5px map.get($map, boxShadow);
+  }
 }
 
 .contents {

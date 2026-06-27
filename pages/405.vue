@@ -1,12 +1,13 @@
 <script setup>
 import Error from '~/components/Error.vue';
+import { SITENAME } from '~/config/common';
 
 definePageMeta({
   layout: false,
 });
 
 useSeoMeta({
-  title: "Method Not Allowed 405 - Benben's Website",
+  title: 'Method Not Allowed 405 - ' + SITENAME,
   robots: 'noindex, follow',
 });
 </script>
