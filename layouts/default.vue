@@ -2,6 +2,9 @@
 import ClientOnlyEffects from '~/components/ClientOnlyEffects.vue';
 import ThemeSwitcher from '~/components/ThemeSwitcher.vue';
 import { SITENAME } from '~/config/common';
+
+const route = useRoute();
+const pathReplaced = computed(() => Object.keys(route.params).length > 0);
 </script>
 
 <style scoped lang="scss">
@@ -47,15 +50,24 @@ import { SITENAME } from '~/config/common';
         </h1>
         <ThemeSwitcher />
       </div>
-      <nav class="links">
-        <slot name="nav">
+      <slot name="nav">
+        <nav class="links">
           <a href="/" class="return">返回首页</a>
-        </slot>
-      </nav>
+          <span v-if="route.path.startsWith('/pages') && pathReplaced">
+            /<a href="/pages">全部页面</a>
+          </span>
+          <span v-if="route.path.startsWith('/tags') && pathReplaced">
+            /<a href="/tags">标签搜索</a>
+          </span>
+          <span v-if="route.path.startsWith('/infos') && pathReplaced">
+            /<a href="/infos">网站说明</a>
+          </span>
+        </nav>
+      </slot>
     </header>
     <slot />
     <footer class="footer">
-      来自{{ SITENAME }} · <a href="/infos/about">关于</a> ·
+      来自{{ SITENAME }} · <a href="/infos">网站说明</a> ·
       <a href="/sitemap.xml">sitemap</a>
     </footer>
   </div>

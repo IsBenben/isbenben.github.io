@@ -105,8 +105,9 @@ export default defineNuxtConfig({
           theme: {
             default: 'one-dark-pro',
             dark: 'one-dark-pro',
-            light: 'one-light'
+            light: 'one-light',
           },
+          langs: ['html', 'javascript', 'js', 'typescript', 'bash', 'toml'],
         },
         toc: { depth: 3 },
       },

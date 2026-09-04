@@ -16,12 +16,14 @@ const { data } = await useAsyncData(`article-${route.path}`, async () => {
     .where('hide', '<>', true)
     .where('date', '<', current.date)
     .order('date', 'DESC')
+    .select('title', 'path')
     .first();
 
   const next = await queryCollection('pages')
     .where('hide', '<>', true)
     .where('date', '>', current.date)
     .order('date', 'ASC')
+    .select('title', 'path')
     .first();
 
   return { current, prev, next };
@@ -44,7 +46,7 @@ article {
   padding: 5px;
   overflow: hidden;
   flex: 1;
-  min-width: 0; /* 防止内容溢出 */
+  min-width: 0;
 
   @include useTheme using ($map) {
     box-shadow: 0 0 5px map.get($map, boxShadow);

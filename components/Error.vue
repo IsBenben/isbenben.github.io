@@ -1,5 +1,3 @@
-<script setup></script>
-
 <style scoped lang="scss">
 .error {
   font-size: 2em;

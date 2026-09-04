@@ -4,7 +4,7 @@ import { SITENAME } from '~/config/common';
 useSeoMeta({
   title: '标签搜索 - ' + SITENAME,
   description:
-    '标签搜索页面，展示所有标签。细致搜索Benben的个人技术博客，游戏开发、实用工具、学习经验等内容和Scratch、Python、Minecraft的技术干货。',
+    '标签搜索页面，展示所有标签。细致搜索Benben的个人技术分享网站，游戏开发、实用工具、学习经验等内容和Scratch、Python、Minecraft的技术干货。',
 });
 </script>
 

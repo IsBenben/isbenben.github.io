@@ -40,8 +40,6 @@ useSeoMeta({
     <p class="search-description">
       显示{{ typeName }}包含{{ tagName }}的所有内容。{{ tagDescription }}
     </p>
-    <div class="cards">
-      <Card v-for="article in articles" :key="article.id" :article="article" />
-    </div>
+    <CardsGrid :articles="articles" />
   </div>
 </template>

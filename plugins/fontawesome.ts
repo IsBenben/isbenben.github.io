@@ -10,6 +10,8 @@ import {
   faCode,
   faTableCellsLarge,
   faDisplay,
+  faArrowRotateRight,
+  faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import Icon from '~/components/Icon.vue';
 
@@ -24,6 +26,8 @@ library.add(
   faDisplay,
   faSun,
   faMoon,
+  faArrowRotateRight,
+  faChevronRight,
 );
 
 export default defineNuxtPlugin((nuxtApp) => {

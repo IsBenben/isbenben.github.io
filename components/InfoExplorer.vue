@@ -53,9 +53,9 @@ h2,
       <h2>网站说明</h2>
       <ul>
         <li class="info-link" v-for="info in infos">
-          <a :href="info.path" v-if="info.title !== article.title">{{
-            info.title
-          }}</a>
+          <a :href="info.path" v-if="!article || info.title !== article.title">
+            {{ info.title }}
+          </a>
           <em v-else>{{ info.title }}</em>
         </li>
       </ul>

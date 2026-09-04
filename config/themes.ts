@@ -5,6 +5,7 @@ const themes: Themes = {
   dark: {
     background: 'hsl(201, 20%, 10%)',
     color: 'hsl(0, 0%, 100%)',
+    colorLight: 'hsl(0, 0%, 75%)',
     scrollbarTrack: 'hsl(201, 20%, 10%)',
     scrollbarThumb: 'hsl(201, 20%, 25%)',
     scrollbarThumbHover: 'hsl(201, 20%, 30%)',
@@ -25,6 +26,7 @@ const themes: Themes = {
   light: {
     background: 'hsl(201, 10%, 90%)',
     color: 'hsl(0, 0%, 0%)',
+    colorLight: 'hsl(0, 0%, 25%)',
     scrollbarTrack: 'hsl(201, 10%, 90%)',
     scrollbarThumb: 'hsl(201, 10%, 75%)',
     scrollbarThumbHover: 'hsl(201, 10%, 70%)',
