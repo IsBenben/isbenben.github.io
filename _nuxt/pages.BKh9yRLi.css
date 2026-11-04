@@ -1,0 +1,1 @@
+.carousel[data-v-2bf7ad7b]{--pos:0;height:1.2em;margin:0;padding:0;line-height:1;list-style:none;position:relative;overflow:hidden}.carousel[data-v-2bf7ad7b]>*{height:1.2em;transform:translateY(calc(var(--pos) * -1.2em));margin:0;transition:transform .2s}.carousel.finished[data-v-2bf7ad7b]>*{transition:none!important}.carousel[data-v-bad781dd]{padding-left:6px}
