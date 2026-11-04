@@ -4,8 +4,9 @@ Example usage:
     background: map.get($map, background);
   }
 */
-// $themes: (...);
-// $defaultTheme: ...;
+
+$themes: () !default;
+$defaultTheme: 'dark' !default;
 
 @mixin useTheme {
   @each $themeName, $themeMap in $themes {
@@ -29,8 +30,4 @@ Example usage:
       }
     }
   }
-}
-
-.theme-switching * {
-  transition: 0.2s !important;
 }

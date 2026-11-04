@@ -19,9 +19,10 @@ function jsObjectToScssMap(obj: Record<string, any>): string {
 
 const scssAdditionalData = `
   @use 'sass:map';
-  $themes: (${jsObjectToScssMap(themes)});
-  $defaultTheme: "${defaultTheme}";
-  @import '~/assets/themes';
+  @use '~/assets/themes' as * with (
+    $themes: (${jsObjectToScssMap(themes)}),
+    $defaultTheme: "${defaultTheme}"
+  );
 `;
 
 export default defineNuxtConfig({

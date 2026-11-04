@@ -6,7 +6,6 @@ const props = defineProps(['date']);
 const daysAgo = ref(null);
 onMounted(() => {
   const timestamp = new Date(props.date).getTime();
-  console.log(timestamp);
   if (Number.isNaN(timestamp)) {
     return;
   }

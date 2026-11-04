@@ -35,6 +35,10 @@ const article = computed(() => data.value?.current);
 const prevArticle = computed(() => data.value?.prev);
 const nextArticle = computed(() => data.value?.next);
 
+if (import.meta.env.DEV) {
+  console.log('Article:', article);
+}
+
 const absoluteUrl = (path?: string) =>
   path ? new URL(path, BASE_URL).href : undefined;
 

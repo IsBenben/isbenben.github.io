@@ -4,8 +4,6 @@ import Icon from './Icon.vue';
 
 const props = defineProps(['article']);
 
-console.log(props.article);
-
 const GITHUB_REPO_URL = 'https://github.com/IsBenben/isbenben.github.io';
 
 const githubUrl = computed(() => {
