@@ -1,0 +1,1 @@
+var e=`https://isbenben.github.io`,t=`Benben's Website`;export{t as n,e as t};
