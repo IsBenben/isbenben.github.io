@@ -5,6 +5,7 @@ import rehypeSlug from 'rehype-slug';
 import postcssPresetEnv from 'postcss-preset-env';
 import remarkCjkFriendly from 'remark-cjk-friendly';
 import { themes, defaultTheme } from './config/themes';
+import { BASE_URL, SITENAME } from './config/common';
 
 function jsObjectToScssMap(obj: Record<string, any>): string {
   const entries = Object.entries(obj).map(([key, value]) => {
@@ -27,13 +28,18 @@ export default defineNuxtConfig({
   ssr: true,
   compatibilityDate: '2026-04-29',
   modules: [
+    '@nuxtjs/sitemap',
+    'nuxt-og-image',
+    'nuxt-schema-org',
     '@nuxt/content',
     'nuxt-github-pages',
-    '@nuxtjs/sitemap',
     '@nuxtjs/color-mode',
   ],
   plugins: ['~/plugins/fontawesome.ts'],
-  site: { url: 'https://isbenben.github.io' },
+  site: {
+    url: BASE_URL,
+    name: SITENAME,
+  },
   sitemap: {
     exclude: ['/404', '/405'],
     contentLastmod: true,
@@ -125,6 +131,13 @@ export default defineNuxtConfig({
       'postcss-preset-env': postcssPresetEnv({
         autoprefixer: { grid: true },
       }),
+    },
+  },
+  schemaOrg: {
+    identity: {
+      type: 'Person',
+      name: 'IsBenben',
+      url: BASE_URL,
     },
   },
 });

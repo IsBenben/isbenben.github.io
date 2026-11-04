@@ -27,7 +27,7 @@ useSeoMeta({
       <RandomCards
         :articles="articles"
         title="项目"
-        tag="!snippet"
+        tag="entertainment,tool,learning,art"
         :count="0"
       />
       <RandomCards
