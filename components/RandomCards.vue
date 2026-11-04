@@ -49,9 +49,18 @@ const randomArticles = useState('random-articles-' + title, () =>
   @include useTheme using ($map) {
     background: map.get($map, codeBackground);
 
+    &:hover {
+      background: map.get($map, codeHoverBackground);
+      opacity: 1;
+    }
+
     &:active {
       background: map.get($map, codeActiveBackground);
     }
+  }
+
+  .icon {
+    margin-right: 4px;
   }
 }
 </style>
@@ -61,10 +70,10 @@ const randomArticles = useState('random-articles-' + title, () =>
     {{ count !== 0 ? '推荐' : '全部' }}{{ title }}
     <span v-if="count !== 0" class="buttons">
       <button @click="randomArticles = pickRandom(4)" class="button">
-        <Icon icon="fa-solid fa-arrow-rotate-right" />刷新
+        <Icon icon="fa-solid fa-arrow-rotate-right" class="icon" />刷新
       </button>
       <a :href="`/pages#cards-${title}`" class="button">
-        <Icon icon="fa-solid fa-chevron-right" />全部{{ title }}
+        <Icon icon="fa-solid fa-chevron-right" class="icon" />全部{{ title }}
       </a>
     </span>
   </h2>

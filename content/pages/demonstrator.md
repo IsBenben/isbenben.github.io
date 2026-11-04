@@ -26,11 +26,19 @@
       ["/raw/7725-demonstrator.html", "下载：7725论证器"],
     ],
   "hide": false,
-  "updatedAt": "2026-06-27",
+  "updatedAt": "2026-11-04",
 }
 ---
 
 # XXXX 论证器
+
+## 版本提示
+
+**此应用已有新版本。新版本支持更多功能，可在 [数字论证生成器（NumProof Gen）](./num-proof-gen) 查看介绍。**
+
+**新版本生成器快捷体验链接：[5277 论证器（新版本）](https://isbenben.github.io/num-proof-gen#,5277)和[7725 论证器（新版本）](https://isbenben.github.io/num-proof-gen#,7725)**
+
+**该应用不会被继续维护，仅作留档之用。以下对该应用的介绍仅供参考。**
 
 ## 介绍
 

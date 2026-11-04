@@ -13,6 +13,11 @@ const pathReplaced = computed(() => Object.keys(route.params).length > 0);
   margin: 1em 0;
   opacity: 0.5;
   overflow: hidden;
+
+  span,
+  a {
+    display: inline-block;
+  }
 }
 
 .header {
@@ -67,7 +72,7 @@ const pathReplaced = computed(() => Object.keys(route.params).length > 0);
     </header>
     <slot />
     <footer class="footer">
-      来自{{ SITENAME }} · <a href="/infos">网站说明</a> ·
+      <span>来自{{ SITENAME }}</span> · <a href="/infos">网站说明</a> ·
       <a href="/sitemap.xml">sitemap</a>
     </footer>
   </div>

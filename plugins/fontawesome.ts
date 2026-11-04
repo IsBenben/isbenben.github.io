@@ -4,6 +4,7 @@ import {
   faLightbulb,
   faMoon,
   faSun,
+  faCopy,
 } from '@fortawesome/free-regular-svg-icons';
 import {
   faExclamation,
@@ -14,6 +15,7 @@ import {
   faChevronRight,
   faCircleInfo,
   faCircleExclamation,
+  faLink,
 } from '@fortawesome/free-solid-svg-icons';
 import Icon from '~/components/Icon.vue';
 
@@ -32,6 +34,8 @@ library.add(
   faChevronRight,
   faCircleInfo,
   faCircleExclamation,
+  faCopy,
+  faLink,
 );
 
 export default defineNuxtPlugin((nuxtApp) => {

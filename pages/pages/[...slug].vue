@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ArticleAside from '~/components/ArticleAside.vue';
+import ArticleTools from '~/components/ArticleTools.vue';
 import LastModified from '~/components/LastModified.vue';
 import MoreArticle from '~/components/MoreArticle.vue';
 import { SITENAME, BASE_URL } from '~/config/common';
@@ -112,6 +113,7 @@ article {
         <ContentRenderer :value="article" />
       </article>
     </div>
+    <ArticleTools :article="article" />
     <LastModified :date="article.updatedAt" />
     <MoreArticle :prevArticle="prevArticle" :nextArticle="nextArticle" />
   </div>
