@@ -1,12 +1,16 @@
 ---
 {
-  "description": ["本文介绍了在rehype中通过两个插件，实现的自定义哈希与章节符号，并提供其配置方法。"],
+  "description":
+    [
+      "本文介绍了在rehype中通过两个插件，实现的自定义哈希与章节符号，并提供其配置方法。",
+    ],
   "date": "2026/05/16",
   "tags":
     [["lang", "web"], ["inspiration", "original"], ["content", "snippet"]],
   "links": [],
   "downloads": [],
   "hide": false,
+  "updatedAt": "2026-06-27",
 }
 ---
 
@@ -30,6 +34,7 @@ npm install rehype-autolink-headings
 ```
 
 文档可以在`Github`上找到：
+
 - https://github.com/rehypejs/rehype-slug
 - https://github.com/rehypejs/rehype-autolink-headings
 

@@ -12,6 +12,7 @@
     [["https://modrinth.com/datapack/disable-ores-smelting", "数据包首页"]],
   "downloads": [],
   "hide": false,
+  "updatedAt": "2026-06-27",
 }
 ---
 

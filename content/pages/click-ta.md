@@ -20,6 +20,7 @@
     ],
   "downloads": [["/raw/click-ta.sb3", "下载：游戏SB3"]],
   "hide": false,
+  "updatedAt": "2026-06-27",
 }
 ---
 

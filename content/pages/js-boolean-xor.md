@@ -11,6 +11,7 @@
   "links": [],
   "downloads": [],
   "hide": false,
+  "updatedAt": "2026-09-04",
 }
 ---
 

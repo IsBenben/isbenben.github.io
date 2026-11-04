@@ -11,6 +11,7 @@
   "links": [["/raw/animated-calculator.html", "体验"]],
   "downloads": [["/raw/animated-calculator.sb3", "下载"]],
   "hide": false,
+  "updatedAt": "2026-06-27",
 }
 ---
 

@@ -23,6 +23,7 @@
     ],
   "downloads": [["/raw/utf-16-supporting.sb3", "下载示例程序"]],
   "hide": false,
+  "updatedAt": "2026-06-27",
 }
 ---
 

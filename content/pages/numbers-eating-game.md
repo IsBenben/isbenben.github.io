@@ -16,6 +16,7 @@
   "links": [["/raw/numbers-eating-game.html", "体验游戏"]],
   "downloads": [["/raw/numbers-eating-game.sb3", "下载游戏SB3"]],
   "hide": false,
+  "updatedAt": "2026-06-27",
 }
 ---
 

@@ -12,6 +12,8 @@ import {
   faDisplay,
   faArrowRotateRight,
   faChevronRight,
+  faCircleInfo,
+  faCircleExclamation,
 } from '@fortawesome/free-solid-svg-icons';
 import Icon from '~/components/Icon.vue';
 
@@ -28,6 +30,8 @@ library.add(
   faMoon,
   faArrowRotateRight,
   faChevronRight,
+  faCircleInfo,
+  faCircleExclamation,
 );
 
 export default defineNuxtPlugin((nuxtApp) => {

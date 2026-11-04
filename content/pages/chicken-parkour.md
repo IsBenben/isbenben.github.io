@@ -16,6 +16,7 @@
   "links": [["/raw/chicken-parkour.html", "体验游戏"]],
   "downloads": [["/raw/chicken-parkour.sb3", "下载：游戏SB3"]],
   "hide": false,
+  "updatedAt": "2026-06-27",
 }
 ---
 

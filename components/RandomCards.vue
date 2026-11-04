@@ -6,10 +6,9 @@ const props = defineProps(['title', 'articles', 'tag', 'count']);
 const { articles, title, tag, count } = props;
 
 function anyTagMatch(article, tag) {
-  const shouldInvert = tag[0] === '!';
-  const matchTag = shouldInvert ? tag.slice(1) : tag;
-  const matched = article.tags?.some((t) => t[1] === matchTag);
-  return shouldInvert ? !matched : matched;
+  const matchTag = tag.split(',');
+  const matched = article.tags?.some((t) => matchTag.some((t2) => t[1] === t2));
+  return matched;
 }
 
 const filtered = articles.filter((article) => anyTagMatch(article, tag));
@@ -45,6 +44,7 @@ const randomArticles = useState('random-articles-' + title, () =>
   font-weight: normal;
   text-decoration: none;
   cursor: pointer;
+  color: inherit;
 
   @include useTheme using ($map) {
     background: map.get($map, codeBackground);

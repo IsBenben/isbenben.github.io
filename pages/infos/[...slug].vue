@@ -1,5 +1,6 @@
 <script setup>
 import InfoExplorer from '~/components/InfoExplorer.vue';
+import LastModified from '~/components/LastModified.vue';
 import { SITENAME } from '~/config/common';
 
 const route = useRoute();
@@ -17,7 +18,7 @@ useSeoMeta({
 </script>
 
 <style scoped lang="scss">
-article {
+.main {
   overflow: auto;
 }
 </style>
@@ -25,8 +26,11 @@ article {
 <template>
   <div class="contents" v-if="info">
     <InfoExplorer :article="info" />
-    <article>
-      <ContentRenderer :value="info" />
-    </article>
+    <div class="main">
+      <article>
+        <ContentRenderer :value="info" />
+      </article>
+      <LastModified :date="info.updatedAt" />
+    </div>
   </div>
 </template>

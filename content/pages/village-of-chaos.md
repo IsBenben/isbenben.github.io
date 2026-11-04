@@ -22,6 +22,7 @@
     ],
   "downloads": [],
   "hide": false,
+  "updatedAt": "2026-06-27",
 }
 ---
 

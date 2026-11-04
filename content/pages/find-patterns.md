@@ -18,6 +18,7 @@
     ],
   "downloads": [["/raw/find-patterns.py", "下载：Python程序"]],
   "hide": false,
+  "updatedAt": "2026-06-27",
 }
 ---
 

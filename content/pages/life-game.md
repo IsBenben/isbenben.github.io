@@ -20,6 +20,7 @@
       ["/raw/life-game.sb3", "下载：旧版本"],
     ],
   "hide": false,
+  "updatedAt": "2026-06-27",
 }
 ---
 

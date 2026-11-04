@@ -12,6 +12,7 @@
   "links": [["https://www.bilibili.com/video/BV1bRcEzHE42/", "演示视频"]],
   "downloads": [["/raw/google_10.zip", "下载资源包"]],
   "hide": false,
+  "updatedAt": "2026-06-27",
 }
 ---
 

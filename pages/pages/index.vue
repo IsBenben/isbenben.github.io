@@ -1,5 +1,4 @@
 <script setup>
-import CardsGrid from '~/components/CardsGrid.vue';
 import { SITENAME } from '~/config/common';
 
 definePageMeta({

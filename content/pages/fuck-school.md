@@ -12,6 +12,7 @@
   "links": [["https://github.com/IsBenben/Fuck_school", "关联仓库"]],
   "downloads": [["/raw/fuck-school.py", "下载：Python程序"]],
   "hide": true,
+  "updatedAt": "2026-06-27",
 }
 ---
 

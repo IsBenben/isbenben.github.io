@@ -9,6 +9,8 @@ const nextArticle = props.nextArticle;
   margin-top: 1em;
   width: fit-content;
   min-width: 25vw;
+  border-radius: 4px;
+  
   @include useTheme using ($map) {
     background: map.get($map, asideBackground);
   }

@@ -15,6 +15,7 @@
   "links": [["/raw/cut-fruit.html", "体验"]],
   "downloads": [["/raw/cut-fruit.sb3", "下载"]],
   "hide": false,
+  "updatedAt": "2026-06-27",
 }
 ---
 

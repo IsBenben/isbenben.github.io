@@ -26,6 +26,7 @@
       ["/raw/7725-demonstrator.html", "下载：7725论证器"],
     ],
   "hide": false,
+  "updatedAt": "2026-06-27",
 }
 ---
 

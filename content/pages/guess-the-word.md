@@ -16,6 +16,7 @@
   "links": [["/raw/guess-the-word.html", "体验"]],
   "downloads": [["/raw/guess-the-word.html", "下载"]],
   "hide": false,
+  "updatedAt": "2026-06-27",
 }
 ---
 

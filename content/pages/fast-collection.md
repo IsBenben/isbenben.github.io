@@ -17,6 +17,7 @@
     ],
   "downloads": [["/raw/fast-collection.zip", "下载zip插件"]],
   "hide": false,
+  "updatedAt": "2026-06-27",
 }
 ---
 

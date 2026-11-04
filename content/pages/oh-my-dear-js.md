@@ -20,6 +20,7 @@
     ],
   "downloads": [["/raw/oh-my-dear-js.sb3", "下载：游戏SB3"]],
   "hide": false,
+  "updatedAt": "2026-06-27",
 }
 ---
 

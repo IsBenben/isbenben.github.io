@@ -22,6 +22,7 @@
     ],
   "downloads": [["/raw/word-solitaire.html", "下载"]],
   "hide": false,
+  "updatedAt": "2026-06-27",
 }
 ---
 

@@ -18,6 +18,7 @@
     ],
   "downloads": [["/raw/characters-drawing.py", "下载：字符画程序"]],
   "hide": false,
+  "updatedAt": "2026-06-27",
 }
 ---
 

@@ -24,18 +24,12 @@
     display: block;
   }
 }
-
-.circled {
-  border-radius: 50%;
-  padding: 2px;
-  border: 2px solid;
-}
 </style>
 
 <template>
   <div class="error">
     <div class="oops">
-      <Icon icon="fa-solid fa-exclamation" class="circled" />
+      <Icon icon="fa-solid fa-circle-exclamation" class="circled" />
       出错了
     </div>
     <slot></slot>

@@ -35,8 +35,8 @@ export default defineNuxtConfig({
   plugins: ['~/plugins/fontawesome.ts'],
   site: { url: 'https://isbenben.github.io' },
   sitemap: {
-    autoLastmod: true,
     exclude: ['/404', '/405'],
+    contentLastmod: true,
     zeroRuntime: true,
   },
   app: {
