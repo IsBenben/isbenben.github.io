@@ -1,16 +1,20 @@
-<script setup>
+<script setup lang="ts">
 import { SITENAME } from '~/config/common';
+import type { ArticleCard } from '~/config/types';
 
 definePageMeta({
   layout: false,
 });
 
-const { data: articles } = await useAsyncData('pages-all', () =>
-  queryCollection('pages')
-    .where('hide', '<>', true)
-    .order('date', 'DESC')
-    .select('title', 'description', 'date', 'tags', 'path')
-    .all(),
+const { data: articles } = await useAsyncData<ArticleCard[]>(
+  'pages-all',
+  () =>
+    queryCollection('pages')
+      .where('hide', '<>', true)
+      .order('date', 'DESC')
+      .select('title', 'description', 'date', 'tags', 'path')
+      .all(),
+  { default: () => [] },
 );
 
 useSeoMeta({

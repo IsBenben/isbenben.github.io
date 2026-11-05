@@ -1,13 +1,15 @@
-<script setup>
+<script setup lang="ts">
 import Tag from './Tag.vue';
+import type { ArticleCard } from '~/config/types.ts';
 
-const props = defineProps(['article']);
+const props = defineProps<{ article: ArticleCard }>();
 const article = props.article;
 
-const cardRef = ref(null);
-if (process.client) {
+const cardRef = ref<HTMLDivElement | null>(null);
+if (import.meta.client) {
   window.addEventListener('mousemove', (e) => {
     const card = cardRef.value;
+    if (!card) return;
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;

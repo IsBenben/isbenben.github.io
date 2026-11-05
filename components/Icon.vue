@@ -1,7 +1,7 @@
-<script setup>
+<script setup lang="ts">
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
-const props = defineProps(['icon']);
+const props = defineProps<{ icon: string }>();
 </script>
 
 <template>

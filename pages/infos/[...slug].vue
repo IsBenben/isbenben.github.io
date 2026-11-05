@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import InfoExplorer from '~/components/InfoExplorer.vue';
 import LastModified from '~/components/LastModified.vue';
 import { SITENAME } from '~/config/common';

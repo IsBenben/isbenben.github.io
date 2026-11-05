@@ -1,6 +1,7 @@
-<script setup>
-const props = defineProps(['article']);
-const article = props.article;
+<script setup lang="ts">
+import type { Collections } from '@nuxt/content';
+
+const props = defineProps<{ article?: Pick<Collections['infos'], 'title'> }>();
 
 const { data: infos } = await useAsyncData('infos-all', () =>
   queryCollection('infos').select('title', 'path').all(),
@@ -53,7 +54,10 @@ h2,
       <h2>网站说明</h2>
       <ul>
         <li class="info-link" v-for="info in infos">
-          <a :href="info.path" v-if="!article || info.title !== article.title">
+          <a
+            :href="info.path"
+            v-if="!article || info.title !== props.article?.title"
+          >
             {{ info.title }}
           </a>
           <em v-else>{{ info.title }}</em>

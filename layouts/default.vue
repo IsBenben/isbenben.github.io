@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import ClientOnlyEffects from '~/components/ClientOnlyEffects.vue';
 import ThemeSwitcher from '~/components/ThemeSwitcher.vue';
 import { SITENAME } from '~/config/common';

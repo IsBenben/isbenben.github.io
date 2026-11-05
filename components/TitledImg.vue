@@ -26,7 +26,7 @@
 }
 </style>
 
-<script setup>
+<script setup lang="ts">
 import { withTrailingSlash, withLeadingSlash, joinURL } from 'ufo';
 import { useRuntimeConfig, computed } from '#imports';
 
@@ -41,11 +41,11 @@ const props = defineProps({
   },
   width: {
     type: [String, Number],
-    default: void 0,
+    default: undefined,
   },
   height: {
     type: [String, Number],
-    default: void 0,
+    default: undefined,
   },
 });
 const refinedSrc = computed(() => {

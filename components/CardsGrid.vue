@@ -1,5 +1,7 @@
-<script setup>
-const props = defineProps(['articles']);
+<script setup lang="ts">
+import type { ArticleCard } from '~/config/types';
+
+const props = defineProps<{ articles: ArticleCard[] }>();
 </script>
 
 <style scoped lang="scss">

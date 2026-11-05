@@ -1,57 +1,66 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
-import { themes } from '~/config/themes';
+import { defaultTheme, themes } from '~/config/themes';
 
-function choice(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
+function choice<T>(array: readonly T[]): T {
+  return array[Math.floor(Math.random() * array.length)]!;
 }
 
+const HEX_CHARACTERS = '1234567890ABCDEF'.split('');
+
 const titleBlend = ref(true);
-setTimeout(() => {
+const titleTimer = setTimeout(() => {
   titleBlend.value = false;
 }, 1300);
+onUnmounted(() => clearTimeout(titleTimer));
 
 // #region background-canvas
-let backgroundEvent = null;
-let backgroundInterval = null;
-let background = null;
+let backgroundResizeHandler: (() => void) | null = null;
+let backgroundInterval: ReturnType<typeof setInterval> | null = null;
+let background: HTMLCanvasElement | null = null;
 onMounted(() => {
-  if (!process.client) {
+  if (!import.meta.client) {
     return;
   }
   const colorMode = useColorMode();
-  background = document.createElement('canvas');
-  background.className = 'background';
-  const ctx = background.getContext('2d');
-  function initCanvas() {
-    background.width = window.innerWidth * devicePixelRatio;
-    background.height = window.innerHeight * devicePixelRatio;
+  const canvas = document.createElement('canvas');
+  background = canvas;
+  canvas.className = 'background';
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return;
+
+  function initCanvas(): void {
+    canvas.width = window.innerWidth * devicePixelRatio;
+    canvas.height = window.innerHeight * devicePixelRatio;
   }
   initCanvas();
-  backgroundEvent = window.addEventListener('resize', () => {
+  backgroundResizeHandler = () => {
     initCanvas();
-  });
+  };
+  window.addEventListener('resize', backgroundResizeHandler);
+
   ctx.textBaseline = 'top';
-  const charIndex = [];
+  const charIndex: number[] = [];
   backgroundInterval = setInterval(() => {
+    const theme = themes[colorMode.value] || themes[defaultTheme]!;
     ctx.globalAlpha = 0.1;
-    ctx.fillStyle = themes[colorMode.value].background;
-    ctx.fillRect(0, 0, background.width, background.height);
+    ctx.fillStyle = theme.background || '';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.globalAlpha = 1;
-    ctx.fillStyle = themes[colorMode.value].backgroundCanvasColor;
+    ctx.fillStyle = theme.backgroundCanvasColor || '';
     const fontsize = 16 * devicePixelRatio;
     ctx.font = `${fontsize}px 'JetBrains Mono', sans-serif`;
-    const columns = Math.ceil(background.width / fontsize);
+    const columns = Math.ceil(canvas.width / fontsize);
     for (let i = 0; i < columns - charIndex.length; i++) {
       charIndex.push(1000);
     }
     for (let i = 0; i < charIndex.length; i++) {
-      const char = choice('1234567890ABCDEF');
-      const y = charIndex[i] * fontsize;
+      const char = choice(HEX_CHARACTERS);
+      const y = charIndex[i]! * fontsize;
       ctx.fillText(char, i * fontsize, y);
-      charIndex[i]++;
-      if (y > background.height) {
+      charIndex[i]!++;
+      if (y > canvas.height) {
         if (Math.random() < 0.01) {
           charIndex[i] = 0;
         }
@@ -61,23 +70,25 @@ onMounted(() => {
   document.body.insertBefore(background, document.body.firstChild);
 });
 onUnmounted(() => {
-  backgroundEvent && window.removeEventListener(backgroundEvent);
+  backgroundResizeHandler &&
+    window.removeEventListener('resize', backgroundResizeHandler);
   backgroundInterval && clearInterval(backgroundInterval);
   background && background.remove();
 });
 // #endregion
 
 // #region clicks
-let clicks = null;
-let clicksEvent = null;
+let clicks: HTMLDivElement | null = null;
+let clicksMousedownHandler: ((e: MouseEvent) => void) | null = null;
 onMounted(() => {
-  if (!process.client) {
+  if (!import.meta.client) {
     return;
   }
-  clicks = document.createElement('div');
-  clicks.className = 'clicks';
-  document.body.appendChild(clicks);
-  clicksEvent = window.addEventListener('mousedown', (e) => {
+  const container = document.createElement('div');
+  clicks = container;
+  container.className = 'clicks';
+  document.body.appendChild(container);
+  clicksMousedownHandler = (e: MouseEvent) => {
     const click = document.createElement('span');
     click.classList.add('click');
     click.textContent = choice([
@@ -137,12 +148,14 @@ onMounted(() => {
     ]);
     click.style.left = `${e.clientX}px`;
     click.style.top = `${e.clientY}px`;
-    clicks.appendChild(click);
+    container.appendChild(click);
     click.addEventListener('animationend', () => void click.remove());
-  });
+  };
+  window.addEventListener('mousedown', clicksMousedownHandler);
 });
 onUnmounted(() => {
-  clicksEvent && window.removeEventListener(clicksEvent);
+  clicksMousedownHandler &&
+    window.removeEventListener('mousedown', clicksMousedownHandler);
   clicks && clicks.remove();
 });
 </script>

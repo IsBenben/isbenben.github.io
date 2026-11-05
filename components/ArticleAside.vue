@@ -1,8 +1,8 @@
-<script setup>
+<script setup lang="ts">
+import type { Collections } from '@nuxt/content';
 import TableOfContents from './TableOfContents.vue';
 
-const props = defineProps(['article']);
-const article = props.article;
+const props = defineProps<{ article: Collections['pages'] }>();
 </script>
 
 <style scoped lang="scss">
@@ -53,27 +53,27 @@ aside {
       <h2>文章信息</h2>
       <div class="metadata-line">
         <Icon icon="far fa-calendar-days" />发布日期：{{
-          article.date.replace(/\/0/g, '/')
+          props.article.date.replace(/\/0/g, '/')
         }}
       </div>
       <div class="metadata-line">
-        <template v-for="(tag, idx) in article.tags" :key="idx"
+        <template v-for="(tag, idx) in props.article.tags" :key="idx"
           ><Tag :type="tag[0]" :text="tag[1]" />&nbsp;</template
         >
       </div>
     </div>
-    <div class="aside-item" v-if="article.links.length > 0">
+    <div class="aside-item" v-if="props.article.links.length > 0">
       <h2>相关链接</h2>
       <ul>
-        <li v-for="link in article.links">
+        <li v-for="link in props.article.links">
           <a :href="link[0]">{{ link[1] }}</a>
         </li>
       </ul>
     </div>
-    <div class="aside-item" v-if="article.downloads.length > 0">
+    <div class="aside-item" v-if="props.article.downloads.length > 0">
       <h2>快捷下载</h2>
       <ul>
-        <li v-for="download in article.downloads">
+        <li v-for="download in props.article.downloads">
           <a
             download
             :href="download[0]"
@@ -83,9 +83,9 @@ aside {
         </li>
       </ul>
     </div>
-    <div class="aside-item sticky" v-if="article.body?.toc?.links.length">
+    <div class="aside-item sticky" v-if="props.article.body?.toc?.links.length">
       <h2>目录</h2>
-      <TableOfContents :article="article" />
+      <TableOfContents :article="props.article" />
     </div>
   </aside>
 </template>

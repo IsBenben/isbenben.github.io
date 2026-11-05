@@ -1,17 +1,32 @@
-<script setup>
+<script setup lang="ts">
 import { SITENAME } from '~/config/common';
-import tagsData from '~/content/tags.json';
+import type { ArticleCard, TagsData } from '~/config/types';
+import tagsDataRaw from '~/content/tags.json';
 
-const route = useRoute();
-const { type, text } = route.params;
+const tagsData = tagsDataRaw as TagsData;
 
-const { data: articles } = await useAsyncData(`tag-${type}-${text}`, () =>
-  queryCollection('pages')
-    .where('hide', '<>', true)
-    .where('tags', 'LIKE', `%["${type}","${text}"]%`)
-    .order('date', 'DESC')
-    .select('title', 'description', 'date', 'tags', 'path')
-    .all(),
+const routeToString = (value: string | string[] | undefined): string =>
+  value === undefined
+    ? ''
+    : Array.isArray(value)
+      ? value[0] === undefined
+        ? ''
+        : value[0]
+      : value;
+const params = useRoute().params;
+const type: string = routeToString(params.type);
+const text: string = routeToString(params.text);
+
+const { data: articles } = await useAsyncData<ArticleCard[]>(
+  `tag-${type}-${text}`,
+  () =>
+    queryCollection('pages')
+      .where('hide', '<>', true)
+      .where('tags', 'LIKE', `%["${type}","${text}"]%`)
+      .order('date', 'DESC')
+      .select('title', 'description', 'date', 'tags', 'path')
+      .all(),
+  { default: () => [] },
 );
 
 const tagDescription = computed(() => {

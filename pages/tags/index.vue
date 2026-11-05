@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { SITENAME } from '~/config/common';
 
 useSeoMeta({

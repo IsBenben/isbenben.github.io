@@ -4,33 +4,33 @@
   </ul>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue';
 
-const carouselRef = ref(null);
-let timer = null;
+const carouselRef = ref<HTMLUListElement | null>(null);
+let timer: ReturnType<typeof setInterval> | undefined;
 let current = 0;
 let total = 0;
 
 onMounted(() => {
   const ul = carouselRef.value;
   if (!ul) return;
-
   total = ul.children.length;
-  const firstClone = ul.children[0].cloneNode(true);
+  if (total <= 0) return;
+  const firstClone = ul.children[0]!.cloneNode(true);
   ul.appendChild(firstClone);
 
   timer = setInterval(() => {
     current++;
     if (current <= total) {
-      ul.style.setProperty('--pos', current);
+      ul.style.setProperty('--pos', current.toString());
     } else {
       ul.classList.add('finished');
-      ul.style.setProperty('--pos', 0);
+      ul.style.setProperty('--pos', '0');
       ul.getBoundingClientRect();
       ul.classList.remove('finished');
       current = 1;
-      ul.style.setProperty('--pos', current);
+      ul.style.setProperty('--pos', current.toString());
     }
   }, 2000);
 });

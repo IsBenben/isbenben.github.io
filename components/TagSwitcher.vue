@@ -1,11 +1,14 @@
-<script setup>
+<script setup lang="ts">
 import tagsData from '@/content/tags.json';
 
-const props = defineProps({
-  activeTag: { type: Object, default: null }, // { type, value }
-});
+const props = defineProps<{
+  activeTag: {
+    type: string;
+    text: string;
+  } | null;
+}>();
 
-function isActive(type, text) {
+function isActive(type: string, text: string): boolean {
   return props.activeTag?.type === type && props.activeTag?.text === text;
 }
 </script>

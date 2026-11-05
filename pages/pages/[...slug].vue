@@ -35,14 +35,14 @@ const article = computed(() => data.value?.current);
 const prevArticle = computed(() => data.value?.prev);
 const nextArticle = computed(() => data.value?.next);
 
-if (import.meta.env.DEV) {
+if (import.meta.dev) {
   console.log('Article:', article);
 }
 
-const absoluteUrl = (path?: string) =>
+const absoluteUrl = (path?: string): string | undefined =>
   path ? new URL(path, BASE_URL).href : undefined;
 
-const imageUrl = computed(() => {
+const imageUrl = computed<string | undefined>(() => {
   const sitemapImage = article.value?.sitemap?.images?.[0]?.loc;
   return absoluteUrl(sitemapImage);
 });

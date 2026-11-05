@@ -1,7 +1,13 @@
-<script setup>
-import tagsData from '@/content/tags.json';
+<script setup lang="ts">
+import tagsDataRaw from '@/content/tags.json';
+import type { TagsData } from '~/config/types';
 
-const props = defineProps(['type', 'text']);
+const tagsData = tagsDataRaw as TagsData;
+
+const props = defineProps<{
+  type: string;
+  text: string;
+}>();
 
 const tagDescription = computed(() => {
   return tagsData[props.type]?.value?.[props.text]?.description;
@@ -12,7 +18,7 @@ const typeName = computed(() => {
 });
 
 const typeIcon = computed(() => {
-  return tagsData[props.type]?.icon;
+  return tagsData[props.type]?.icon ?? '';
 });
 
 const typeDescription = computed(() => {
@@ -20,17 +26,19 @@ const typeDescription = computed(() => {
 });
 
 const tagName = computed(() => {
-  return tagsData[props.type]?.value?.[props.text]?.name;
+  return tagsData[props.type]?.value?.[props.text]?.name || '';
 });
 
 const tagWidth = computed(() => {
   return (
-    tagName.value.split('').reduce((accumulator, currentChar) => {
-      if (currentChar.charCodeAt(0) < 256) {
-        return accumulator + 0.6;
-      }
-      return accumulator + 1;
-    }, 0) + 1
+    tagName.value
+      .split('')
+      .reduce((accumulator: number, currentChar: string) => {
+        if (currentChar.charCodeAt(0) < 256) {
+          return accumulator + 0.6;
+        }
+        return accumulator + 1;
+      }, 0) + 1
   );
 });
 </script>

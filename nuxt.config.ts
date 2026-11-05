@@ -150,4 +150,21 @@ export default defineNuxtConfig({
       url: BASE_URL,
     },
   },
+  typescript: {
+    typeCheck: true,
+    tsConfig: {
+      compilerOptions: {
+        noUnusedLocals: true,
+        noUnusedParameters: true,
+      },
+    },
+    appTsConfig: {
+      vueCompilerOptions: {
+        strictTemplates: true,
+      },
+    },
+  },
+  experimental: {
+    typedPages: true,
+  },
 });

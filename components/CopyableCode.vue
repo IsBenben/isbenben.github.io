@@ -1,10 +1,14 @@
-<script setup>
+<script setup lang="ts">
+import type { VNode } from 'vue';
+
 const slots = defineSlots();
+
+type SlotNode = string | number | VNode | SlotNode[] | null;
 
 const slotText = computed(() => {
   const defaultSlot = slots.default?.();
 
-  const extractText = (vnode) => {
+  const extractText = (vnode: SlotNode): string => {
     if (typeof vnode === 'string' || typeof vnode === 'number') {
       return vnode.toString();
     }
@@ -12,7 +16,7 @@ const slotText = computed(() => {
       return vnode.map(extractText).join('');
     }
     if (vnode?.children) {
-      return extractText(vnode.children);
+      return extractText(vnode.children as any);
     }
     return '';
   };

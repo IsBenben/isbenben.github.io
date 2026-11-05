@@ -1,12 +1,13 @@
-<script setup>
+<script setup lang="ts">
+import type { Collections } from '@nuxt/content';
 import { computed } from 'vue';
 import Icon from './Icon.vue';
 
-const props = defineProps(['article']);
+const props = defineProps<{ article: Collections['pages'] }>();
 
 const GITHUB_REPO_URL = 'https://github.com/IsBenben/isbenben.github.io';
 
-const githubUrl = computed(() => {
+const githubUrl = computed<string>(() => {
   if (!props.article?.stem) return '#';
   return `${GITHUB_REPO_URL}/blob/main/content/${props.article.stem}.md`;
 });

@@ -1,8 +1,8 @@
-<script setup>
+<script setup lang="ts">
 const props = defineProps(['article']);
 const article = props.article;
 
-function getText(heading) {
+function getText(heading: string) {
   return heading.slice(0, heading.length - 4);
 }
 </script>

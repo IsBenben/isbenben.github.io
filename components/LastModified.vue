@@ -1,9 +1,9 @@
-<script setup>
+<script setup lang="ts">
 import Icon from './Icon.vue';
 
-const props = defineProps(['date']);
+const props = defineProps<{ date: string }>();
 
-const daysAgo = ref(null);
+const daysAgo = ref<number | null>(null);
 onMounted(() => {
   const timestamp = new Date(props.date).getTime();
   if (Number.isNaN(timestamp)) {

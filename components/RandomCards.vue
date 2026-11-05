@@ -1,26 +1,34 @@
-<script setup>
+<script setup lang="ts">
+import type { ArticleCard } from '~/config/types.ts';
 import CardsGrid from './CardsGrid.vue';
 
-const props = defineProps(['title', 'articles', 'tag', 'count']);
+const props = defineProps<{
+  title: string;
+  articles: ArticleCard[];
+  tag: string;
+  count: number;
+}>();
 
 const { articles, title, tag, count } = props;
 
-function anyTagMatch(article, tag) {
+function anyTagMatch(article: ArticleCard, tag: string): boolean {
   const matchTag = tag.split(',');
-  const matched = article.tags?.some((t) => matchTag.some((t2) => t[1] === t2));
+  const matched = article.tags.some((t) => matchTag.some((t2) => t[1] === t2));
   return matched;
 }
 
 const filtered = articles.filter((article) => anyTagMatch(article, tag));
 
-function pickRandom(n) {
+function pickRandom(count: number) {
   if (!filtered) return [];
   const shuffled = [...filtered];
   for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    const tmp = shuffled[i]!;
+    shuffled[i] = shuffled[j]!;
+    shuffled[j] = tmp;
   }
-  return shuffled.slice(0, n);
+  return shuffled.slice(0, count);
 }
 
 const randomArticles = useState('random-articles-' + title, () =>

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import Error from '~/components/Error.vue';
 import { SITENAME } from '~/config/common';
 
